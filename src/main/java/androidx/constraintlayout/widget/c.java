@@ -23,7 +23,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import org.xmlpull.v1.XmlPullParserException;
 
-// renamed from: androidx.constraintlayout.widget
+// renamed from: androidx.constraintlayout.widget.c
 public class c {
 
     /* renamed from: a  reason: collision with root package name */
@@ -719,6 +719,7 @@ public class c {
         }
     }
 
+    // public void connect(int startId, .... )
     public void a(int i, int i2, int i3, int i4, int i5) {
         if (!this.f1477b.containsKey(Integer.valueOf(i))) {
             this.f1477b.put(Integer.valueOf(i), new a());

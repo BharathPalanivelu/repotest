@@ -16,6 +16,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
+
 import com.google.a.o;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.shopee.live.livestreaming.a.VeryBaseLiveStreamingActivity;
@@ -59,18 +61,15 @@ import com.shopee.live.livestreaming.util.ab;
 import com.shopee.live.livestreaming.util.ac;
 import com.shopee.live.livestreaming.util.classX;
 import com.shopee.live.livestreaming.util.f;
-import com.shopee.live.livestreaming.util.h;
-import com.shopee.live.livestreaming.util.i;
-import com.shopee.live.livestreaming.util.p;
 import com.shopee.live.livestreaming.util.t;
-import com.shopee.live.livestreaming.util.w;
 import com.shopee.live.livestreaming.util.x;
-import com.shopee.live.livestreaming.util.z;
 import com.shopee.sdk.c.c;
 import com.shopee.sdk.modules.ui.a.a;
 import com.shopee.sdk.modules.ui.navigator.NavigationPath;
 import com.shopee.sdk.modules.ui.navigator.options.PopOption;
 import java.io.File;
+
+import loan.data_point.Constant;
 
 public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingActivity implements interfaceD, AudienceCoinView.a, c {
     /* access modifiers changed from: private */
@@ -157,7 +156,7 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     public void l() {
     }
 
-    private void j() {
+    private void locateView() {
         this.f28963b = (CleanableLayout) a(c.e.container_audience);
         this.f28964c = a(c.e.gradient_cover);
         this.f28965d = (TXVideoLayout) a(c.e.video_view);
@@ -181,7 +180,7 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(c.f.live_streaming_activity_audience);
-        j();
+        locateView();
         this.f28965d.a();
         // init presenter
         this.s = new com.shopee.live.livestreaming.ui.audience.b(this);
@@ -227,12 +226,12 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     public void onStop() {
         super.onStop();
         if (isFinishing()) {
-            this.s.a();
+            this.s.a();// presenter manggil sesuatu
             this.h.setClickListener((LivePageShowProductView.a) null);
             this.f28967f.setSizeChangeListener((LivePageTitleView.a) null);
             this.f28968g.setClickListener((LivePageAnchorInfoView.a) null);
             this.j.setBottomViewCallback((AudienceBottomView.b) null);
-            this.f28966e.b();
+            this.f28966e.b(); // stop some view
             com.shopee.sdk.b.c().b("NotificationShopeeLiveHideMiniWindow", this);
         }
     }
@@ -837,17 +836,19 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
      * init view juga
      */
     private void w() {
+        // old code
         int a2 = com.shopee.live.livestreaming.util.w.a(getApplicationContext()); // ambil height
         int b2 = com.shopee.live.livestreaming.util.w.b(getApplicationContext()); // ambil width
 
         androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
-        cVar.a((ConstraintLayout) this.f28963b);
-        cVar.d(this.f28965d.getId(), a2);
+        cVar.a((ConstraintLayout) this.f28963b); // a(layout) == clone(ConstraintLayout)
+        cVar.d(this.f28965d.getId(), a2);// constrainHeight(viewId,
         cVar.c(this.f28965d.getId(), b2);
         cVar.a(this.f28965d.getId(), 3, 0, 3, 0);
         cVar.a(this.f28965d.getId(), 4, 0, 4, 0);
         cVar.a(this.f28965d.getId(), 1, 0, 1, 0);
         cVar.a(this.f28965d.getId(), 2, 0, 2, 0);
+
         cVar.d(this.f28964c.getId(), a2);
         cVar.c(this.f28964c.getId(), b2);
         androidx.constraintlayout.widget.c cVar2 = cVar;
@@ -856,6 +857,23 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
         cVar2.a(this.f28964c.getId(), 1, this.f28965d.getId(), 1, 0);
         cVar2.a(this.f28964c.getId(), 2, this.f28965d.getId(), 2, 0);
         cVar.b((ConstraintLayout) this.f28963b);
+
+
+        //new code
+
+        int height = com.shopee.live.livestreaming.util.w.a(getApplicationContext()); // ambil height
+        int width = com.shopee.live.livestreaming.util.w.b(getApplicationContext()); // ambil width
+
+        ConstraintSet constraintSet = new ConstraintSet();
+        constraintSet.clone(f28963b);
+
+        constraintSet.constrainHeight(f28965d.getId(), height);
+        constraintSet.constrainWidth(f28965d.getId(), width);
+        constraintSet.connect(this.f28965d.getId(), 3, 0, 3, 0);
+        constraintSet.connect(this.f28965d.getId(), 4, 0, 4, 0);
+        constraintSet.connect(this.f28965d.getId(), 1, 0, 1, 0);
+        constraintSet.connect(this.f28965d.getId(), 2, 0, 2, 0);
+
         this.q.setVisibility(8);// 8 == Visibility.GONE
 
         com.shopee.live.livestreaming.ui.audience.a.a.a().k();
