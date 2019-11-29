@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="internalOnly" android:largeHeap="true" package="com.shopee.id" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:maxSdkVersion="22" android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.any" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera2" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.landscape"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:fullBackupContent="@xml/appsflyer_backup_rules" android:hardwareAccelerated="true" android:icon="@mipmap/com_garena_shopee_logo_shopee_launcher" android:label="@string/sp_icon_name" android:largeHeap="true" android:name="com.shopee.app.application.ShopeeApplication_" android:networkSecurityConfig="@xml/network_security_config" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@style/ShopeeTheme">
+        <activity android:label="@string/sp_icon_name" android:name="com.shopee.app.ui.home.HomeActivity_" android:screenOrientation="portrait" android:theme="@style/SplashTheme" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/sp_app_name" android:launchMode="singleTask" android:name="com.shopee.app.ui.proxy.ProxyActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="shopee.co.id" android:scheme="http"/>
+                <data android:host="shopee.co.id" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="shopeeid"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.garena.sdk.push.applicationId" android:value="10022"/>
+        <receiver android:name="com.garena.android.gpns.logic.AlarmReceiver" android:process=":push">
+            <intent-filter>
+                <action android:name="com.garena.android.gpns.ALARM_ACTION.com.shopee.id.10022"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.shopee.app.pushnotification.GPNTokenReceiver">
+            <intent-filter>
+                <action android:name="com.garena.android.gpns.TOKEN_RECEIVE.com.shopee.id.10022"/>
+                <category android:name="com.garena.android.gpns.10022"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.shopee.app.pushnotification.DefaultNotificationReceiver" android:process=":push">
+            <intent-filter>
+                <action android:name="com.garena.android.gpns.NOTIFICATION_RECEIVE.com.shopee.id.10022"/>
+                <category android:name="com.garena.android.gpns.10022"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.appsflyer.MultipleInstallBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.shopee.app.util.ShopeeInstallReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.shopee.app.util.datapoint.DataPointBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.freefire.broadcast.ID"/>
+            </intent-filter>
+        </receiver>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.product.add.AddProductActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.chat2.search.ChatSearchActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.chat2.ChatListActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.chat2.block.BlockedUserActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.product.comment.FeedsComment.FeedsCommentActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.product.add.FacebookPageActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.product.rating.RatingImageActivity_"/>
+        <provider android:authorities="com.shopee.id.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <provider android:authorities="@string/fb_content_provider_id" android:exported="true" android:name="com.facebook.FacebookContentProvider"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.product.location.SetLocationNoticeActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.home.me.editprofile.EditProfileActivity_" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.home.me.editprofile.bio.EditProfileBioActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.home.me.editprofile.ShopLocationActivity_" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.myaccount.MyAccountActivity_" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/fb_app_name" android:name="com.facebook.FacebookActivity" android:theme="@style/com_facebook_activity_theme"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.myaccount.EmailSetActivity_" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.myaccount.PhoneSettings.PhoneSettingsActivity_" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.shopassistant.shopProfile.ShopProfileActivity_" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.myaccount.SocialAccounts.SocialAccountsActivity_" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.webview.WebPageActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.web2.WebPageActivity2_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.instagram.InstagramAuthPage_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.webview.simpleweb.SimpleWebPageActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.product.twitter.TwitterAuthPage_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.auth.signup.thirdparty.ThirdPartyRegisterActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.maps.BBMapLocationActivity"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.auth.AuthTabActivity_" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.auth.signup.email.EmailRegisterActivity_" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.auth.signup.email.EmailCaptchaActivity_" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.auth.IsAuthProxyActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.auth.IsNoAuthProxyActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.auth.signup.phone.PhoneDetailActivity_" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.actionbox.ActionBoxActivity"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.actionbox.ActionBoxActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.activity.ShopUpdatesActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.activity.ActivityActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.chat.ChatActivity_" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.follow.following.FollowingActivity"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.follow.following.recommend.RecommendFriendsActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.camera.MakePhotoActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.auth.password.ResetPasswordActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.auth.phone.PhoneAskActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.auth.phone.PhoneVerifyActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.auth.password.SetNewPasswordActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.auth.password.CheckPasswordActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.follow.search.SearchUserActivity_" android:windowSoftInputMode="stateVisible"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.product.newsearch.SearchTabActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.myproduct.MyProductActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.order.MyOrderActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.refund.cancel.CancelOrderActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.refund.detail.RefundDetailActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.setting.SettingActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.setting.NotificationBatchActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.setting.FontSelectionActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.scanner.ScannerActivity_" android:screenOrientation="landscape"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.setting.CustomerService.CustomerServiceActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.setting.notification2.NotificationActivity2_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.setting.emailnotification.EmailNotificationActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.setting.privacy.PrivacyActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.shopassistant.ShopAssistantActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.shopassistant.shopSetting.ShopSettingActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.shopassistant.chatSetting.ChatSettingActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.shopassistant.shopSetting.SetAutoReplyActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.tutorial.TutorialActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.tutorial.LanguageInitActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.income.TransactionActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.customer.list.MyCustomerActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.income.MyIncomeActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.chat2.product.ProductSelectionActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.setting.language.LanguageSettingActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.customer.order.CustomerOrdersActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.order.rate.OrderRateActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.order.detail.CheckoutDetailActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.setting.account.SingleEntrySettingActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.photo.PhotoProxyActivity_" android:screenOrientation="portrait"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.react.util.image.ReactPhotoProxyActivity_" android:theme="@style/Theme.Transparent"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.image.ImageBrowserActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.image.SearchPreviewActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.video.VideoViewerActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.video.trim.VideoTrimActivity_" android:screenOrientation="portrait"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.gallery.GalleryBrowserActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.chat2.offer.OfferTabActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.chat2.offer.OfferSingleTabActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.chat2.buy.BuyProductSelectActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.chat2.order.OrderSelectActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.chat2.order.singletab.OrderSingleTabActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.image.editor.ImageEditorActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.gallery.GalleryActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.gallery.instagram.InstagramGalleryActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.image.crop.CropActivity_"/>
+        <activity android:label="@string/app_name" android:name="com.shopee.app.ui.order.search.GetSearchShopCustomerActivity_"/>
+        <activity android:name="com.shopee.app.react.ReactActivity_" android:theme="@style/ReactShopeeTheme" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.shopee.app.react.ReactTransparentActivity_" android:theme="@style/Theme.TransparentDarkStatusBar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
+        <meta-data android:name="firebase_performance_collection_enabled" android:value="false"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/fb_app_id"/>
+        <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationName" android:value="@string/fb_app_name"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDzbRLKcy4_d72nhjHOsRaf1kwXfvwfX-w"/>
+        <service android:enabled="true" android:exported="false" android:name="com.shopee.app.react.sync.BundleSyncService">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.garena.sdk.applicationId" android:value="10003"/>
+        <activity android:name="com.beetalk.sdk.BTLoginActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="3c38111b02944bafce0702b5e9e4c7ecc938baef"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="com.shopee.app.util.youtube.OpenYouTubePlayerActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Black"/>
+        <service android:enabled="true" android:exported="true" android:name="com.garena.android.gpns.GNotificationService" android:process=":push">
+            <intent-filter>
+                <action android:name="com.garena.android.gpush.GNotificationService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.shopee.app.pushnotification.GPNIntentService"/>
+        <service android:exported="false" android:name="com.shopee.app.network.BIReportIntentService"/>
+        <receiver android:name="com.shopee.app.util.FailedMessageBroadcastReceiver"/>
+        <receiver android:exported="true" android:name="com.shopee.app.ui.auth.phone.SmsOtpReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher"/>
+        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:name="com.shopee.app.pushnotification.fcm.ShopeeFcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.shopee.app.util.datapoint.DataPointService"/>
+        <activity android:label="@string/app_name" android:name="com.shopee.app.ui.product.attributes.AttributeListActivity_" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:label="@string/app_name" android:name="com.shopee.app.ui.chat2.MessageShortcutsActivity_"/>
+        <activity android:label="@string/app_name" android:name="com.shopee.app.ui.chat2.MessageShortcutsEditActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/app_name" android:name="com.shopee.app.ui.error.ErrorActivity_"/>
+        <activity android:label="@string/app_name" android:name="com.shopee.app.ui.product.comment.CommentsActivity_"/>
+        <activity android:name="com.shopee.app.ui.product.add.wholesale.WholesaleActivity_" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.react.debug.ReactDebugActivity"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.bca.BCARegisterActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.bca.BCAEditXcoActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.tracklog.TrackLogActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.tracklog.TrackBadgeDetailActivity_" android:screenOrientation="portrait"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.util.sfchat.ui.SFChatProxyActivity_" android:theme="@style/Theme.TransparentDarkStatusBar"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.image.icimage.IcImagePreviewActivity_"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.line.LineAuthProxyActivity" android:theme="@style/Theme.TransparentDarkStatusBar"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.home.me.v3.MyShopActivity_" android:screenOrientation="portrait"/>
+        <activity android:label="@string/sp_app_name" android:name="com.shopee.app.ui.setting.notificationsound.NotificationSoundsActivity_"/>
+        <provider android:authorities="com.shopee.id.MarketingInitProvider" android:exported="false" android:initOrder="1" android:name="com.facebook.marketing.internal.MarketingInitProvider"/>
+        <provider android:authorities="com.shopee.id.FacebookInitProvider" android:exported="false" android:initOrder="1" android:name="com.facebook.internal.FacebookInitProvider"/>
+        <provider android:authorities="com.shopee.id.FacebookSettingsContentProvider" android:enabled="true" android:exported="false" android:initOrder="10" android:name="com.shopee.app.util.FacebookSettingsContentProvider"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <service android:exported="false" android:name="com.shopee.feeds.feedlibrary.bg.BackgroundService"/>
+        <activity android:name="com.shopee.feeds.feedlibrary.activity.SelectVoucherActivity"/>
+        <activity android:launchMode="singleTask" android:name="com.shopee.feeds.feedlibrary.webview.CommonWebviewActivity" android:screenOrientation="portrait" android:theme="@style/sdk_sp_shopee_theme"/>
+        <activity android:launchMode="singleTask" android:name="com.shopee.feeds.feedlibrary.activity.SelectPictureActivity" android:screenOrientation="portrait" android:theme="@style/sdk_sp_shopee_theme"/>
+        <activity android:launchMode="singleTask" android:name="com.shopee.feeds.feedlibrary.activity.CreatePostActivity" android:screenOrientation="portrait" android:theme="@style/sdk_sp_shopee_theme"/>
+        <activity android:launchMode="singleTask" android:name="com.shopee.feeds.feedlibrary.activity.SelectProductActivity" android:screenOrientation="portrait" android:theme="@style/sdk_sp_shopee_theme"/>
+        <activity android:launchMode="singleTask" android:name="com.shopee.feeds.feedlibrary.activity.MyFollowingActivity" android:screenOrientation="portrait" android:theme="@style/sdk_sp_shopee_theme"/>
+        <activity android:launchMode="singleTask" android:name="com.shopee.feeds.feedlibrary.activity.ProductSearchActivity" android:screenOrientation="portrait" android:theme="@style/sdk_sp_shopee_theme"/>
+        <activity android:launchMode="singleTask" android:name="com.shopee.feeds.feedlibrary.activity.UserSearchActivity" android:screenOrientation="portrait" android:theme="@style/sdk_sp_shopee_theme"/>
+        <activity android:launchMode="singleTask" android:name="com.shopee.feeds.feedlibrary.editor.activity.PhotoEditActivity" android:screenOrientation="portrait" android:theme="@style/sdk_sp_shopee_theme"/>
+        <activity android:launchMode="singleTask" android:name="com.shopee.feeds.feedlibrary.editor.activity.VideoEditActivity" android:screenOrientation="portrait" android:theme="@style/sdk_sp_shopee_theme"/>
+        <activity android:launchMode="singleTask" android:name="com.shopee.feeds.feedlibrary.activity.PicPreviewActivity" android:screenOrientation="portrait" android:theme="@style/sdk_sp_shopee_theme"/>
+        <activity android:launchMode="singleTask" android:name="com.shopee.feeds.feedlibrary.activity.CropActivity" android:screenOrientation="portrait" android:theme="@style/sdk_sp_shopee_theme"/>
+        <activity android:name="com.shopee.react.sdk.activity.ReactActivity"/>
+        <activity android:name="com.shopee.react.sdk.activity.ReactTransparentActivity" android:theme="@style/Theme.TransparentDarkStatusBar"/>
+        <activity android:configChanges="orientation|screenSize" android:launchMode="singleTask" android:name="com.salesforce.android.chat.ui.internal.chatfeed.ChatFeedActivity" android:theme="@style/SalesforceTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="orientation" android:launchMode="singleTask" android:name="com.salesforce.android.chat.ui.internal.prechat.PreChatActivity" android:theme="@style/SalesforceTheme.Floating"/>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="com.shopee.live.livestreaming.ui.anchor.LiveStreamingAnchorActivity" android:screenOrientation="portrait" android:theme="@style/LiveStreamingBlackTheme" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTask" android:name="com.shopee.live.livestreaming.ui.audience.activity.LiveStreamingAudienceActivity" android:screenOrientation="portrait" android:theme="@style/LiveStreamingBlackTheme" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTask" android:name="com.shopee.live.livestreaming.ui.audience.activity.LiveStreamingReplayActivity" android:screenOrientation="portrait" android:theme="@style/LiveStreamingBlackTheme" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="com.shopee.live.livestreaming.ui.forbidden.LiveStreamingForbiddenZoneActivity" android:screenOrientation="portrait" android:theme="@style/sdk_sp_shopee_theme" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="com.shopee.livestreaming.forbiddenzone"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.shopee.live.livestreaming.util.NetworkStateReceiver"/>
+        <service android:exported="false" android:name="com.shopee.live.livestreaming.ui.floatwindow.service.FloatVideoService">
+            <intent-filter>
+                <action android:name="com.shopee.livestreaming.livefloatservice"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="face"/>
+        <activity android:launchMode="singleTop" android:name="com.shopee.arcatch.page.activity.ArCatchLoadingActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.shopee.arcatch.page.activity.FaceMatchActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.shopee.arcatch.page.activity.ArCatchActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="com.shopee.livequiz.ui.activity.LivePlayerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:name="com.facebook.CustomTabActivity"/>
+        <activity android:exported="false" android:hardwareAccelerated="true" android:label="@string/places_autocomplete_label" android:name="com.google.android.libraries.places.widget.AutocompleteActivity" android:theme="@style/PlacesAutocompleteThemeOverlay" android:windowSoftInputMode="stateAlwaysVisible|adjustPan"/>
+        <service android:exported="false" android:name="com.shopee.liveimsdk.custom.CustomIMSingleService">
+            <intent-filter>
+                <action android:name="com.shopee.liveimsdk.CUSTOM_IM_SINGLE_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.tencent.qalsdk.service.QalService" android:process=":QALSERVICE"/>
+        <service android:exported="false" android:name="com.tencent.qalsdk.service.QalAssistService" android:process=":QALSERVICE"/>
+        <receiver android:exported="false" android:name="com.tencent.qalsdk.QALBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.broadcast.qal"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.tencent.qalsdk.core.NetConnInfoCenter" android:process=":QALSERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.service.TASK_REMOVED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.shopee.id.firebaseperfprovider" android:exported="false" android:initOrder="101" android:name="com.google.firebase.perf.provider.FirebasePerfProvider"/>
+        <service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.tagmanager.TagManagerService"/>
+        <activity android:exported="true" android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity" android:noHistory="true">
+            <intent-filter>
+                <data android:scheme="tagmanager.c.com.shopee.id"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.shopee.id.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:name="com.airpay.paysdk.core.dispatch.DispatchActivity" android:theme="@style/AppDispatchTheme">
+            <intent-filter>
+                <action android:name="airpay.intent.action.OPEN_QR_CODE"/>
+                <action android:name="airpay.intent.action.SCAN_TO_PAY"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.airpay.paysdk.qrcode.ui.PaymentCodeActivity" android:screenOrientation="portrait" android:theme="@style/AppActivityTheme"/>
+        <activity android:launchMode="singleTop" android:name="com.airpay.paysdk.qrcode.ui.ConfirmPaymentActivity" android:screenOrientation="portrait" android:theme="@style/com_garena_beepay_activity_half_transparent"/>
+        <activity android:launchMode="singleTop" android:name="com.airpay.paysdk.qrcode.ui.TicketCodeViewActivity" android:screenOrientation="portrait" android:theme="@style/com_garena_beepay_activity_transparent"/>
+        <activity android:launchMode="singleTop" android:name="com.airpay.paysdk.pay.PaymentDetailsActivity" android:screenOrientation="portrait" android:theme="@style/Pay_White_Theme" android:windowSoftInputMode="stateVisible"/>
+        <activity android:launchMode="singleTop" android:name="com.airpay.paysdk.pay.PaymentOptionsActivity" android:screenOrientation="portrait" android:theme="@style/Pay_White_Theme"/>
+        <activity android:launchMode="singleTop" android:name="com.airpay.paysdk.pay.ui.PaymentProcessingActivity" android:screenOrientation="portrait" android:theme="@style/com_garena_beepay_activity_half_transparent" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:launchMode="singleTop" android:name="com.airpay.paysdk.pay.ui.PaymentOTPVerifiedActivity" android:screenOrientation="portrait" android:theme="@style/com_garena_beepay_activity_transparent" android:windowSoftInputMode="stateAlwaysVisible|adjustPan"/>
+        <activity android:launchMode="singleTop" android:name="com.airpay.paysdk.pay.ui.PaymentOTPWebViewActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.airpay.paysdk.qrcode.ui.CheckPaymentPswActivity" android:screenOrientation="portrait" android:theme="@style/com_garena_beepay_activity_half_transparent" android:windowSoftInputMode="stateAlwaysVisible"/>
+        <activity android:launchMode="singleTop" android:name="com.airpay.paysdk.result.TransactionDetailsActivity" android:screenOrientation="portrait" android:theme="@style/Pay_White_Theme"/>
+        <activity android:launchMode="singleTop" android:name="com.airpay.paysdk.result.BPTransactionMoreDetailsActivity" android:screenOrientation="portrait" android:theme="@style/Pay_White_Theme"/>
+        <activity android:launchMode="singleTop" android:name="com.airpay.paysdk.qrcode.ui.PaymentCodeHelpActivity" android:screenOrientation="portrait" android:theme="@style/Pay_White_Theme"/>
+        <service android:name="com.salesforce.android.chat.core.internal.service.ChatService"/>
+        <service android:name="com.salesforce.android.service.common.liveagentlogging.internal.service.LiveAgentLoggingService"/>
+        <activity android:enabled="false" android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true"/>
+        <receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.shopee.id.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.linecorp.linesdk.auth.internal.LineAuthenticationActivity" android:theme="@style/LineSdk_AuthenticationActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.linecorp.linesdk.auth.internal.LineAuthenticationCallbackActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="lineauth"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.beetalklib.ganalytics.report_url" android:value="http://122.11.128.69:2205"/>
+        <activity android:configChanges="orientation" android:name="com.garena.pay.android.GGPayActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent"/>
+        <activity android:name="com.jakewharton.processphoenix.ProcessPhoenix" android:process=":phoenix" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
+        <meta-data android:name="com.android.vending.splits" android:value="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="5"/>
+    </application>
+</manifest>
