@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/buttonContainer" android:background="#ff161819" android:paddingTop="1.0px" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/seekbarContainer">
+        <ImageButton android:textColor="#ffffffff" android:id="@id/cancel" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginRight="1.0px" android:src="@drawable/ic_control_cancel" android:layout_weight="1.0" android:layout_marginEnd="1.0px" />
+        <ImageButton android:textColor="#ffffffff" android:id="@id/ok" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="56.0dip" android:src="@drawable/ic_control_done" android:layout_weight="1.0" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/seekbarContainer" android:background="#ff161819" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="90.0dip">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_control_centre" />
+        <TextView android:textColor="@color/primary" android:gravity="center" android:id="@id/textSeekbarValue" android:layout_width="20.0dip" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="50" />
+        <SeekBar android:layout_gravity="center_vertical" android:id="@id/seekbar" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="100" android:progress="24" android:progressDrawable="@drawable/seekbar_progress" android:thumb="@drawable/ic_control_drag" />
+    </FrameLayout>
+    <com.shopee.app.ui.image.editor.SubToolMenu_ android:id="@id/subMenu" android:background="#ff161819" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="90.0dip" />
+</RelativeLayout>

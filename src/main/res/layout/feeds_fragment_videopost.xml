@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/feeds_common_top" />
+    <com.shopee.sdk.ui.DrawShadowFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:shadowDrawable="@drawable/bottom_shadow2" app:shadowVisible="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/rl_frame" android:layout_width="fill_parent" android:layout_height="200.0dip">
+                <com.otaliastudios.cameraview.CameraView android:id="@id/camera_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true" app:cameraPictureSizeAspectRatio="1:1" />
+                <ImageView android:id="@id/iv_flash" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/feeds_ic_camera_flash_off" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+                <ImageView android:id="@id/iv_front" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/feeds_ic_camera_switch" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/iv_take_photo" android:background="@drawable/feeds_bg_photo_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/feeds_ic_take_photo" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.shopee.sdk.ui.DrawShadowFrameLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="35.0dip" android:max="100" android:progressDrawable="@drawable/livequiz_bg_answer_result_progress_bar" android:minHeight="35.0dip" style="?android:progressBarStyleHorizontal" />
+    <com.devspark.robototextview.widget.RobotoTextView android:ellipsize="end" android:id="@id/answer_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:maxLines="1" android:layout_centerVertical="true" app:robotoTypeface="roboto_regular" style="@style/txt_typeface_6" />
+    <com.devspark.robototextview.widget.RobotoTextView android:id="@id/answer_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:maxEms="8" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginEnd="12.0dip" android:layout_alignParentEnd="true" app:robotoTypeface="roboto_regular" style="@style/txt_typeface_8" />
+</RelativeLayout>

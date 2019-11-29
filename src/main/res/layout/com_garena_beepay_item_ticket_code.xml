@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/com_garena_beepay_view_background" android:background="@color/com_garena_beepay_bg_color_white" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/com_garena_beepay_section_content" android:padding="@dimen/com_garena_beepay_margin_xx_large" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.airpay.paysdk.base.ui.weidget.BPSizeFitImageView android:id="@id/com_garena_beepay_img_ticket_code" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.airpay.paysdk.base.ui.weidget.BPLoadingView android:id="@id/com_garena_beepay_img_ticket_loadingView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <com.airpay.paysdk.base.ui.weidget.BPAutoSpacingTextView android:textSize="@dimen/com_garena_beepay_text_size_normal" android:textColor="@color/txt_color_dark" android:gravity="center" android:id="@id/com_garena_beepay_txt_ticket_code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/com_garena_beepay_margin_normal" app:font_path="@string/font_path_gotham_medium" />
+        <TextView android:textSize="@dimen/txt_size_small" android:textColor="@color/text_dark_30" android:gravity="center" android:id="@id/code_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/com_garena_beepay_margin_small" android:text="@string/label_do_not_share_code" />
+    </LinearLayout>
+</FrameLayout>

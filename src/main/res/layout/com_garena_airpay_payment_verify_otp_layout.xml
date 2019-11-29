@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/com_garena_beepay_scanner_button_normal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:garena="http://schemas.android.com/apk/res-auto">
+    <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="vertical" android:background="@color/bg_white" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0">
+        <RelativeLayout android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="44.0dip">
+            <TextView android:textSize="@dimen/com_garena_beepay_text_size_large" android:textColor="@color/com_garena_beepay_selector_half_screen_payment_text_action" android:gravity="center_vertical" android:id="@id/com_garena_beepay_tv_action_left" android:layout_width="72.0dip" android:layout_height="fill_parent" android:text="@string/com_garena_beepay_label_cancel" android:lines="1" />
+            <TextView android:textSize="@dimen/com_garena_beepay_text_size_large" android:textColor="@color/text_dark_100" android:gravity="center" android:id="@id/com_garena_beepay_tv_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/airpay_title_input_otp" android:layout_centerHorizontal="true" />
+            <TextView android:enabled="false" android:textSize="@dimen/com_garena_beepay_text_size_large" android:textColor="@color/com_garena_beepay_selector_half_screen_payment_text_action" android:gravity="end|center" android:id="@id/com_garena_beepay_tv_action_right" android:layout_width="72.0dip" android:layout_height="fill_parent" android:text="@string/com_garena_beepay_label_continue" android:lines="1" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <View android:background="@color/border_normal" android:layout_width="fill_parent" android:layout_height="@dimen/border_thick_0_5" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/com_garena_beepay_txt_color_grey" android:layout_marginTop="15.0dip" android:text="@string/airpay_label_enter_otp_code_verify_transaction" style="@style/com_garena_beepay_common_section_general_item_style" />
+        <TextView android:textSize="@dimen/com_garena_beepay_text_size_normal" android:textColor="@color/text_dark_100" android:id="@id/com_garena_beepay_txt_phone_number" android:visibility="gone" android:layout_marginTop="8.0dip" style="@style/com_garena_beepay_common_section_general_item_style" />
+        <com.airpay.paysdk.base.ui.weidget.BSSectionPureTextItemView android:id="@id/com_garena_beepay_verification_code_area" android:layout_marginTop="10.0dip" garena:base_editable="true" garena:base_layout_ref="@layout/com_garena_beepay_section_vertical_large_item" garena:base_max_length="10" style="@style/com_garena_beepay_common_section_general_item_style" />
+    </LinearLayout>
+</LinearLayout>

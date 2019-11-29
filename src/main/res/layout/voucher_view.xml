@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black" android:gravity="center" android:id="@id/text_voucher_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="40.0dip" style="@style/RobotoR16" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textSize="34.0sp" android:textStyle="bold" android:textColor="@color/primary" android:gravity="center|top" android:id="@id/text_voucher_code" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="35.0dip" android:maxLines="1" android:singleLine="true" style="@style/RobotoR16Bold" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:gravity="center" android:id="@id/text_voucher_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="20.0dip" style="@style/RobotoL14" />
+    <View android:background="@color/background_divider" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="35.0dip" />
+    <com.devspark.robototextview.widget.RobotoButton android:textColor="@color/primary" android:gravity="center" android:id="@id/btn_copy_code" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="46.0dip" android:text="@string/sp_label_copy_code" style="@style/RobotoR16" />
+</LinearLayout>

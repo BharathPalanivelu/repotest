@@ -1,0 +1,23 @@
+package cn.tongdun.android.core.oo0ooo0o00o0xo;
+
+import android.content.Context;
+import android.net.wifi.WifiManager;
+import cn.tongdun.android.core.oo0ooo0o00o0xo.o00xxox0x0xoox.o00xxox0x0xoox;
+
+final class x0xx00ooxx0oo000xxo implements o00xxox0x0xoox {
+    private final WifiManager o00xxox0x0xoox;
+    private final Context oo0ooo0o00o0xo;
+
+    private x0xx00ooxx0oo000xxo(Context context, WifiManager wifiManager) {
+        this.o00xxox0x0xoox = wifiManager;
+        this.oo0ooo0o00o0xo = context;
+    }
+
+    public static x0xx00ooxx0oo000xxo o00xxox0x0xoox(Context context, WifiManager wifiManager) {
+        return new x0xx00ooxx0oo000xxo(context, wifiManager);
+    }
+
+    public Object o00xxox0x0xoox() {
+        return xoxx0xx.o00xx0xx0ooooo0xx00(this.oo0ooo0o00o0xo, this.o00xxox0x0xoox);
+    }
+}

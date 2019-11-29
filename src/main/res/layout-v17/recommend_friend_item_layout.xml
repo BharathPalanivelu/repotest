@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="16.0dip" />
+    <RelativeLayout android:background="@drawable/white_background_hightlight" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="wrap_content" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginRight="16.0dip" android:layout_centerVertical="true" android:layout_marginEnd="16.0dip" />
+        <TextView android:textColor="@color/black87" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/username" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="8.0dip" android:singleLine="true" android:layout_marginEnd="8.0dip" android:layout_toStartOf="@id/follow_button" android:layout_toEndOf="@id/avatar" style="@style/RobotoR14" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:ellipsize="end" android:gravity="start" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:singleLine="true" android:layout_below="@id/username" android:textAlignment="viewStart" android:layout_marginEnd="6.0dip" android:layout_toStartOf="@id/follow_button" android:layout_toEndOf="@id/avatar" style="@style/RobotoR12" />
+        <com.devspark.robototextview.widget.RobotoButton android:textSize="12.0sp" android:id="@id/follow_button" android:paddingLeft="12.0dip" android:layout_width="wrap_content" android:layout_height="32.0dip" android:minWidth="88.0dip" android:text="@string/sp_follow" android:drawableLeft="@drawable/com_garena_shopee_ic_btn_add" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/ButtonPrimary" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/products_panel" android:background="@color/white" android:paddingLeft="12.0dip" android:paddingTop="4.0dip" android:paddingRight="12.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/product_panel0" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/product0" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.devspark.robototextview.widget.RobotoTextView android:id="@id/product_text0" style="@style/productPriceLabel" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/product_panel1" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/product1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.devspark.robototextview.widget.RobotoTextView android:id="@id/product_text1" style="@style/productPriceLabel" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/product_panel2" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/product2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.devspark.robototextview.widget.RobotoTextView android:id="@id/product_text2" style="@style/productPriceLabel" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/product_panel3" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/product3" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.devspark.robototextview.widget.RobotoTextView android:id="@id/product_text3" style="@style/productPriceLabel" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

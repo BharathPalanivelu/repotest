@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <WebView android:id="@id/webView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/toolbar" />
+        <RelativeLayout android:orientation="horizontal" android:id="@id/toolbar" android:background="@color/secondary" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_alignParentBottom="true">
+            <ImageButton android:id="@id/back_button" android:background="@drawable/btn_mask_no_radius_no_border" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:src="@drawable/com_garena_shopee_ic_back_white" android:layout_marginStart="4.0dip" android:layout_alignParentStart="true" />
+            <ImageButton android:id="@id/forward_button" android:background="@drawable/btn_mask_no_radius_no_border" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:src="@drawable/com_garena_shopee_ic_forward_white" android:layout_marginStart="16.0dip" android:layout_toEndOf="@id/back_button" />
+            <ImageButton android:id="@id/refresh_button" android:background="@drawable/btn_mask_no_radius_no_border" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="4.0dip" android:src="@drawable/com_garena_shopee_ic_refresh_white" android:layout_marginEnd="4.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:indeterminate="true" style="@android:style/Widget.Holo.Light.ProgressBar.Large.Inverse" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:gravity="center" android:id="@id/error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/sp_web_tap_reload" style="@style/RobotoL32" />
+</merge>

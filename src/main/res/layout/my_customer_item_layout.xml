@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/white_background_hightlight" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.shopee.app.ui.common.AvatarView android:id="@id/avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginRight="16.0dip" android:layout_centerVertical="true" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/avatar" style="@style/RobotoR14" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black65" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/nickname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/avatar" android:layout_below="@id/username" style="@style/RobotoL12" />
+</RelativeLayout>

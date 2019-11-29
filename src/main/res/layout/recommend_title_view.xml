@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/fb_friends" android:background="@drawable/bottom_border_white_background_highlight" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <ImageView android:id="@id/fb_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/com_garena_shopee_ic_addfriend_fb" android:layout_centerVertical="true" />
+        <com.devspark.robototextview.widget.RobotoTextView android:gravity="center_vertical" android:id="@id/facebook_friends_view" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:text="@string/sp_find_facebook_friends" android:layout_toRightOf="@id/fb_icon" style="@style/ProductEditText" />
+    </RelativeLayout>
+</merge>

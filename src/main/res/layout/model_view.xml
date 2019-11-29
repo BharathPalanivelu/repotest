@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <RelativeLayout android:id="@id/delete_icon" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_centerVertical="true">
+        <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_add_product_delete" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/model_type" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_toRightOf="@id/delete_icon">
+        <ImageView android:gravity="center_vertical" android:id="@id/set_model" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_product_setmodel" android:layout_centerVertical="true" />
+        <com.devspark.robototextview.widget.RobotoTextView android:id="@id/model_type_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sp_label_type" android:layout_toRightOf="@id/set_model" android:layout_centerVertical="true" style="@style/ProductEditText" />
+        <com.devspark.robototextview.widget.RobotoEditText android:textSize="14.0sp" android:gravity="end|center" android:id="@id/set_model_input" android:layout_width="wrap_content" android:layout_height="fill_parent" android:hint="@string/sp_model_type_hint" android:singleLine="true" android:maxLength="20" android:layout_toRightOf="@id/model_type_text" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/ProductEditText" />
+        <View android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/model_price" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_toRightOf="@id/delete_icon" android:layout_below="@id/model_type">
+        <ImageView android:gravity="center_vertical" android:id="@id/model_price_image" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/com_garena_shopee_ic_add_product_price" android:layout_centerVertical="true" />
+        <com.devspark.robototextview.widget.RobotoTextView android:id="@id/model_price_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sp_label_price" android:layout_toRightOf="@id/model_price_image" android:layout_centerVertical="true" style="@style/ProductEditText" />
+        <com.devspark.robototextview.widget.RobotoEditText android:textSize="14.0sp" android:gravity="end|center" android:id="@id/model_price_input" android:layout_width="wrap_content" android:layout_height="fill_parent" android:hint="@string/sp_label_set_price" android:singleLine="true" android:layout_toRightOf="@id/model_price_title" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/ProductEditText" />
+        <View android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/model_stock" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_toRightOf="@id/delete_icon" android:layout_below="@id/model_price">
+        <ImageView android:gravity="center_vertical" android:id="@id/model_stock_image" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/com_garena_shopee_ic_add_product_stock" android:layout_centerVertical="true" />
+        <com.devspark.robototextview.widget.RobotoTextView android:id="@id/model_stock_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sp_label_stock" android:layout_toRightOf="@id/model_stock_image" android:layout_centerVertical="true" style="@style/ProductEditText" />
+        <com.devspark.robototextview.widget.RobotoEditText android:textSize="14.0sp" android:gravity="end|center" android:id="@id/model_stock_input" android:layout_width="wrap_content" android:layout_height="fill_parent" android:hint="@string/sp_label_set_stock" android:singleLine="true" android:layout_toRightOf="@id/model_stock_text" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/ProductEditText" />
+    </RelativeLayout>
+</RelativeLayout>

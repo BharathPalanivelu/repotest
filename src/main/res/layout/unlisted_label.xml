@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/white" android:id="@id/product_price" android:background="@drawable/rounded_grey" android:padding="@dimen/spacing_tiny" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unlisted" style="@style/RobotoR10"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

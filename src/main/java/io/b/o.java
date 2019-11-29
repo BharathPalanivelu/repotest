@@ -1,0 +1,13 @@
+package io.b;
+
+import io.b.b.b;
+
+public interface o<T> {
+    void a();
+
+    void a(b bVar);
+
+    void a(T t);
+
+    void a(Throwable th);
+}

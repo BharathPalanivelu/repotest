@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/white_background_hightlight" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="36.0dip">
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/sp_seller_center" style="@style/RobotoR14" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/url" android:gravity="center_vertical" android:id="@id/url" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" style="@style/RobotoR12" />
+    </RelativeLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/banner" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:text="@string/sp_be_a_power_seller" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textSize="12.0sp" android:textColor="@color/seller_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="50.0dip" android:layout_marginRight="20.0dip" android:text="@string/sp_manager_your_shop_efficiently_on_shopee" />
+    </FrameLayout>
+</LinearLayout>

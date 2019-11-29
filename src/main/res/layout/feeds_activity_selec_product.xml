@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/grey_0" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/feeds_common_top" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.shopee.sdk.ui.DrawShadowFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:shadowDrawable="@drawable/bottom_shadow2" app:shadowVisible="true">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <View android:layout_gravity="bottom" android:background="@color/color_9" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                <com.google.android.material.tabs.TabLayout android:id="@id/tab_layout" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginBottom="0.5dip" app:tabIndicatorColor="@color/main_text_color" app:tabTextAppearance="@style/TabLayoutTextStyle" app:tabTextColor="#ff191919" />
+            </FrameLayout>
+        </com.shopee.sdk.ui.DrawShadowFrameLayout>
+        <View android:background="@drawable/feeds_app_line_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="6.0dip" />
+        <com.shopee.feeds.feedlibrary.view.easyviewpager.CustomScrollViewPager android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape android:thickness="1.0dip">
+                <gradient android:startColor="@color/com_garena_beepay_txt_regular_color_blue" android:endColor="@color/com_garena_beepay_txt_regular_color_blue" android:angle="270.0" android:centerY="0.75" android:centerColor="@color/com_garena_beepay_txt_regular_color_blue" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:thickness="2.0dip">
+                <gradient android:startColor="@color/com_garena_beepay_txt_regular_color_blue" android:endColor="@color/com_garena_beepay_txt_regular_color_blue" android:angle="270.0" android:centerY="0.75" android:centerColor="@color/com_garena_beepay_txt_regular_color_blue" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:paddingLeft="12.0dip" android:paddingTop="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sp_label_my_account" android:paddingStart="12.0dip" style="@style/RobotoR12" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnProfile" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_label_my_profile" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnEditAddress" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_label_my_address" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnBankAndCard" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_label_my_bank_and_card" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:paddingLeft="12.0dip" android:paddingTop="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sp_settings" android:paddingStart="12.0dip" style="@style/RobotoR12" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/myEReceipt" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/my_e_receipt" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnChatSetting" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_label_chat_settings" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnNotificationBatchSettings" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_notification_settings" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnPrivacySettings" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_privacy_setting" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnBlockedUser" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_blocked_users" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnLanguageSettings" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_language_settings" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:paddingLeft="12.0dip" android:paddingTop="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sp_label_support" android:paddingStart="12.0dip" style="@style/RobotoR12" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnHelperCenter" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_help_centre" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnTipsAndTricks" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_tip_n_trick" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnCommunityRules" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_community_rule" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnShopeePolicies" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_label_shopee_policies" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnGooglePlay" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_rate_shopee" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnClearCache" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/settings_clear_cache" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnRequestAccountDeletion" android:layout_width="fill_parent" android:layout_height="wrap_content" app:text="@string/sp_request_account_deletion" />
+    <com.devspark.robototextview.widget.RobotoButton android:id="@id/btnLogout" android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_margin="16.0dip" android:text="@string/sp_label_logout" style="@style/ButtonPrimary" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:gravity="center" android:id="@id/app_version" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" style="@style/RobotoR12" />
+</LinearLayout>

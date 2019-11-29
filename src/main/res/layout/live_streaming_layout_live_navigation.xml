@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:id="@id/ll_live_navigation" android:layout_width="fill_parent" android:layout_height="44.0dip" android:weightSum="3.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_live_back" android:background="@color/live_streaming_product_bg" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <com.shopee.live.livestreaming.ui.view.MyButton android:id="@id/btn_go_live" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" app:layersColor="@color/button_layer" app:mybutton_border_color="@color/main_color" app:mybutton_border_width="1.0dip" app:normalBackgroundColor="@color/main_color" app:normalTextColor="@color/white" app:radius="0.0dip" app:textSize="16.0sp" app:ver_padding="2.0dip" />
+</LinearLayout>

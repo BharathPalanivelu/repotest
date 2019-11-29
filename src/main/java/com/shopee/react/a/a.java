@@ -1,0 +1,43 @@
+package com.shopee.react.a;
+
+public final class a {
+
+    /* renamed from: com.shopee.react.a.a$a  reason: collision with other inner class name */
+    public static final class C0463a {
+        public static final int abc_fade_in = 2130771968;
+        public static final int abc_fade_out = 2130771969;
+        public static final int abc_grow_fade_in_from_bottom = 2130771970;
+        public static final int abc_popup_enter = 2130771971;
+        public static final int abc_popup_exit = 2130771972;
+        public static final int abc_shrink_fade_out_from_bottom = 2130771973;
+        public static final int abc_slide_in_bottom = 2130771974;
+        public static final int abc_slide_in_top = 2130771975;
+        public static final int abc_slide_out_bottom = 2130771976;
+        public static final int abc_slide_out_top = 2130771977;
+        public static final int abc_tooltip_enter = 2130771978;
+        public static final int abc_tooltip_exit = 2130771979;
+        public static final int btn_checkbox_to_checked_box_inner_merged_animation = 2130771988;
+        public static final int btn_checkbox_to_checked_box_outer_merged_animation = 2130771989;
+        public static final int btn_checkbox_to_checked_icon_null_animation = 2130771990;
+        public static final int btn_checkbox_to_unchecked_box_inner_merged_animation = 2130771991;
+        public static final int btn_checkbox_to_unchecked_check_path_merged_animation = 2130771992;
+        public static final int btn_checkbox_to_unchecked_icon_null_animation = 2130771993;
+        public static final int btn_radio_to_off_mtrl_dot_group_animation = 2130771994;
+        public static final int btn_radio_to_off_mtrl_ring_outer_animation = 2130771995;
+        public static final int btn_radio_to_off_mtrl_ring_outer_path_animation = 2130771996;
+        public static final int btn_radio_to_on_mtrl_dot_group_animation = 2130771997;
+        public static final int btn_radio_to_on_mtrl_ring_outer_animation = 2130771998;
+        public static final int btn_radio_to_on_mtrl_ring_outer_path_animation = 2130771999;
+        public static final int fade_in_animation = 2130772027;
+        public static final int fade_in_animation_long = 2130772028;
+        public static final int fade_out_animation = 2130772029;
+        public static final int fade_out_animation_long = 2130772030;
+        public static final int not_move_ani = 2130772035;
+        public static final int slide_in_from_bottom = 2130772039;
+        public static final int slide_in_from_bottom_fast = 2130772040;
+        public static final int slide_in_from_up = 2130772042;
+        public static final int slide_out_from_bottom = 2130772043;
+        public static final int slide_out_from_bottom_fast = 2130772044;
+        public static final int slide_out_from_top = 2130772046;
+    }
+}

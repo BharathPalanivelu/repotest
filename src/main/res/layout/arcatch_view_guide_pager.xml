@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/arcatch_guide_guide_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="22.5dip" android:layout_marginTop="22.5dip" android:layout_marginRight="22.5dip" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+    <com.shopee.arcatch.page.view.ArCatchGuideIndicator android:id="@id/arcatch_guide_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+</LinearLayout>

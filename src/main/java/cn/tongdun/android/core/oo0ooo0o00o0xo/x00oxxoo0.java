@@ -1,0 +1,20 @@
+package cn.tongdun.android.core.oo0ooo0o00o0xo;
+
+import android.content.Context;
+import cn.tongdun.android.core.oo0ooo0o00o0xo.o00xxox0x0xoox.o00xxox0x0xoox;
+
+final class x00oxxoo0 implements o00xxox0x0xoox {
+    private Context o00xxox0x0xoox;
+
+    private x00oxxoo0(Context context) {
+        this.o00xxox0x0xoox = context;
+    }
+
+    public static x00oxxoo0 o00xxox0x0xoox(Context context) {
+        return new x00oxxoo0(context);
+    }
+
+    public Object o00xxox0x0xoox() {
+        return xoxx0xx.xo00o00xxox0xx(this.o00xxox0x0xoox);
+    }
+}

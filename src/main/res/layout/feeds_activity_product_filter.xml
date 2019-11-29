@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/filter_layout" android:layout_width="fill_parent" android:layout_height="48.0dip" android:weightSum="3.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_weight="1.0">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.devspark.robototextview.widget.RobotoTextView android:textSize="12.0sp" android:textColor="@color/feeds_search_cate_color" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/mall_tx" android:background="@drawable/feeds_search_select_bg_selector_unselect" android:layout_width="fill_parent" android:layout_height="32.0dip" android:text="@string/feeds_search_mall_key" android:singleLine="true" app:robotoTypeface="roboto_regular" />
+            <ImageView android:id="@id/mall_img" android:background="@drawable/feeds_search_sub_selected_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_weight="1.0">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.devspark.robototextview.widget.RobotoTextView android:textSize="12.0sp" android:textColor="@color/feeds_search_cate_color" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/prefer_tx" android:background="@drawable/feeds_search_select_bg_selector_unselect" android:layout_width="fill_parent" android:layout_height="32.0dip" android:text="@string/feeds_search_preferred_key" android:singleLine="true" app:robotoTypeface="roboto_regular" />
+            <ImageView android:id="@id/prefer_img" android:background="@drawable/feeds_search_sub_selected_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_weight="1.0">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.devspark.robototextview.widget.RobotoTextView android:textSize="12.0sp" android:textColor="@color/feeds_search_cate_color" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/time_tx" android:background="@drawable/feeds_search_select_bg_selector_unselect" android:layout_width="fill_parent" android:layout_height="32.0dip" android:text="@string/feeds_search_time_key" android:singleLine="true" app:robotoTypeface="roboto_regular" />
+            <ImageView android:id="@id/time_img" android:background="@drawable/feeds_search_sub_selected_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

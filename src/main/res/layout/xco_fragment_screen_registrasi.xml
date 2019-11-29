@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_marginBottom="20.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/xco_space_layout" style="@style/padding">
+                    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/xco_space_left_subtitle">
+                        <ImageView android:id="@id/xco_ic_kartu" android:layout_width="@dimen/xco_size_icon" android:layout_height="@dimen/xco_size_icon" android:layout_marginRight="@dimen/xco_space_icon_with_text" android:src="@drawable/xco_ic_kartu" />
+                        <com.bca.xco.widget.comp.XTextView android:textSize="@dimen/xco_standard_font_size" android:textColor="@color/xco_text_active" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="NOMOR KARTU" android:layout_toRightOf="@id/xco_ic_kartu" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                    <com.bca.xco.widget.comp.XEditText android:textSize="@dimen/xco_text_size_input" android:id="@id/xco_input_card_number" android:layout_width="fill_parent" android:layout_height="@dimen/xco_text_size_height" android:text="" android:hint="@string/xco_hint_input_card_number" android:maxLength="19" android:drawableRight="@drawable/xco_ic_cancel" android:inputType="number" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/padding">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/xco_space_left_subtitle">
+                        <ImageView android:id="@id/xco_ic_batas_harian" android:layout_width="@dimen/xco_size_icon" android:layout_height="@dimen/xco_size_icon" android:layout_marginRight="@dimen/xco_space_icon_with_text" android:src="@drawable/xco_ic_batas_harian" />
+                        <com.bca.xco.widget.comp.XTextView android:textSize="@dimen/xco_standard_font_size" android:textColor="@color/xco_text_active" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LIMIT HARIAN" android:layout_toRightOf="@id/xco_ic_batas_harian" android:layout_centerVertical="true" />
+                        <ImageView android:id="@id/xco_info_limit" android:layout_width="@dimen/xco_size_icon" android:layout_height="@dimen/xco_size_icon" android:layout_marginRight="@dimen/xco_space_ic_limit_info" android:src="@drawable/xco_ic_notification" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                    <com.bca.xco.widget.comp.XEditText android:textSize="@dimen/xco_text_size_input" android:id="@id/xco_input_daily_limit" android:layout_width="fill_parent" android:layout_height="@dimen/xco_text_size_height" android:text="" android:hint="@string/xco_hint_input_daily_limit" android:maxLength="11" android:drawableLeft="@drawable/xco_ic_cancel" android:drawableRight="@drawable/xco_ic_cancel" android:inputType="number" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.bca.xco.widget.comp.XTextView android:textSize="@dimen/xco_standard_font_size" android:gravity="fill_horizontal|center" android:layout_gravity="center" android:id="@id/xco_text_help" android:padding="5.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:text="BANTUAN" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

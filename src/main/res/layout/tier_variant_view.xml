@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/variationDividerFirst" android:background="@color/black09" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <com.garena.android.appkit.btmsheet.MaxHeightScrollView android:id="@id/scrollViewFirst" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:paddingLeft="12.0dip" android:paddingTop="8.0dip" android:paddingRight="12.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:id="@id/variationTitleFirst" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sp_label_select_variation" style="@style/RobotoR14" />
+            <com.garena.android.uikit.fluid.tagcloud.GTagCloud android:id="@id/variationGridFirst" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/variationTitleFirst" />
+        </RelativeLayout>
+    </com.garena.android.appkit.btmsheet.MaxHeightScrollView>
+    <View android:id="@id/variationDividerSecond" android:background="@color/black09" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <com.garena.android.appkit.btmsheet.MaxHeightScrollView android:id="@id/scrollViewSecond" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:paddingLeft="12.0dip" android:paddingTop="8.0dip" android:paddingRight="12.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:id="@id/variationTitleSecond" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sp_label_select_variation" style="@style/RobotoR14" />
+            <com.garena.android.uikit.fluid.tagcloud.GTagCloud android:id="@id/variationGridSecond" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/variationTitleSecond" />
+        </RelativeLayout>
+    </com.garena.android.appkit.btmsheet.MaxHeightScrollView>
+</merge>

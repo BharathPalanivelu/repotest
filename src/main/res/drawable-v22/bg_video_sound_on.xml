@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/video_turn_on" android:start="@dimen/btn_video_mute_margin_horizonal" android:end="@dimen/btn_video_mute_margin_horizonal" />
+</layer-list>

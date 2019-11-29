@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/border_color_normal" />
+        </shape>
+    </item>
+    <item android:top="0.75dip" android:bottom="0.75dip">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/com_garena_beepay_bg_color_white" />
+        </shape>
+    </item>
+</layer-list>

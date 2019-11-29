@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="32.0dip">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@id/login_id"
+            style="@style/EditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sp_login_placeholder"
+            android:inputType="textNoSuggestions"
+            android:maxLength="64" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@id/password"
+                style="@style/EditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="@string/sp_label_password"
+                android:inputType="textPassword" />
+
+            <com.devspark.robototextview.widget.RobotoButton
+                android:id="@id/forgot_password_btn"
+                style="@style/RobotoR12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/password"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/action_bar_button_background"
+                android:minWidth="60.0dip"
+                android:text="@string/sp_label_forgot"
+                android:textAllCaps="false"
+                android:textColor="@color/link_text_material_light" />
+        </RelativeLayout>
+
+        <com.devspark.robototextview.widget.RobotoButton
+            android:id="@id/login_btn"
+            style="@style/ButtonPrimary"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginTop="16.0dip"
+            android:text="@string/sp_log_in" />
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:id="@id/help_btn"
+            style="@style/RobotoR12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10.0dip"
+            android:background="?selectableItemBackground"
+            android:padding="6.0dip"
+            android:text="@string/label_need_help"
+            android:textAllCaps="false" />
+
+        <com.devspark.robototextview.widget.RobotoButton
+            android:id="@id/qa_login_btn"
+            style="@style/RobotoR12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16.0dip"
+            android:background="@drawable/action_bar_button_background"
+            android:text="QA Login?"
+            android:textAllCaps="false"
+            android:textColor="@color/black26"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:layout_marginBottom="20.0dip">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/label_or"
+                    android:background="@color/black26" />
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:id="@id/label_or"
+                    style="@style/RobotoR12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="24.0dip"
+                    android:paddingRight="24.0dip"
+                    android:text="@string/sp_label_quick_login_with"
+                    android:textColor="@color/black54" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/label_or"
+                    android:background="@color/black26" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.devspark.robototextview.widget.RobotoTextView
+                        android:id="@id/sms_btn"
+                        style="@style/ButtonGeneric"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dip"
+                        android:background="@drawable/btn_login_sms"
+                        android:text="@string/sp_login_sms_full"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="26.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="8.0dip"
+                        android:src="@drawable/login_sms" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@id/line_panel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12.0dip">
+
+                    <com.devspark.robototextview.widget.RobotoTextView
+                        android:id="@id/line_btn"
+                        style="@style/ButtonGeneric"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dip"
+                        android:background="@drawable/btn_login_line"
+                        android:text="@string/sp_label_login_line_full"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="26.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="8.0dip"
+                        android:padding="2.0dip"
+                        android:src="@drawable/login_line" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12.0dip">
+
+                    <com.devspark.robototextview.widget.RobotoTextView
+                        android:id="@id/facebook_btn"
+                        style="@style/ButtonGeneric"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dip"
+                        android:background="@drawable/btn_login_facebook"
+                        android:text="@string/sp_label_login_facebook_full"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="26.0dip"
+                        android:layout_height="26.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="8.0dip"
+                        android:src="@drawable/login_facebook" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

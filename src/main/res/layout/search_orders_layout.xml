@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:dividerHeight="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/order_list" android:background="@color/background" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/empty_vew" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/circle_icon" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="80.0dip" android:src="@drawable/ic_no_orderdetails" android:layout_centerHorizontal="true" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black26" android:gravity="center" android:id="@id/label" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sp_order_search_view_hint_1" android:layout_below="@id/circle_icon" android:layout_centerInParent="true" style="@style/RobotoR12" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black26" android:gravity="center" android:id="@id/label1" android:paddingTop="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sp_order_search_view_hint_2" android:drawableRight="@drawable/ic_search_recipient" android:drawablePadding="4.0dip" android:layout_below="@id/label" android:layout_centerInParent="true" android:layout_centerVertical="true" android:drawableEnd="@drawable/ic_search_recipient" style="@style/RobotoR12" />
+    </RelativeLayout>
+</FrameLayout>

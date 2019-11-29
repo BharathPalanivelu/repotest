@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/live_streaming_bg_black_rectange" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_shopee_voucher" android:focusable="false" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_no_product" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableTop="@drawable/live_streaming_ic_no_voucher" android:drawablePadding="6.0dip" android:layout_centerInParent="true" />
+    <ProgressBar android:id="@id/loading_progress" android:visibility="gone" android:layout_width="27.0dip" android:layout_height="27.0dip" android:indeterminateDrawable="@drawable/live_streaming_page_circle_progress_bar" android:indeterminateDuration="1000" android:layout_centerInParent="true" />
+</RelativeLayout>

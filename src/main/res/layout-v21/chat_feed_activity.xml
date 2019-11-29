@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="@color/salesforce_contrast_quaternary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/SalesforceAppBarOverlay" android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" app:navigationIcon="@drawable/ic_close_livechat" style="@style/ChatToolbar">
+            <com.salesforce.android.service.common.ui.views.SalesforceTextView android:textSize="@dimen/font_size_18" android:textColor="@color/black87" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/chat_feed_agent_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chat_feed_title" android:singleLine="true" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.salesforce.android.service.common.ui.views.SalesforceConnectionBanner android:id="@id/chat_connection_banner" style="@style/SalesforceConnectionBanner" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/chat_message_feed" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/chat_feed_content_description" app:layout_behavior="com.salesforce.android.service.common.ui.behavior.SalesforceSqueezeBehavior" app:salesforce_squeeze_beneath_view="@id/appbar" app:salesforce_squeeze_over_view="@id/chat_feed_input_footer" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/chat_feed_input_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="com.salesforce.android.service.common.ui.behavior.SalesforcePushUpAndHideBehavior">
+        <include layout="@layout/salesforce_message_input" />
+    </FrameLayout>
+    <com.salesforce.android.service.common.ui.views.SalesforceBottomSheetMenu android:id="@id/chat_bottom_sheet_menu" android:background="@color/salesforce_contrast_inverted" android:layout_width="fill_parent" android:layout_height="wrap_content" android:splitMotionEvents="false" android:elevation="4.0dip" app:behavior_hideable="true" app:behavior_peekHeight="0.0dip" app:layout_behavior="@string/bottom_sheet_behavior" />
+    <include layout="@layout/chat_resume_error" />
+    <FrameLayout android:id="@id/fullscreen_status_container" android:background="@color/salesforce_brand_secondary_inverted" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?android:actionBarSize" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

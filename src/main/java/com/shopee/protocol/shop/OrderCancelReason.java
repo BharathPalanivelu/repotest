@@ -1,0 +1,40 @@
+package com.shopee.protocol.shop;
+
+import com.shopee.live.livestreaming.data.entity.DanmaKuEntity;
+import com.squareup.wire.ProtoEnum;
+import com.tencent.ijk.media.player.IMediaPlayer;
+import com.tencent.qalsdk.im_open.http;
+
+public enum OrderCancelReason implements ProtoEnum {
+    CANCEL_REASON_NONE(0),
+    CANCEL_REASON_OUT_OF_STOCK(1),
+    CANCEL_REASON_CUSTOMER_REQUEST(2),
+    CANCEL_REASON_UNDELIVERABLE_AREA(3),
+    CANCEL_REASON_CANNOT_SUPPORT_COD(4),
+    CANCEL_REASON_LOST_PARCEL(5),
+    CANCEL_REASON_GAME_COMPLETED(6),
+    CANCEL_REASON_SYSTEM_UNPAID(100),
+    CANCEL_REASON_SYSTEM_UNDERPAID(101),
+    CANCEL_REASON_SYSTEM_PAYMENT_REJECTED(102),
+    CANCEL_REASON_LOGISTICS_REQUEST_CANCELED(200),
+    CANCEL_REASON_LOGISTICS_PICKUP_FAILED(DanmaKuEntity.MESSAGE_PUBLIC),
+    CANCEL_REASON_LOGISTICS_DELIVERY_FAILED(202),
+    CANCEL_REASON_LOGISTICS_COD_REJECTED(203),
+    CANCEL_REASON_BACKEND_LOGISTICS_NOT_STARTED(http.No_Content),
+    CANCEL_REASON_BACKEND_ESCROW_TERMINATED(300),
+    CANCEL_REASON_BACKEND_INACTIVE_SELLER(301),
+    CANCEL_REASON_BACKEND_SELLER_DID_NOT_SHIP(302),
+    CANCEL_REASON_RULE_ENGINE_AUTO_CANCEL(400),
+    CANCEL_REASON_LOGISTICS_ISSUE(IMediaPlayer.MEDIA_INFO_NOT_SEEKABLE),
+    CANCEL_REASON_FRAUD_CASE(IMediaPlayer.MEDIA_INFO_UNSUPPORTED_SUBTITLE);
+    
+    private final int value;
+
+    private OrderCancelReason(int i) {
+        this.value = i;
+    }
+
+    public int getValue() {
+        return this.value;
+    }
+}

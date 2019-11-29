@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.exoplayer2.ui.AspectRatioFrameLayout android:layout_gravity="center" android:id="@id/video_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextureView android:layout_gravity="center" android:id="@id/texture_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.google.android.exoplayer2.ui.SubtitleView android:id="@id/subtitles" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.google.android.exoplayer2.ui.AspectRatioFrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/rl_following" android:background="@drawable/feeds_bg_common_press_item" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="63.0dip">
+            <com.shopee.feeds.feedlibrary.view.CircleImageView android:id="@id/civ_portrait" android:background="@drawable/feeds_shape_cb_head" android:padding="0.5dip" android:clickable="true" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/feeds_icn_default_avatar" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/grey_900" android:id="@id/tv_follow_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/civ_portrait" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/grey_500" android:id="@id/tv_follower_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_toRightOf="@id/civ_portrait" android:layout_below="@id/tv_follow_name" />
+        </RelativeLayout>
+        <View android:id="@id/view_bg" android:background="#a6ffffff" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="63.0dip" />
+    </FrameLayout>
+    <View android:background="@color/grey_100" android:layout_width="fill_parent" android:layout_height="0.30000007dip" />
+</LinearLayout>

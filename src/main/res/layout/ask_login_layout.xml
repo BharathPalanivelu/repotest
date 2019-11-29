@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/login_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black26" android:gravity="center" android:id="@id/label" android:paddingTop="8.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Already a user and want to see your Activity?" android:layout_centerInParent="true" style="@style/RobotoR12" />
+    <ImageView android:id="@id/circle_icon" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/ic_no_activity" android:scaleType="centerInside" android:layout_above="@id/label" android:layout_centerHorizontal="true" />
+    <com.devspark.robototextview.widget.RobotoButton android:textColor="@color/black54" android:id="@id/ask_login_btn" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="@string/sp_login_or_signup_label" android:layout_below="@id/label" android:layout_centerHorizontal="true" style="@style/ButtonSecondaryGrey" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/useLocalhost" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" app:primaryText="Use localhost" app:showCheck="true" />
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/bottom_border_white_background_highlight" android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <com.rengwuxian.materialedittext.MaterialEditText android:gravity="center_vertical" android:id="@id/rnServerEdit" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="Enter RN Server IP" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" app:met_hideUnderline="true" style="@style/RobotoR14" />
+        <com.devspark.robototextview.widget.RobotoButton android:id="@id/btnSetServer" android:layout_width="wrap_content" android:layout_height="30.0dip" android:text="SET" style="@style/ButtonSecondaryPrimary" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/white_background_hightlight" android:padding="10.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/avatar_section" android:layout_width="34.0dip" android:layout_height="32.0dip" android:layout_marginRight="8.0dip" android:layout_centerVertical="true" android:layout_marginEnd="8.0dip" android:layout_alignParentStart="true">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/avatar" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+        <ImageView android:layout_gravity="end|bottom|center" android:id="@id/shopee_verified" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/ic_shop_verified_tick" android:scaleType="fitCenter" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/follow_button" android:layout_toEndOf="@id/avatar_section">
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:ellipsize="end" android:id="@id/nickname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:singleLine="true" android:layout_marginEnd="8.0dip" style="@style/RobotoR14" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black65" android:ellipsize="end" android:id="@id/username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:singleLine="true" android:layout_marginEnd="8.0dip" style="@style/RobotoL12" />
+    </LinearLayout>
+    <com.devspark.robototextview.widget.RobotoButton android:textSize="12.0sp" android:id="@id/follow_button" android:paddingLeft="12.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="32.0dip" android:minWidth="88.0dip" android:text="@string/sp_view_shop" android:layout_centerVertical="true" android:textAllCaps="false" android:layout_alignParentEnd="true" style="@style/ButtonSecondaryPrimary" />
+</RelativeLayout>

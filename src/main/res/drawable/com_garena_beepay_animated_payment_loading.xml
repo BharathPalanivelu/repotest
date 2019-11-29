@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/com_garena_beepay_payment_loading"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target android:name="loading_circle" android:animation="@anim/com_garena_beepay_payment_loading_circle_ani" />
+    <target android:name="loading_tick" android:animation="@anim/com_garena_beepay_payment_loading_tick_ani" />
+</animated-vector>

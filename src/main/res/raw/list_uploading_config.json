@@ -1,0 +1,555 @@
+{
+  "singapore": {
+    "version": "524d309d814c310bc4c3b57a92a92b9e",
+    "data": {
+      "attrs": [
+        {
+          "attr_key": "title.length.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "title.length.max",
+          "value_type": "octet",
+          "attr_value": "80"
+        },
+        {
+          "attr_key": "description.length.min",
+          "value_type": "octet",
+          "attr_value": "20"
+        },
+        {
+          "attr_key": "description.length.max",
+          "value_type": "octet",
+          "attr_value": "3000"
+        },
+        {
+          "attr_key": "image.num.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "category.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "brand.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "image.height.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "image.width.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "title.character_blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "price.limit.max",
+          "value_type": "octet",
+          "attr_value": "99999900000"
+        },
+        {
+          "attr_key": "price.limit.min",
+          "value_type": "octet",
+          "attr_value": "10000"
+        },
+        {
+          "attr_key": "stock.limit.max",
+          "value_type": "octet",
+          "attr_value": "999999"
+        },
+        {
+          "attr_key": "stock.limit.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        }
+      ]
+    },
+    "error_msg": null,
+    "error": 0
+  },
+  "malaysia": {
+    "version": "524d309d814c310bc4c3b57a92a92b9e",
+    "data": {
+      "attrs": [
+        {
+          "attr_key": "title.length.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "title.length.max",
+          "value_type": "octet",
+          "attr_value": "80"
+        },
+        {
+          "attr_key": "description.length.min",
+          "value_type": "octet",
+          "attr_value": "20"
+        },
+        {
+          "attr_key": "description.length.max",
+          "value_type": "octet",
+          "attr_value": "3000"
+        },
+        {
+          "attr_key": "image.num.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "category.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "brand.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "image.height.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "image.width.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "title.character_blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "price.limit.max",
+          "value_type": "octet",
+          "attr_value": "100000000000000"
+        },
+        {
+          "attr_key": "price.limit.min",
+          "value_type": "octet",
+          "attr_value": "10000"
+        },
+        {
+          "attr_key": "stock.limit.max",
+          "value_type": "octet",
+          "attr_value": "999999"
+        },
+        {
+          "attr_key": "stock.limit.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        }
+      ]
+    },
+    "error_msg": null,
+    "error": 0
+  },
+  "thailand": {
+    "version": "524d309d814c310bc4c3b57a92a92b9e",
+    "data": {
+      "attrs": [
+        {
+          "attr_key": "title.length.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "title.length.max",
+          "value_type": "octet",
+          "attr_value": "120"
+        },
+        {
+          "attr_key": "description.length.min",
+          "value_type": "octet",
+          "attr_value": "25"
+        },
+        {
+          "attr_key": "description.length.max",
+          "value_type": "octet",
+          "attr_value": "5000"
+        },
+        {
+          "attr_key": "image.num.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "category.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "brand.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "image.height.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "image.width.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "title.character_blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "price.limit.max",
+          "value_type": "octet",
+          "attr_value": "100000000000000"
+        },
+        {
+          "attr_key": "price.limit.min",
+          "value_type": "octet",
+          "attr_value": "100000"
+        },
+        {
+          "attr_key": "stock.limit.max",
+          "value_type": "octet",
+          "attr_value": "999999"
+        },
+        {
+          "attr_key": "stock.limit.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        }
+      ]
+    },
+    "error_msg": null,
+    "error": 0
+  },
+  "taiwan": {
+    "version": "524d309d814c310bc4c3b57a92a92b9e",
+    "data": {
+      "attrs": [
+        {
+          "attr_key": "title.length.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "title.length.max",
+          "value_type": "octet",
+          "attr_value": "60"
+        },
+        {
+          "attr_key": "description.length.min",
+          "value_type": "octet",
+          "attr_value": "3"
+        },
+        {
+          "attr_key": "description.length.max",
+          "value_type": "octet",
+          "attr_value": "3000"
+        },
+        {
+          "attr_key": "image.num.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "category.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "brand.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "image.height.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "image.width.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "title.character_blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "price.limit.max",
+          "value_type": "octet",
+          "attr_value": "49999900000"
+        },
+        {
+          "attr_key": "price.limit.min",
+          "value_type": "octet",
+          "attr_value": "100000"
+        },
+        {
+          "attr_key": "stock.limit.max",
+          "value_type": "octet",
+          "attr_value": "999999"
+        },
+        {
+          "attr_key": "stock.limit.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        }
+      ]
+    },
+    "error_msg": null,
+    "error": 0
+  },
+  "indonesia": {
+    "version": "524d309d814c310bc4c3b57a92a92b9e",
+    "data": {
+      "attrs": [
+        {
+          "attr_key": "title.length.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "title.length.max",
+          "value_type": "octet",
+          "attr_value": "100"
+        },
+        {
+          "attr_key": "description.length.min",
+          "value_type": "octet",
+          "attr_value": "20"
+        },
+        {
+          "attr_key": "description.length.max",
+          "value_type": "octet",
+          "attr_value": "3000"
+        },
+        {
+          "attr_key": "image.num.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "category.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "brand.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "image.height.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "image.width.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "title.character_blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "price.limit.max",
+          "value_type": "octet",
+          "attr_value": "100000000000000"
+        },
+        {
+          "attr_key": "price.limit.min",
+          "value_type": "octet",
+          "attr_value": "10000000"
+        },
+        {
+          "attr_key": "stock.limit.max",
+          "value_type": "octet",
+          "attr_value": "999999"
+        },
+        {
+          "attr_key": "stock.limit.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        }
+      ]
+    },
+    "error_msg": null,
+    "error": 0
+  },
+  "philipines": {
+    "version": "524d309d814c310bc4c3b57a92a92b9e",
+    "data": {
+      "attrs": [
+        {
+          "attr_key": "title.length.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "title.length.max",
+          "value_type": "octet",
+          "attr_value": "60"
+        },
+        {
+          "attr_key": "description.length.min",
+          "value_type": "octet",
+          "attr_value": "20"
+        },
+        {
+          "attr_key": "description.length.max",
+          "value_type": "octet",
+          "attr_value": "3000"
+        },
+        {
+          "attr_key": "image.num.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "category.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "brand.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "image.height.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "image.width.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "title.character_blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "price.limit.max",
+          "value_type": "octet",
+          "attr_value": "100000000000"
+        },
+        {
+          "attr_key": "price.limit.min",
+          "value_type": "octet",
+          "attr_value": "500000"
+        },
+        {
+          "attr_key": "stock.limit.max",
+          "value_type": "octet",
+          "attr_value": "999999"
+        },
+        {
+          "attr_key": "stock.limit.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        }
+      ]
+    },
+    "error_msg": null,
+    "error": 0
+  },
+  "vietnam": {
+    "version": "524d309d814c310bc4c3b57a92a92b9e",
+    "data": {
+      "attrs": [
+        {
+          "attr_key": "title.length.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "title.length.max",
+          "value_type": "octet",
+          "attr_value": "120"
+        },
+        {
+          "attr_key": "description.length.min",
+          "value_type": "octet",
+          "attr_value": "100"
+        },
+        {
+          "attr_key": "description.length.max",
+          "value_type": "octet",
+          "attr_value": "3000"
+        },
+        {
+          "attr_key": "image.num.min",
+          "value_type": "octet",
+          "attr_value": "1"
+        },
+        {
+          "attr_key": "category.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "brand.blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "image.height.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "image.width.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        },
+        {
+          "attr_key": "title.character_blacklist",
+          "value_type": "octet",
+          "attr_value": ""
+        },
+        {
+          "attr_key": "price.limit.max",
+          "value_type": "octet",
+          "attr_value": "10000000000000"
+        },
+        {
+          "attr_key": "price.limit.min",
+          "value_type": "octet",
+          "attr_value": "100000000"
+        },
+        {
+          "attr_key": "stock.limit.max",
+          "value_type": "octet",
+          "attr_value": "999999"
+        },
+        {
+          "attr_key": "stock.limit.min",
+          "value_type": "octet",
+          "attr_value": "0"
+        }
+      ]
+    },
+    "error_msg": null,
+    "error": 0
+  }
+}

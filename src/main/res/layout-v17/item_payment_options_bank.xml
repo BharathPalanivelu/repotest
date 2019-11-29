@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/com_garena_beepay_bg_color_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/com_garena_beepay_divider_top" android:background="@color/border_color_normal" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/com_garena_beepay_border_width_thin" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/layout_content" android:paddingLeft="14.0dip" android:paddingTop="@dimen/com_garena_beepay_margin_normal" android:paddingRight="@dimen/com_garena_beepay_margin_normal" android:paddingBottom="@dimen/com_garena_beepay_margin_normal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/com_garena_beepay_img_selection" android:layout_width="@dimen/com_garena_beepay_payment_selection_height_width" android:layout_height="@dimen/com_garena_beepay_payment_selection_height_width" android:src="@drawable/com_garena_beepay_circular_checkbox_selector" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/com_garena_beepay_margin_m_normal" android:layout_marginStart="@dimen/com_garena_beepay_margin_m_normal">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/com_garena_beepay_img_channel_icon" android:layout_width="22.0dip" android:layout_height="22.0dip" />
+                <TextView android:textSize="@dimen/com_garena_beepay_text_size_x_normal" android:textColor="@color/txt_color_dark_grey" android:ellipsize="end" android:id="@id/com_garena_beepay_txt_channel_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/com_garena_beepay_margin_small" android:singleLine="true" android:layout_weight="1.0" android:layout_marginStart="@dimen/com_garena_beepay_margin_small" />
+                <TextView android:textSize="@dimen/com_garena_beepay_text_size_x_normal" android:textColor="@drawable/com_garena_beepay_color_list_item_txt_default" android:layout_gravity="top" android:id="@id/com_garena_beepay_txt_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/com_garena_beepay_margin_small" android:layout_marginStart="@dimen/com_garena_beepay_margin_small" />
+            </LinearLayout>
+            <TextView android:id="@id/com_garena_beepay_txt_rebate" android:visibility="gone" style="@style/com_garena_beepay_payment_option_channel_details_orange" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/com_garena_beepay_divider_bottom" android:background="@color/border_color_normal" android:layout_width="fill_parent" android:layout_height="@dimen/com_garena_beepay_border_width_thin" />
+</LinearLayout>

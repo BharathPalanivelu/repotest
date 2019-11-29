@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_product_item" android:background="@color/grey_200" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_product" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_product" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitXY" />
+        <LinearLayout android:gravity="center" android:id="@id/ll_check" android:visibility="gone" android:layout_width="29.0dip" android:layout_height="29.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true">
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_check" android:background="@drawable/feeds_product_checkbox_selector" android:layout_width="36.0dip" android:layout_height="36.0dip" android:includeFontPadding="false" />
+        </LinearLayout>
+    </RelativeLayout>
+    <com.devspark.robototextview.widget.RobotoTextView android:textSize="14.0sp" android:textColor="@color/black_87" android:ellipsize="end" android:gravity="left" android:layout_gravity="center" android:id="@id/tv_product_name" android:background="@color/white" android:paddingLeft="10.0dip" android:paddingTop="6.5dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:minLines="2" android:includeFontPadding="false" android:layout_toRightOf="@id/iv_product" app:robotoTypeface="roboto_regular" />
+    <com.shopee.feeds.feedlibrary.editor.text.PriceTextView android:textSize="16.0sp" android:textColor="@color/main_text_color" android:gravity="bottom|center|left" android:id="@id/price_textview" android:background="@color/white" android:paddingLeft="10.0dip" android:paddingTop="3.0dip" android:paddingRight="10.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" />
+</LinearLayout>

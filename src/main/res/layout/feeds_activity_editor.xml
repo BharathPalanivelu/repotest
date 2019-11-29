@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_top_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <include layout="@layout/feeds_common_top" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_view_pager_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/ll_bottom_bar" android:layout_below="@id/rl_top_layout">
+        <RelativeLayout android:id="@id/rl_image_or_video_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/rl_video_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="200.0dip" layout="@layout/feeds_layout_editor_video" />
+            <androidx.viewpager.widget.ViewPager android:id="@id/tag_viewpager" android:layout_width="fill_parent" android:layout_height="200.0dip" />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_product" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_image_or_video_container" />
+        <com.shopee.feeds.feedlibrary.view.PageIndicator android:gravity="center" android:id="@id/page_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/page_indicator_height" android:layout_marginTop="16.0dip" android:layout_below="@id/rl_image_or_video_container" android:layout_centerHorizontal="true" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/page_indicator">
+            <TextView android:id="@id/tv_tap" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TagTextStyle" />
+            <TextView android:id="@id/tv_remove" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TagTextStyle" />
+            <TextView android:id="@id/tv_move" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" style="@style/TagTextStyle" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_bottom_bar" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@id/rl_add_tag" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/iv_add_tag" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/feeds_ic_tag" android:scaleType="centerInside" android:layout_centerInParent="true" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="3.0dip">
+                <com.devspark.robototextview.widget.RobotoTextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_tag_num" android:background="@drawable/feeds_bg_add_tag_button_corner_mark" android:visibility="gone" android:layout_width="15.0dip" android:layout_height="15.0dip" android:includeFontPadding="false" android:layout_centerInParent="true" app:robotoTypeface="roboto_regular" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <ImageView android:id="@id/iv_add_text" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/feeds_ic_text" android:scaleType="centerInside" android:layout_weight="1.0" />
+        <ImageView android:id="@id/iv_add_sticker" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/feeds_ic_sticker" android:scaleType="centerInside" android:layout_weight="1.0" />
+    </LinearLayout>
+    <com.shopee.feeds.feedlibrary.editor.sticker.CommentStickerEditorPanel android:id="@id/comment_edit_panel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

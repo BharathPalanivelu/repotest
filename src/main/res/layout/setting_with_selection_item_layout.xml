@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:id="@id/primary_text" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/sp_label_country" android:layout_weight="1.0" style="@style/RobotoR14" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:id="@id/selection_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" style="@style/RobotoR14" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/imv_right_arrow" android:layout_width="@dimen/dp12" android:layout_height="@dimen/dp12" android:layout_marginRight="16.0dip" android:src="@drawable/ic_arrow_right" />
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:id="@id/bottom_divider" android:background="@color/black09" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</merge>

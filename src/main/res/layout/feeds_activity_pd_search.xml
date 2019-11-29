@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55.0dip"
+        android:layout_marginTop="8.0dip"
+        android:background="@color/grey_0"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+        <View
+            android:id="@id/search_et_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginRight="70.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:background="@drawable/feeds_search_round_bg" />
+
+        <com.shopee.feeds.feedlibrary.view.edittext.CustomSearchEditText
+            android:id="@id/et_search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="90.0dip"
+            android:background="@null"
+            android:drawableLeft="@drawable/feeds_ic_search_gray"
+            android:drawablePadding="5.0dip"
+            android:hint=""
+            android:imeOptions="actionSearch"
+            android:maxLength="255"
+            android:paddingLeft="10.0dip"
+            android:paddingTop="6.0dip"
+            android:paddingBottom="6.0dip"
+            android:singleLine="true"
+            android:textColorHint="@color/grey_400"
+            android:textSize="14.0sp" />
+
+        <ImageView
+            android:id="@id/iv_search_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/search_et_bg"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:clickable="true"
+            android:src="@drawable/feeds_search_cancle_selector"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="12.0dip"
+            android:paddingRight="12.0dip"
+            android:text="@string/feeds_button_cancel"
+            android:textColor="@color/grey_1000"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <com.shopee.sdk.ui.DrawShadowFrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:shadowDrawable="@drawable/bottom_shadow2"
+        app:shadowVisible="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/recycler_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fadingEdge="none"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@id/tv_no_result"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40.0dip"
+                android:gravity="center"
+                android:text="@string/feeds_search_product_or_shope_no_result_found_tips"
+                android:textColor="@color/grey_500"
+                android:textSize="14.0sp"
+                android:visibility="gone" />
+
+            <com.shopee.feeds.feedlibrary.view.SearchLoadingView
+                android:id="@id/search_loading_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10.0dip"
+                android:visibility="gone"
+                app:color1="#ff00eeee"
+                app:color2="#ffff4040" />
+        </LinearLayout>
+    </com.shopee.sdk.ui.DrawShadowFrameLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/shadow_view" android:background="#77000000" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_centerInParent="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/popup_window_view" android:background="@drawable/feeds_bg_pop" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="7.0">
+            <TextView android:textSize="18.0sp" android:gravity="center" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:id="@id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="5.0dip" android:lineSpacingExtra="8.0dip" />
+                <View android:background="@color/grey_300" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="23.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/orange_700" android:gravity="center" android:id="@id/tv_cancel" android:layout_width="0.0dip" android:layout_height="50.0dip" android:text="@string/feeds_button_cancel" android:layout_weight="1.0" />
+                    <View android:background="@color/grey_300" android:layout_width="0.5dip" android:layout_height="fill_parent" />
+                    <TextView android:textColor="@color/orange_700" android:gravity="center" android:id="@id/tv_confirm" android:layout_width="0.0dip" android:layout_height="50.0dip" android:text="@string/feeds_button_discard" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

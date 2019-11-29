@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.devspark.robototextview.widget.RobotoTextView android:textSize="13.0sp" android:textColor="@color/black" android:id="@id/txt_tab" android:layout_width="wrap_content" android:layout_height="wrap_content" app:robotoTypeface="roboto_regular" />
+    <TextView android:textColor="@color/grey_1000" android:id="@id/txt_tab_num" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" />
+</LinearLayout>

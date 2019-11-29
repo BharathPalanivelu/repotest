@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.shopee.app.ui.common.SquareFrameLayout android:id="@id/layout_square_frame" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/sticker_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+    </com.shopee.app.ui.common.SquareFrameLayout>
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:ellipsize="end" android:id="@id/tv_roboto" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" android:textAlignment="center" style="@style/RobotoR11" />
+</merge>

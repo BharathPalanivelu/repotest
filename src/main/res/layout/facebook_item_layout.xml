@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/category_layout" android:background="@drawable/bottom_border_white_background_highlight" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.devspark.robototextview.widget.RobotoTextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/page_name" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLength="100" android:layout_toLeftOf="@id/toggle_button" android:inputType="textCapSentences" style="@style/ProductEditText" />
+    <RelativeLayout android:id="@id/toggle_button" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/com_garena_shopee_ic_ok" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

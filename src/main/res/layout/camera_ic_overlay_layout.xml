@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.shopee.app.ui.image.RotatingViewGroup android:id="@id/rotatingViewGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.4" app:rotation="90">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_kredit_mask_ic" android:scaleType="fitCenter" />
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/white" android:layout_gravity="center" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="@string/sp_camera_hint_kredit_ic" android:shadowColor="@color/black" android:shadowRadius="4.0" style="@style/RobotoR14" />
+        </FrameLayout>
+    </com.shopee.app.ui.image.RotatingViewGroup>
+    <View android:id="@id/mask_top" android:background="@color/black40" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/rotatingViewGroup" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <View android:id="@id/mask_bottom" android:background="@color/black40" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/rotatingViewGroup" />
+    <View android:id="@id/mask_left" android:background="@color/black40" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/rotatingViewGroup" app:layout_constraintEnd_toStartOf="@id/rotatingViewGroup" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/rotatingViewGroup" />
+    <View android:id="@id/mask_right" android:background="@color/black40" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/rotatingViewGroup" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/rotatingViewGroup" app:layout_constraintTop_toTopOf="@id/rotatingViewGroup" />
+</androidx.constraintlayout.widget.ConstraintLayout>

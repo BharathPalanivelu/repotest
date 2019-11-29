@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/xco_border_radius" />
+            <stroke android:width="@dimen/xco_button_border_width" android:color="@color/xco_button_cancel_border_color" />
+            <solid android:color="@color/xco_button_cancel_hover_color" />
+        </shape>
+    </item>
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/xco_border_radius" />
+            <stroke android:width="@dimen/xco_button_border_width" android:color="@color/xco_button_cancel_border_color" />
+            <solid android:color="@color/xco_button_cancel_color" />
+        </shape>
+    </item>
+</selector>

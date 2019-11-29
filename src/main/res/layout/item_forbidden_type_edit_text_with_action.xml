@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bottom_border_white_background_highlight" android:paddingTop="@dimen/spacing_normal" android:paddingBottom="@dimen/spacing_normal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:gravity="center_vertical" android:id="@id/tvTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/RobotoR14" />
+    <LinearLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.rengwuxian.materialedittext.MaterialEditText android:id="@id/editText" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/EditText" />
+        <com.devspark.robototextview.widget.RobotoButton android:textColor="@color/black87" android:id="@id/btnAction" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginLeft="@dimen/spacing_normal" android:textAllCaps="false" style="@style/ButtonSecondaryBlue" />
+    </LinearLayout>
+</LinearLayout>

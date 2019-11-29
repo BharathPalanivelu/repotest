@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/img_item_1" android:layout_width="@dimen/livequiz_dialog_share_item_size" android:layout_height="@dimen/livequiz_dialog_share_item_size" android:src="@mipmap/livequiz_ic_whatsapp" />
+    <ImageView android:id="@id/img_item_2" android:layout_width="@dimen/livequiz_dialog_share_item_size" android:layout_height="@dimen/livequiz_dialog_share_item_size" android:layout_marginLeft="@dimen/livequiz_dialog_share_item_margin_between" android:src="@mipmap/livequiz_ic_instagram" />
+    <ImageView android:id="@id/img_item_3" android:layout_width="@dimen/livequiz_dialog_share_item_size" android:layout_height="@dimen/livequiz_dialog_share_item_size" android:layout_marginLeft="@dimen/livequiz_dialog_share_item_margin_between" android:src="@mipmap/livequiz_ic_line" />
+    <ImageView android:id="@id/img_copy_link" android:layout_width="@dimen/livequiz_dialog_share_item_size" android:layout_height="@dimen/livequiz_dialog_share_item_size" android:layout_marginLeft="@dimen/livequiz_dialog_share_item_margin_between" android:src="@mipmap/livequiz_ic_copy_link" />
+    <ImageView android:id="@id/img_more" android:layout_width="@dimen/livequiz_dialog_share_item_size" android:layout_height="@dimen/livequiz_dialog_share_item_size" android:layout_marginLeft="@dimen/livequiz_dialog_share_item_margin_between" android:src="@mipmap/livequiz_ic_more" />
+</LinearLayout>

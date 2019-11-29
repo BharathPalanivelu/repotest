@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="chat_minimized_unread_message_count">
+        <item quantity="other">%1$d unread messages from %2$s</item>
+        <item quantity="one">%1$d unread message from %2$s</item>
+    </plurals>
+</resources>

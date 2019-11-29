@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="54.0dip" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/white90" android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:id="@id/empty_view_label" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="No Videos" />
+    <com.shopee.app.ui.gallery.AlbumListView_ android:layout_gravity="bottom" android:id="@id/album_list" android:background="@color/black54" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="54.0dip" />
+    <FrameLayout android:layout_gravity="bottom" android:background="@color/black80" android:padding="16.0dip" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="54.0dip">
+        <TextView android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/album_filter" android:layout_width="wrap_content" android:layout_height="fill_parent" android:drawableRight="@drawable/ic_arrow" android:drawablePadding="4.0dip" android:drawableEnd="@drawable/ic_arrow" />
+        <TextView android:textColor="@color/white" android:layout_gravity="center|right" android:id="@id/album_counter" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="0/8" />
+    </FrameLayout>
+</FrameLayout>

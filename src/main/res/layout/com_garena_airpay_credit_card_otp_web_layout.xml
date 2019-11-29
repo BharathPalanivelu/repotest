@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/com_garena_beepay_webview_progress_bar" android:layout_width="fill_parent" android:layout_height="2.0dip" android:progressDrawable="@drawable/com_garena_beepay_webview_progress_bar" style="?android:progressBarStyleHorizontal" />
+    <FrameLayout android:id="@id/com_garena_beepay_webview_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/com_garena_beepay_webview_error_page" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="120.0dip" android:layout_height="120.0dip" android:src="@drawable/com_garena_beepay_icon_network_error" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/com_garena_beepay_default_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/com_garena_beepay_network_unavailable" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/com_garena_beepay_txt_color_grey" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="32.0dip" android:text="@string/com_garena_beepay_description_webview_network_unavailable" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

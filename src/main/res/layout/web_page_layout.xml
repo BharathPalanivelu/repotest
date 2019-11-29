@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipe_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wheel="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/webview_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.shopee.app.ui.webview.TouchWebView android:id="@id/webView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.pnikosis.materialishprogress.ProgressWheel android:layout_gravity="center" android:id="@id/progress_wheel" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="30.0dip" wheel:matProg_barColor="@color/black26" wheel:matProg_progressIndeterminate="true" />
+        <RelativeLayout android:id="@id/error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:gravity="center" android:id="@id/error_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sp_no_internet_connection" android:layout_above="@id/gap" style="@style/RobotoR14" />
+            <View android:id="@id/gap" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_centerInParent="true" />
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/primary" android:gravity="center" android:id="@id/error_retry" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/offline_message_retry_button" android:layout_below="@id/gap" android:layout_centerInParent="true" style="@style/RobotoR12" />
+        </RelativeLayout>
+    </FrameLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/top_bar" android:background="#ff22263b" android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <ImageButton android:id="@id/back_button" android:background="@null" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/com_garena_shopee_ic_back" />
+        <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/editor_title" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/undo_container" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageButton android:id="@id/undo_button" android:background="@null" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_marginRight="16.0dip" android:src="@drawable/ic_filter_back" android:layout_marginEnd="16.0dip" />
+            <ImageButton android:id="@id/redo_button" android:background="@null" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:src="@drawable/ic_filter_next" android:layout_marginStart="16.0dip" />
+        </LinearLayout>
+        <ImageButton android:layout_gravity="end" android:id="@id/save_button" android:background="@null" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/com_garena_shopee_ic_done" />
+    </FrameLayout>
+    <com.garena.imageeditor.ImageEditView android:id="@id/editView" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/presetTool" android:layout_below="@id/top_bar" />
+    <com.shopee.app.ui.image.editor.EditToolbar_ android:id="@id/buttonPanel" android:background="#ff282828" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <com.shopee.app.ui.image.editor.PresetToolbar_ android:id="@id/presetTool" android:background="#ff161819" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_above="@id/buttonPanel" />
+    <com.shopee.app.ui.image.editor.AdjustView android:id="@id/adjustView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.garena.android.uikit.image.browser.GImageBrowserView android:id="@id/browser" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageButton android:id="@id/back_button" android:background="@drawable/action_bar_button_background" android:layout_width="@dimen/action_bar_height" android:layout_height="@dimen/action_bar_height" android:src="@drawable/com_garena_shopee_ic_back" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/count_display" android:background="@color/black50" android:padding="4.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" style="@style/RobotoM12" />
+</merge>

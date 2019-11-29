@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:garena="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.shopee.app.ui.product.comment.CommentSwitchView_ android:id="@id/buyer_review_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="40.0dip" android:layout_alignParentTop="true" />
+        <RelativeLayout android:id="@id/emptyView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/comment_text" android:layout_below="@id/buyer_review_switch">
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black26" android:gravity="center" android:id="@id/label" android:paddingTop="8.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sp_product_no_rating" android:layout_centerInParent="true" android:layout_centerVertical="true" style="@style/RobotoR12" />
+            <ImageView android:id="@id/circle_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_no_comment" android:layout_above="@id/label" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.shopee.app.ui.common.ExceptionCatchListView android:id="@id/comment_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/comment_text" android:layout_below="@id/buyer_review_switch" />
+        <com.shopee.app.ui.common.ExceptionCatchListView android:id="@id/user_list" android:background="@color/background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/comment_text" />
+        <com.shopee.app.ui.common.SendTextView_ android:id="@id/comment_text" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true" garena:maxChars="250" garena:textHint="@string/sp_send_comment" />
+    </RelativeLayout>
+</LinearLayout>

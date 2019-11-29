@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipe_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <RelativeLayout android:orientation="vertical" android:id="@id/me_tab_content_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.shopee.app.ui.common.ProductProgressView_ android:id="@id/upload_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.shopee.app.ui.home.me.MeCoverView_ android:id="@id/me_cover" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/upload_progress" />
+            <com.google.android.material.tabs.TabLayout android:id="@id/tab_layout" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_below="@id/me_cover" app:tabBackground="@drawable/white_background_hightlight" app:tabGravity="fill" app:tabIndicatorColor="@color/primary" app:tabIndicatorHeight="2.0dip" app:tabMode="fixed" app:tabPaddingEnd="@dimen/spacing_small" app:tabPaddingStart="@dimen/spacing_small" app:tabSelectedTextColor="@color/primary" app:tabTextAppearance="@style/RobotoR14" app:tabTextColor="@color/black65" />
+            <FrameLayout android:id="@id/switch_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tab_layout" />
+        </RelativeLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

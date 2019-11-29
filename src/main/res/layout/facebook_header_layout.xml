@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="16.0dip" />
+    <RelativeLayout android:id="@id/category_layout" android:background="@drawable/bottom_border_white_background_highlight" android:layout_width="fill_parent" android:layout_height="48.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.devspark.robototextview.widget.RobotoTextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/no_page" android:background="@drawable/white_background_hightlight" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/sp_fb_page_none" android:inputType="textCapSentences" style="@style/ProductEditText" />
+        <RelativeLayout android:id="@id/toggle_button" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/com_garena_shopee_ic_ok" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black65" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/title" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="20.0dip" android:text="@string/sp_fb_page_title" android:inputType="textCapSentences" style="@style/ProductEditText" />
+    <View android:id="@id/divider" android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

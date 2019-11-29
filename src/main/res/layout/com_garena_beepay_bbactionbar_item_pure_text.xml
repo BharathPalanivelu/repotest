@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="17.0sp" android:textColor="@color/com_garena_beepay_txt_color_action_home_button" android:gravity="center" android:id="@id/myactionbar_text_item_btn" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_margin="4.0dip" android:scaleType="centerInside" android:adjustViewBounds="true" android:minWidth="50.0dip" android:singleLine="true" android:layout_centerVertical="true" style="@style/com_garena_beepay_myactionbar_item_text"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

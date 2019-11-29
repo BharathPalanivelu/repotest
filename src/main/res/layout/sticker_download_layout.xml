@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/download_icon" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginTop="20.0dip" android:layout_centerHorizontal="true" />
+    <com.devspark.robototextview.widget.RobotoButton android:id="@id/download_btn" android:layout_width="wrap_content" android:layout_height="36.0dip" android:layout_marginTop="12.0dip" android:layout_below="@id/download_icon" android:layout_centerHorizontal="true" android:textAllCaps="false" style="@style/ButtonSecondaryGrey" />
+</merge>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/top_and_bottom_border_no_background" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:garena="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:background="@drawable/chat_send_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/spacing_small" android:layout_weight="1.0" android:layout_marginStart="@dimen/spacing_small">
+        <ImageView android:enabled="false" android:layout_gravity="center_vertical" android:id="@id/sticker_btn" android:visibility="gone" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="0.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/ic_chat_emoji" android:layout_marginStart="8.0dip" android:layout_marginEnd="0.0dip" />
+        <com.shopee.app.ui.common.TagEditText android:textColorHint="@color/black26" android:id="@id/chat_edit" android:background="@color/transparent" android:paddingTop="5.0dip" android:paddingRight="16.0dip" android:paddingBottom="5.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:minHeight="38.0dip" android:hint="@string/sp_send_message" android:maxLines="3" android:inputType="textCapSentences|textImeMultiLine|textMultiLine" android:isScrollContainer="true" android:layout_marginStart="8.0dip" style="@style/RobotoR16" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="38.0dip" android:layout_height="fill_parent" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip">
+        <ImageButton android:enabled="false" android:id="@id/send_btn" android:background="@drawable/action_bar_button_background" android:visibility="gone" android:layout_width="38.0dip" android:layout_height="fill_parent" android:src="@drawable/com_garena_shopee_ic_send" />
+        <com.shopee.app.ui.common.IconImageView_ android:layout_gravity="center" android:id="@id/more_btn" android:layout_width="23.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_chat_plus_close" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="106.0dip" android:layout_marginTop="80.0dip">
+        <View android:id="@id/header" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="86.0dip" android:layout_alignParentBottom="true" />
+        <ImageView android:id="@id/closeButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:src="@drawable/ic_no" android:layout_alignTop="@id/header" android:layout_alignRight="@id/header" />
+        <ImageView android:id="@id/icon" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/com_garena_shopee_ic_product_default" android:scaleType="centerCrop" android:layout_alignParentBottom="true" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textSize="20.0sp" android:textColor="@color/primary" android:ellipsize="end" android:id="@id/price" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$38.00-$2138.00" android:singleLine="true" android:layout_toRightOf="@id/icon" android:layout_above="@id/stock" style="@style/RobotoR16" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:id="@id/stock" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Stock: 87" android:layout_toRightOf="@id/icon" android:layout_alignBottom="@id/icon" style="@style/RobotoR14" />
+    </RelativeLayout>
+    <LinearLayout android:id="@id/variationDivider" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@color/black09" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    </LinearLayout>
+    <com.garena.android.appkit.btmsheet.MaxHeightScrollView android:id="@id/oldVariant" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:paddingLeft="12.0dip" android:paddingTop="8.0dip" android:paddingRight="12.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:id="@id/variationTitle" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sp_label_select_variation" style="@style/RobotoR14" />
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/text_underline_blue" android:id="@id/textSizeChart" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sp_label_size_chart" android:layout_alignParentRight="true" style="@style/RobotoR12" />
+            <com.garena.android.uikit.fluid.tagcloud.GTagCloud android:id="@id/variationGrid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/variationTitle" />
+        </RelativeLayout>
+    </com.garena.android.appkit.btmsheet.MaxHeightScrollView>
+    <com.shopee.app.ui.common.TierVariationView android:id="@id/tierVariant" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/divider_quantity" android:background="@color/black09" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <com.shopee.app.ui.dialog.QuantityManageView2_ android:id="@id/quantity_section" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View android:id="@id/divider_price" android:background="@color/black09" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="8.0dip" />
+            <com.shopee.app.ui.dialog.PriceManageView2_ android:id="@id/price_section" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/button_panel" android:background="@color/white" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="2.0">
+                <com.devspark.robototextview.widget.RobotoButton android:id="@id/cancel" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="4.0dip" android:text="@string/button_cancel" android:layout_weight="1.0" style="@style/ButtonSecondaryPrimary" />
+                <com.devspark.robototextview.widget.RobotoButton android:id="@id/submit" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="12.0dip" android:text="@string/sp_make_an_offer" android:layout_weight="1.0" style="@style/ButtonPrimary" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</merge>

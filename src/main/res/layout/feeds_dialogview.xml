@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/iv_logo" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/feeds_animated_progress_bar" />
+        <ProgressBar android:layout_gravity="center" android:layout_width="50.0dip" android:layout_height="50.0dip" android:indeterminateOnly="true" android:indeterminateDrawable="@drawable/feeds_animated_progress_bar" android:indeterminateDuration="200" android:indeterminateBehavior="repeat" />
+    </FrameLayout>
+    <TextView android:textColor="@color/orange_900" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="loading..." />
+</LinearLayout>

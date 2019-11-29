@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_activated="true">
+        <layer-list>
+            <item android:state_pressed="true" android:left="4.0dip" android:right="4.0dip">
+                <shape>
+                    <solid android:color="@color/primary" />
+                </shape>
+            </item>
+            <item android:bottom="3.0dip">
+                <shape android:shape="rectangle">
+                    <solid android:color="#ff161819" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

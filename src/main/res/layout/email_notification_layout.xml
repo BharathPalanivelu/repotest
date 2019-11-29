@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:garena="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/allow_email_setting" android:layout_width="fill_parent" android:layout_height="56.0dip" garena:primaryText="@string/sp_email_notifications" garena:showCheck="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/order_notification" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" garena:primaryText="@string/sp_email_notifications_order_updates" garena:secondaryText="@string/sp_email_notifications_order_updates_hint" garena:showCheck="true" garena:showSecondary="true" />
+            <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/listing_notification" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" garena:primaryText="@string/sp_email_notifications_seller_info" garena:secondaryText="@string/sp_email_notifications_listing_updates_hint" garena:showCheck="true" garena:showSecondary="true" />
+            <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/newsletter_notification" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" garena:primaryText="@string/sp_email_notifications_newsletter" garena:secondaryText="@string/sp_email_notifications_newsletter_hint" garena:showCheck="true" garena:showSecondary="true" />
+            <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/personalised_content_notification" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" garena:primaryText="@string/sp_email_notifications_personalised_content" garena:secondaryText="@string/sp_email_notifications_personalised_content_hint" garena:showCheck="true" garena:showSecondary="true" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

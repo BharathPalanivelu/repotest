@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <stroke android:width="1.0dip" android:color="@color/com_garena_beepay_border_color_light_grey" />
+            <corners android:radius="@dimen/com_garena_beepay_radius_xx_small" />
+            <solid android:color="@color/com_garena_beepay_bg_color_white_pressed" />
+        </shape>
+    </item>
+    <item android:state_enabled="true" android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <stroke android:width="1.0dip" android:color="@color/com_garena_beepay_border_color_light_grey" />
+            <corners android:radius="@dimen/com_garena_beepay_radius_xx_small" />
+            <solid android:color="@color/com_garena_beepay_bg_color_white_pressed" />
+        </shape>
+    </item>
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <stroke android:width="1.0dip" android:color="@color/com_garena_beepay_border_color_light_grey" />
+            <corners android:radius="@dimen/com_garena_beepay_radius_xx_small" />
+            <solid android:color="@color/bg_color_white" />
+        </shape>
+    </item>
+</selector>

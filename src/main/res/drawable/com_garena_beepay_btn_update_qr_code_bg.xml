@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="18.0dip" />
+            <solid android:color="@color/bg_color_btn_pressed" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="18.0dip" />
+            <stroke android:width="@dimen/com_garena_beepay_border_width_thin" android:color="@color/theme_color_blue" />
+            <solid android:color="@color/bg_color_white" />
+        </shape>
+    </item>
+</selector>

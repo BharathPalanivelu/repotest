@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/panel_color_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/camera_preview_empty" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/com_garena_shopee_ic_camera_white" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+    <FrameLayout android:id="@id/camera_preview" android:background="@color/panel_color_black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/camera_action_bar" />
+    <com.shopee.app.ui.image.bound.PhotoFrameView_ android:id="@id/photo_frame_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:layout_gravity="center" android:id="@id/camera_selfie_overlay_stub" android:layout="@layout/camera_selfie_overlay_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/camera_ic_overlay_stub" android:layout="@layout/camera_ic_overlay_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/camera_action_bar" android:background="@color/full_opacity" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentTop="true">
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/current_video_length" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="00:00:00" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="@style/RobotoR16" />
+        <ImageButton android:id="@id/close_window" android:background="@drawable/camera_btn" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/com_garena_shopee_ic_close_white" android:layout_alignParentStart="true" />
+        <ImageButton android:id="@id/flip_camera" android:background="@drawable/camera_btn" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/com_garena_shopee_ic_camera_switch" android:layout_alignParentEnd="true" />
+        <ImageButton android:id="@id/flash_option" android:background="@drawable/camera_btn" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/com_garena_shopee_ic_camera_flash_off" android:layout_toStartOf="@id/flip_camera" />
+    </RelativeLayout>
+    <ImageButton android:id="@id/close_window_ic" android:background="@null" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/com_garena_shopee_ic_close_white" />
+    <ImageView android:id="@id/image_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="48.0dip" />
+    <RelativeLayout android:id="@id/btn_panel" android:background="@color/full_opacity" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_alignParentBottom="true">
+        <ImageButton android:gravity="center_vertical" android:id="@id/switch_video_mode" android:background="@color/transparent" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_video_camera" android:layout_alignParentStart="true" />
+        <ImageButton android:id="@id/capture_camera" android:background="@color/transparent" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/ic_camera_button" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ImageButton android:id="@id/flash_option_ic" android:background="@null" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="80.0dip" android:src="@drawable/com_garena_shopee_ic_camera_flash_off" android:layout_alignParentBottom="true" android:rotation="90.0" android:layout_alignParentEnd="true" />
+    <RelativeLayout android:id="@id/text_panel" android:background="@color/full_opacity" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_alignParentBottom="true">
+        <TextView android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/retake" android:background="@drawable/camera_btn" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="@string/sp_retake" android:layout_centerVertical="true" style="@style/RobotoR16" />
+        <TextView android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/use_photo" android:background="@drawable/camera_btn" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="@string/sp_use_photo" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/RobotoR16" />
+    </RelativeLayout>
+</RelativeLayout>

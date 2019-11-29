@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/publishLayout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.SwitchCompat android:id="@id/switchView" android:background="@color/white" android:padding="@dimen/spacing_normal" android:layout_width="fill_parent" android:layout_height="48.0dip" android:checked="true" android:text="@string/add_product_publish" android:drawableLeft="@drawable/ic_addproduct_publish" android:drawablePadding="@dimen/spacing_normal" android:drawableStart="@drawable/ic_addproduct_publish" />
+    <View android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="@dimen/spacing_small" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textSize="12.0sp" android:textColor="@color/black54" android:paddingLeft="@dimen/spacing_middle" android:paddingRight="@dimen/spacing_middle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_normal" android:text="@string/add_product_publish_desciption" />
+</LinearLayout>

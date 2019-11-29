@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/yellow_light" android:padding="@dimen/spacing_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.devspark.robototextview.widget.RobotoTextView android:id="@id/reminderTextView" android:layout_width="0.0dip" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_notice" android:drawablePadding="@dimen/spacing_normal" android:layout_weight="1.0" style="@style/RobotoR12" />
+    <ImageView android:id="@id/closeReminder" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close_black_24dp" android:tint="@color/gray_87" />
+</LinearLayout>

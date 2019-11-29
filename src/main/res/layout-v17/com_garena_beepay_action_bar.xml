@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rootview" android:background="@color/com_garena_beepay_common_white_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:baselineAligned="false">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/actionbar_home_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_margin="4.0dip" android:baselineAligned="false">
+            <ImageView android:id="@id/back_arrow" android:layout_width="@dimen/com_garena_beepay__action_bar_icon_width" android:layout_height="fill_parent" android:scaleType="centerInside" android:adjustViewBounds="true" style="@style/com_garena_beepay_myactionbar_item" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/actionbar_actions" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:baselineAligned="false" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+        <FrameLayout android:orientation="horizontal" android:id="@id/actionbar_bg" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0dip" android:baselineAligned="false">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/actionbar_title_bg" android:longClickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="18.0sp" android:textColor="@color/txt_color_dark" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/actionbar_title_lab" android:paddingLeft="5.0dip" android:paddingTop="0.0dip" android:paddingRight="5.0dip" android:paddingBottom="0.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="48.0dip" android:layout_marginRight="48.0dip" android:baselineAligned="false" android:singleLine="true" />
+            </LinearLayout>
+        </FrameLayout>
+        <View android:id="@id/com_garena_beepay_bottom_divider" android:background="@color/border_color_normal" android:layout_width="wrap_content" android:layout_height="@dimen/com_garena_beepay_border_width_thin" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

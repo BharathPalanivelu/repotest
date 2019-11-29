@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:paddingLeft="32.0dip" android:paddingTop="32.0dip" android:paddingRight="32.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:id="@id/tipView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" style="@style/RobotoR14" />
+            <com.rengwuxian.materialedittext.MaterialEditText android:id="@id/phone_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:hint="@string/sp_mobile_number" android:layout_below="@id/tipView" android:inputType="phone" android:textDirection="ltr" style="@style/EditText" />
+            <com.devspark.robototextview.widget.RobotoButton android:id="@id/continue_btn" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="16.0dip" android:text="@string/sp_label_continue" android:layout_below="@id/phone_number" style="@style/ButtonPrimary" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

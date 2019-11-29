@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.devspark.robototextview.widget.RobotoEditText android:textSize="14.0sp" android:textColor="@color/black87" android:gravity="top" android:id="@id/text" android:background="@drawable/read_bg_with_highlight_new" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="10" android:layout_above="@id/hint" android:layout_alignParentTop="true" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textSize="12.0sp" android:textColor="@color/black54" android:id="@id/hint" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="@string/sp_info_edit_message_shortcuts" android:layout_above="@id/submit" />
+    <com.devspark.robototextview.widget.RobotoButton android:id="@id/submit" android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_marginBottom="12.0dip" android:text="@string/sp_label_save" android:layout_alignParentBottom="true" style="@style/ButtonPrimary" />
+</RelativeLayout>

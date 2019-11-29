@@ -1,0 +1,42 @@
+package com.salesforce.android.chat.core;
+
+public class ChatAnalytics {
+    public static final String DATA_AGENT_ID = "CHAT_DATA_AGENT_ID";
+    public static final String DATA_AGENT_NAME = "CHAT_DATA_AGENT_NAME";
+    public static final String DATA_BUTTON_ID = "CHAT_DATA_BUTTON_ID";
+    public static final String DATA_CURRENT_LIFECYCLE_STATE = "CHAT_DATA_CURRENT_LIFECYCLE_STATE";
+    public static final String DATA_DEPLOYMENT_ID = "CHAT_DATA_DEPLOYMENT_ID";
+    public static final String DATA_END_REASON = "CHAT_DATA_END_REASON";
+    public static final String DATA_ERROR = "CHAT_DATA_ERROR";
+    public static final String DATA_LIVE_AGENT_POD = "CHAT_DATA_LIVE_AGENT_POD";
+    public static final String DATA_LIVE_AGENT_SESSION_ID = "CHAT_DATA_LIVE_AGENT_SESSION_ID";
+    public static final String DATA_ORGANIZATION_ID = "CHAT_DATA_ORGANIZATION_ID";
+    public static final String DATA_PREVIOUS_LIFECYCLE_STATE = "CHAT_DATA_PREVIOUS_LIFECYCLE_STATE";
+    public static final String DATA_TIMESTAMP = "CHAT_DATA_TIMESTAMP";
+    public static final String FILE_TRANSFER_BYTES = "CHAT_FILE_TRANSFER_BYTES";
+    public static final String FILE_TRANSFER_STATUS = "CHAT_FILE_TRANSFER_STATUS";
+    public static final String FILE_TRANSFER_TYPE = "CHAT_FILE_TRANSFER_TYPE";
+    private static final String PREFIX = "CHAT_";
+    public static final String RESPONSE_AGENT_CANCEL_FILE_TRANSFER = "CHAT_RESPONSE_AGENT_CANCEL_FILE_TRANSFER";
+    public static final String RESPONSE_AGENT_HAS_FINISHED_TYPING = "CHAT_RESPONSE_AGENT_HAS_FINISHED_TYPING";
+    public static final String RESPONSE_AGENT_IS_TYPING = "CHAT_RESPONSE_AGENT_IS_TYPING";
+    public static final String RESPONSE_AGENT_JOINED = "CHAT_RESPONSE_AGENT_JOINED";
+    public static final String RESPONSE_AGENT_JOINED_CONFERENCE = "CHAT_RESPONSE_AGENT_JOINED_CONFERENCE";
+    public static final String RESPONSE_AGENT_LEFT_CONFERENCE = "CHAT_RESPONSE_AGENT_LEFT_CONFERENCE";
+    public static final String RESPONSE_AGENT_REQUEST_FILE_TRANSFER = "CHAT_RESPONSE_AGENT_REQUEST_FILE_TRANSFER";
+    public static final String RESPONSE_ERROR = "CHAT_RESPONSE_ERROR";
+    public static final String RESPONSE_FILE_TRANSFER_COMPLETE = "CHAT_RESPONSE_FILE_TRANSFER_COMPLETE";
+    public static final String RESPONSE_FILE_TRANSFER_FAILED = "CHAT_RESPONSE_FILE_TRANSFER_FAILED";
+    public static final String RESPONSE_INITIALIZED_CLIENT = "CHAT_RESPONSE_INITIALIZED_CLIENT";
+    public static final String RESPONSE_LIFECYCLE_CHANGE = "CHAT_RESPONSE_LIFECYCLE_CHANGE";
+    public static final String RESPONSE_MESSAGE_RECEIVED = "CHAT_RESPONSE_MESSAGE_RECEIVED";
+    public static final String RESPONSE_MESSAGE_SENT = "CHAT_RESPONSE_MESSAGE_SENT";
+    public static final String RESPONSE_SESSION_CREATED = "CHAT_RESPONSE_SESSION_CREATED";
+    public static final String RESPONSE_SESSION_ENDED = "CHAT_RESPONSE_SESSION_ENDED";
+    public static final String USER_END_SESSION = "CHAT_USER_END_SESSION";
+    public static final String USER_FILE_TRANSFER_UPLOAD_INITIATED = "CHAT_USER_FILE_TRANSFER_UPLOAD_INITIATED";
+    public static final String USER_HAS_FINISHED_TYPING = "CHAT_USER_HAS_FINISHED_TYPING";
+    public static final String USER_INITIALIZE_CLIENT = "CHAT_USER_INITIALIZE_CLIENT";
+    public static final String USER_IS_TYPING = "CHAT_USER_IS_TYPING";
+    public static final String USER_SEND_MESSAGE = "CHAT_USER_SEND_MESSAGE";
+}

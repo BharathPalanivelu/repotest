@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/rl_outside_view" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/rl_inputdlg_view" android:background="@drawable/livequiz_bg_input" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <ImageView android:id="@id/input_image" android:layout_width="24.0dip" android:layout_height="20.0dip" android:layout_marginLeft="10.0dip" android:src="@mipmap/livequiz_ic_comments" />
+        <com.devspark.robototextview.widget.RobotoEditText android:textSize="14.0sp" android:textColor="@color/livequiz_color_grey_800" android:textColorHint="#a6000000" android:gravity="center_vertical" android:id="@id/et_danmaku" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:hint="@string/danmaku_input_hint" android:maxEms="150" android:maxLength="150" android:layout_weight="5.0" android:imeOptions="actionSend|flagNoExtractUi" android:textCursorDrawable="@drawable/livequiz_edit_text_cursor" app:robotoTypeface="roboto_italic" />
+        <RelativeLayout android:id="@id/confirm_area" android:focusable="true" android:clickable="true" android:layout_width="40.0dip" android:layout_height="40.0dip">
+            <ImageView android:id="@id/btn_send_danmaku" android:background="@mipmap/livequiz_ic_send" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

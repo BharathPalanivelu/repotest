@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.garena.imageeditor.view.ImageGLSurfaceView android:layout_gravity="center" android:id="@id/surfaceView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.garena.imageeditor.view.ImageMaskView android:layout_gravity="center" android:id="@id/maskView" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.garena.cropimage.library.CropImageView android:id="@id/cropView" android:background="#ff000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:garena_cropimage_frameColor="#99000000" custom:garena_cropimage_ratioHeight="1" custom:garena_cropimage_ratioWidth="1" />
+</merge>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/video_parent" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/video_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/iv_video_stop" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/feeds_ic_profile_video" android:scaleType="fitXY" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/photo_parent" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/iv_picture" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="0.0dip" android:layout_alignParentTop="true" />
+        <RelativeLayout android:id="@id/rl_tag_logo" android:background="@drawable/feeds_bg_image_tag" android:padding="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="28.0dip" android:layout_margin="16.0dip" android:layout_alignParentBottom="true">
+            <ImageView android:id="@id/iv_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/feeds_ic_shopee_primary" android:layout_centerVertical="true" />
+            <com.devspark.robototextview.widget.RobotoTextView android:textSize="12.0sp" android:textColor="@color/black_87" android:id="@id/tv_tag_logo_num" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:includeFontPadding="false" android:layout_toRightOf="@id/iv_logo" android:layout_alignParentBottom="true" app:robotoTypeface="roboto_regular" />
+            <ImageView android:id="@id/iv_tag_logo_arrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/feeds_ic_tag_logo_arrow" android:layout_toRightOf="@id/tv_tag_logo_num" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.shopee.feeds.feedlibrary.view.CommonCheckButton android:id="@id/checkbox_mute" android:background="@drawable/feeds_bg_common_check_button" android:padding="6.0dip" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_margin="16.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_delete" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <ImageView android:background="@drawable/feeds_bg_photo_editor_delete_ring" android:padding="4.0dip" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginLeft="30.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/feeds_ic_photo_editor_delete" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

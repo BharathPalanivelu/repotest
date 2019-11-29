@@ -1,0 +1,64 @@
+{
+    "groups": [
+        {
+            "features": [
+                {
+                    "name": "my_purchase"
+                },
+                {
+                    "name": "my_groups"
+                },
+                {
+                    "name": "digital_purchase"
+                }
+            ],
+            "name": "order"
+        },
+        {
+            "features": [
+                {
+                    "name": "my_likes"
+                },
+                {
+                    "name": "recently_viewed"
+                },
+                {
+                    "name": "live_stream"
+                },
+                {
+                    "name": "wallet"
+                },
+                {
+                    "name": "airpay_vn_wallet"
+                },
+                {
+                    "name": "credit_entrance"
+                },
+                {
+                    "name": "referrer_entrance"
+                },
+                {
+                    "name": "shopee_coins"
+                },
+                {
+                    "name": "my_rating"
+                },
+                {
+                    "name": "my_voucher_button"
+                }
+            ],
+            "name": "activity"
+        },
+        {
+            "features": [
+                {
+                    "name": "account_setting"
+                },
+                {
+                    "name": "help_center"
+                }
+            ],
+            "name": "miscellaneous"
+        }
+    ]
+}

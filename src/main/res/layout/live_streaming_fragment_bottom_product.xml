@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/live_streaming_bg_black_rectange" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_bottom_product" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:paddingLeft="15.0dip" android:paddingTop="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/tv_bottom_product_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.shopee.live.livestreaming.ui.view.MyButton android:id="@id/btn_bottom_product_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" app:btn_text="+ Add" app:disabledBackgroundColor="@color/grey_500" app:hor_padding="25.0dip" app:layersColor="@color/button_layer" app:mybutton_border_color="@color/color_bg_anchor_symbol" app:normalBackgroundColor="@color/color_bg_anchor_symbol" app:normalTextColor="@color/white" app:radius="20.0dip" app:textSize="14.0sp" app:ver_padding="5.0dip" />
+        </RelativeLayout>
+        <View android:background="@color/color_bottom_line" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <com.shopee.live.livestreaming.ui.view.LoadMoreRecycyleView android:id="@id/rv_bottom_product" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_no_product" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="40.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/tv_no_product" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableTop="@drawable/live_streaming_ic_no_product" android:drawablePadding="6.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

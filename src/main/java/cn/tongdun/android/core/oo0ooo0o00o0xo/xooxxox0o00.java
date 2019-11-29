@@ -1,0 +1,18 @@
+package cn.tongdun.android.core.oo0ooo0o00o0xo;
+
+import cn.tongdun.android.core.oo0ooo0o00o0xo.o00xxox0x0xoox.o00xxox0x0xoox;
+
+final class xooxxox0o00 implements o00xxox0x0xoox {
+    private static xooxxox0o00 o00xxox0x0xoox = new xooxxox0o00();
+
+    xooxxox0o00() {
+    }
+
+    static xooxxox0o00 oo0ooo0o00o0xo() {
+        return o00xxox0x0xoox;
+    }
+
+    public Object o00xxox0x0xoox() {
+        return xoxx0xx.ooxoxoooxooo0xx00();
+    }
+}

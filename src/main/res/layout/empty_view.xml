@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/emptyView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="180.0dip" android:layout_below="@id/action_required_list"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black26" android:gravity="center" android:id="@id/label" android:paddingTop="8.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sp_label_empty_action_required" android:layout_centerInParent="true" style="@style/RobotoR12" />
+    <ImageView android:id="@id/circle_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_no_product" android:layout_above="@id/label" android:layout_centerHorizontal="true" />
+</RelativeLayout>

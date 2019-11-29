@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/shadow_view" android:background="#77000000" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_centerInParent="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/popup_window_view" android:background="@drawable/feeds_bg_pop" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="7.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip">
+                <com.devspark.robototextview.widget.RobotoTextView android:textSize="16.0sp" android:textColor="#da000000" android:gravity="center" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="Only eligible vouchers can be added to Feeds" />
+                <com.devspark.robototextview.widget.RobotoTextView android:textSize="14.0sp" android:textColor="#a6000000" android:id="@id/tv_tip_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="The voucher should be shop voucher." />
+            </LinearLayout>
+            <View android:background="@color/grey_300" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+            <com.devspark.robototextview.widget.RobotoTextView android:textSize="14.0sp" android:textColor="@color/main_color" android:gravity="center" android:id="@id/tv_confirm" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="@string/feeds_button_ok" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

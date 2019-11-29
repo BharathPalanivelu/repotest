@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="Please not that you can only upload one product at one time. Try again after the current uploading is finished." android:lineSpacingMultiplier="1.1" style="@style/RobotoR16" />
+    <com.shopee.app.ui.common.ProductProgressView_ android:id="@id/progress_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

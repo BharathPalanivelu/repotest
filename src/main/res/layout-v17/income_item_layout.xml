@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bottom_border_white_background_highlight" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:layout_width="54.0dip" android:layout_height="54.0dip" android:layout_marginLeft="12.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="12.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/info_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/icon" android:layout_toEndOf="@id/icon">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toStartOf="@id/price" style="@style/RobotoR14" />
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/primary" android:ellipsize="end" android:gravity="end" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:minWidth="60.0dip" android:layout_alignBottom="@id/title" android:layout_marginEnd="12.0dip" android:layout_alignParentEnd="true" style="@style/RobotoR14" />
+        </RelativeLayout>
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="#ff53597a" android:ellipsize="end" android:id="@id/username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/RobotoR12" />
+        <com.devspark.robototextview.widget.RobotoTextView android:ellipsize="end" android:id="@id/extra_info" android:paddingTop="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:singleLine="true" android:layout_marginEnd="12.0dip" style="@style/RobotoL10" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/complement" android:id="@id/payment_status" android:paddingTop="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@drawable/ic_income_payment" android:drawablePadding="3.0dip" android:drawableStart="@drawable/ic_income_payment" style="@style/RobotoL10" />
+    </LinearLayout>
+</RelativeLayout>

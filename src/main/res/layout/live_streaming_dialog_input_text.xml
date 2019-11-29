@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/rl_outside_view" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/rl_inputdlg_view" android:background="#fffdfdfd" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/barrage_area" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="0.3">
+            <Button android:id="@id/barrage_btn" android:layout_width="40.0dip" android:layout_height="25.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        </LinearLayout>
+        <View android:background="@color/colorTransparentBlack" android:visibility="gone" android:layout_width="0.5dip" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+        <EditText android:textSize="14.0sp" android:textColor="@color/black_87" android:textColorHint="@color/black_16" android:gravity="center_vertical" android:id="@id/et_input_message" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="18.0dip" android:singleLine="true" android:maxLength="150" android:layout_weight="4.0" android:inputType="text" android:imeOptions="actionSend|flagNoExtractUi" />
+        <LinearLayout android:layout_gravity="center" android:id="@id/confirm_area" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="2.0dip">
+            <ImageView android:gravity="center" android:id="@id/confrim_btn" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/live_streaming_ic_send_message" android:scaleType="center" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

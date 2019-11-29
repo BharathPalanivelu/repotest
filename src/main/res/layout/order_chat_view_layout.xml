@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:garena="http://schemas.android.com/apk/res-auto">
+    <com.shopee.app.ui.chat.order.ChatOrderInfoView_ android:id="@id/order_info" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.shopee.app.ui.common.ChatListView android:id="@id/chat_list" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="0.0dip" android:listSelector="#00000000" android:stackFromBottom="true" android:divider="@null" android:layout_weight="1.0" />
+    <com.shopee.app.ui.common.SendTextView_ android:id="@id/send_text_view" android:layout_width="fill_parent" android:layout_height="48.0dip" garena:maxChars="5000" garena:showPhone="true" garena:showPhoto="true" garena:textHint="@string/sp_send_message" />
+</LinearLayout>

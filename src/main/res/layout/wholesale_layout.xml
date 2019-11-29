@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.devspark.robototextview.widget.RobotoTextView android:textSize="12.0sp" android:textColor="@color/black54" android:id="@id/addPriceView" android:padding="@dimen/spacing_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" app:robotoTypeface="roboto_regular" />
+    <LinearLayout android:orientation="vertical" android:id="@id/tierRootView" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+        <View android:id="@id/splitLine" android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:id="@id/containerLayout" android:paddingTop="@dimen/spacing_normal" android:paddingBottom="@dimen/spacing_small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="48.0dip">
+            <com.devspark.robototextview.widget.RobotoTextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/spacing_middle" android:text="@string/wholesale_min_order" android:layout_weight="1.5" app:robotoTypeface="roboto_regular" />
+            <com.devspark.robototextview.widget.RobotoTextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/spacing_normal" android:text="@string/wholesale_max_order" android:layout_weight="1.5" app:robotoTypeface="roboto_regular" />
+            <com.devspark.robototextview.widget.RobotoTextView android:textSize="14.0sp" android:textColor="@color/black" android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/spacing_middle" android:text="@string/wholesale_unit_price" android:layout_weight="2.0" app:robotoTypeface="roboto_regular" />
+        </LinearLayout>
+        <View android:id="@id/splitLine2" android:layout_width="fill_parent" android:layout_height="@dimen/spacing_small" />
+        <View android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textSize="14.0sp" android:textColor="@color/complement" android:id="@id/addPriceTierBtn" android:background="?selectableItemBackground" android:padding="@dimen/spacing_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wholesale_price_tier" app:robotoTypeface="roboto_regular" />
+        <View android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+</LinearLayout>

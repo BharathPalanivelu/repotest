@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/bar_overlay" android:background="#fff6a700" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_height">
+        <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/ic_coins_nav" android:layout_centerVertical="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="8.0dip" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/coin_balance" android:paddingTop="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="357" android:layout_toEndOf="@id/icon" style="@style/RobotoR16" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sp_coin_balance" android:layout_below="@id/coin_balance" android:layout_toEndOf="@id/icon" style="@style/RobotoR12" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="center" android:id="@id/popup" android:background="@drawable/white_background_corner" android:padding="16.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip">
+        <ImageView android:id="@id/coin_icon_big" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_shopee_coins" android:layout_centerHorizontal="true" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="#fff6a700" android:id="@id/coin_amount" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sp_add_x_shopee_coins" android:layout_below="@id/coin_icon_big" android:layout_centerHorizontal="true" style="@style/RobotoR16" />
+        <com.devspark.robototextview.widget.RobotoButton android:textColor="@color/white" android:id="@id/collect_btn" android:layout_width="fill_parent" android:layout_height="36.0dip" android:text="@string/sp_collect_now" android:layout_below="@id/coin_amount" android:textAllCaps="false" style="@style/ButtonCoin" />
+    </RelativeLayout>
+</FrameLayout>

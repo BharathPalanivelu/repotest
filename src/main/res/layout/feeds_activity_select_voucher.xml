@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_title_bar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <ImageView android:id="@id/iv_left" android:background="@drawable/sp_sdk_action_bar_button_bg" android:padding="16.0dip" android:visibility="visible" android:layout_width="@dimen/SP_action_bar_height" android:layout_height="@dimen/SP_action_bar_height" android:src="@drawable/feeds_ic_close_gray" android:layout_centerVertical="true" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:id="@id/tv_select_voucher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/feeds_nav_bar_title_select_voucher" android:layout_toRightOf="@id/iv_left" android:layout_centerVertical="true" style="@style/SPR18" />
+        <ImageView android:id="@id/iv_info" android:background="@drawable/sp_sdk_action_bar_button_bg" android:padding="18.0dip" android:layout_width="@dimen/SP_action_bar_height" android:layout_height="@dimen/SP_action_bar_height" android:src="@drawable/feeds_ic_select_voucher_info" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="#40000000" android:gravity="center" android:id="@id/tv_no_voucher_hint" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="80.0dip" android:layout_centerInParent="true" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/select_voucher_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/rl_title_bar" />
+</RelativeLayout>

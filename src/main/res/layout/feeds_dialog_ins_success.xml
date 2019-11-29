@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/feeds_progress_ins_bg" android:layout_width="165.0dip" android:layout_height="124.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_ins_state" android:layout_width="42.0dip" android:layout_height="42.0dip" android:layout_marginTop="25.0dip" android:src="@drawable/feeds_ins_logo" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/tv_ins_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_below="@id/iv_ins_state" android:layout_centerHorizontal="true" app:robotoTypeface="roboto_regular" />
+</RelativeLayout>

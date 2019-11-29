@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/primary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:indeterminate="true" style="@android:style/Widget.Holo.ProgressBar.Large" />
+    <RelativeLayout android:id="@id/location_action_bar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentTop="true">
+        <ImageButton android:id="@id/location_close_window" android:background="@drawable/btn_secondary_white_square" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/com_garena_shopee_ic_close" android:layout_alignParentStart="true" />
+        <TextView android:textSize="18.0sp" android:gravity="center_vertical" android:id="@id/map_view_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/sp_label_choose_location" android:layout_centerHorizontal="true" />
+        <ImageButton android:id="@id/send_location" android:background="@drawable/btn_secondary_white_square" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/com_garena_shopee_ic_done" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/location_action_bar"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="300.0dip">
+            <ImageButton android:layout_gravity="end|bottom|center" android:id="@id/locate_btn" android:background="@drawable/btn_map" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="20.0dip" android:src="@drawable/com_garena_shopee_ic_gps" android:layout_marginEnd="20.0dip" />
+        </FrameLayout>
+        <View android:background="#ffd9d9d9" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        <ListView android:id="@id/list_address_result" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0dip" />
+    </LinearLayout>
+</RelativeLayout>

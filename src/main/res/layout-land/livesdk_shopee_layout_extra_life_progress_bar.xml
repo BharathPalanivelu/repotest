@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="44.0dip" android:max="100" android:progressDrawable="@drawable/livequiz_bg_extra_life_progress_bar" android:minHeight="44.0dip" style="?android:progressBarStyleHorizontal" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textSize="16.0sp" android:textColor="@color/white" android:ellipsize="end" android:id="@id/tv_notice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerInParent="true" app:robotoTypeface="roboto_bold" />
+</RelativeLayout>

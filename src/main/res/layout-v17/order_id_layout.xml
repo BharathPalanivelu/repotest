@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="34.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/divider" android:background="@color/black06" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black65" android:id="@id/label" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sp_order_number" android:layout_below="@id/divider" android:layout_toStartOf="@id/order_id" style="@style/RobotoL12" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black65" android:gravity="end" android:id="@id/order_id" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="8.0dip" android:layout_below="@id/divider" android:layout_alignParentEnd="true" style="@style/RobotoL14" />
+</RelativeLayout>

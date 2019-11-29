@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/red_light" android:ellipsize="end" android:id="@id/errorView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_middle" android:maxLines="1" android:textAlignment="center" style="@style/RobotoR12"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <include android:id="@id/footer_divider" layout="@layout/divider" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:ellipsize="end" android:id="@id/outOfStockVariations" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_middle" android:maxLines="2" style="@style/RobotoR12"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</merge>

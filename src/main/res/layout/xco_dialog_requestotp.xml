@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="25.0dip" android:paddingRight="25.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginBottom="@dimen/xco_space_dialogotp_bottom"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.bca.xco.widget.comp.XTextView android:textSize="@dimen/xco_dialog_text_font_size" android:textColor="@color/xco_black" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SMS OTP akan dikirimkan ke nomor ponsel" />
+        <com.bca.xco.widget.comp.XTextView android:textSize="@dimen/xco_dialog_ponsel_font_size" android:textStyle="bold" android:textColor="@color/xco_black" android:layout_gravity="left" android:id="@id/xco_phone_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/xco_warnpointspace" android:layout_marginBottom="@dimen/xco_warnpointspace" android:text="-" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/xco_size_bullet" android:gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/xco_spacebullet_left" android:layout_marginTop="@dimen/xco_bullet_top" android:text="@string/xco_bullets" />
+                <com.bca.xco.widget.comp.XTextView android:textSize="@dimen/xco_dialog_text_font_size" android:textColor="@color/xco_black" android:gravity="top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/xco_spacebullet_between" android:text="@string/xco_dialogwarn_point1" android:layout_alignParentTop="true" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/xco_warnpointspace">
+                <TextView android:textSize="@dimen/xco_size_bullet" android:gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/xco_spacebullet_left" android:layout_marginTop="@dimen/xco_bullet_top" android:text="@string/xco_bullets" />
+                <com.bca.xco.widget.comp.XTextView android:textSize="@dimen/xco_dialog_text_font_size" android:textColor="@color/xco_black" android:gravity="top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/xco_spacebullet_between" android:text="@string/xco_dialogwarn_point2" android:layout_alignParentTop="true" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="left" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/xco_warnpointspace">
+                <TextView android:textSize="@dimen/xco_size_bullet" android:gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/xco_spacebullet_left" android:layout_marginTop="@dimen/xco_bullet_top" android:text="@string/xco_bullets" />
+                <com.bca.xco.widget.comp.XTextView android:textSize="@dimen/xco_dialog_text_font_size" android:textColor="@color/xco_black" android:gravity="top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/xco_spacebullet_between" android:text="@string/xco_dialogwarn_point3" android:layout_alignParentTop="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="20.0dip">
+            <Button android:textSize="@dimen/xco_dialog_button_font_size" android:textStyle="normal" android:textColor="@color/xco_gray" android:id="@id/xco_button_cancel" android:background="@drawable/xco_button_rounded_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:text="@string/xco_btn_dialog_otp_batal" android:layout_weight="5.0" />
+            <Button android:textSize="@dimen/xco_dialog_button_font_size" android:textStyle="normal" android:textColor="@color/xco_white" android:id="@id/xco_button_ok" android:background="@drawable/xco_button_rounded_positive" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="@string/xco_btn_dialog_otp_ok" android:layout_weight="5.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/xco_space_dialogotp_bottom" />
+    </LinearLayout>
+</LinearLayout>

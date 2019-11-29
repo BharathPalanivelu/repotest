@@ -1,0 +1,52 @@
+{
+    "groups": [
+        {
+            "features": [
+                {
+                    "name": "my_sales"
+                }
+            ],
+            "name": "sales"
+        },
+        {
+            "features": [
+                {
+                    "name": "add_new_products"
+                }
+            ],
+            "name": "add_product"
+        },
+        {
+            "features": [
+                {
+                    "name": "seller_wallet"
+                },
+                {
+                    "name": "jko_pay_wallet"
+                },
+                {
+                    "name": "my_income"
+                },
+                {
+                    "name": "shopee_buddy"
+                },
+                {
+                    "name": "my_shipping"
+                },
+                {
+                    "name": "shop_rating"
+                },
+                {
+                    "name": "my_performance"
+                },
+                {
+                    "name": "seller_assistance"
+                },
+                {
+                    "name": "help_center"
+                }
+            ],
+            "name": "others"
+        }
+    ]
+}

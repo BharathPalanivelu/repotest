@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.devspark.robototextview.widget.RobotoButton android:id="@id/roBtnReset" android:layout_width="0.0dip" android:layout_height="36.0dip" android:layout_margin="8.0dip" android:text="Reset" android:layout_weight="1.0" style="@style/ButtonSecondaryPrimary" />
+        <com.devspark.robototextview.widget.RobotoButton android:id="@id/roBtnSave" android:layout_width="0.0dip" android:layout_height="36.0dip" android:layout_margin="8.0dip" android:text="Save" android:layout_weight="1.0" style="@style/ButtonPrimary" />
+    </LinearLayout>
+</merge>

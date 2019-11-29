@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:fab="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.SwitchCompat android:id="@id/androidV3Only" android:padding="@dimen/spacing_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Android V3 only" fab:switchPadding="@dimen/spacing_small" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipe_container" android:layout_width="fill_parent" android:layout_height="wrap_content" fab:layout_constraintTop_toBottomOf="@id/androidV3Only"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/listView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.garena.android.appkit.floating.FloatingActionButton android:id="@id/fabRemove" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" fab:fab_icon="@drawable/ic_delete_black_24dp" fab:layout_constraintBottom_toBottomOf="parent" fab:layout_constraintEnd_toEndOf="parent" />
+    <com.garena.android.appkit.floating.FloatingActionButton android:id="@id/fabUpload" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" fab:fab_icon="@drawable/com_garena_shopee_ic_arrow_up" fab:fab_title="Upload" fab:layout_constraintBottom_toTopOf="@id/fabRemove" fab:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

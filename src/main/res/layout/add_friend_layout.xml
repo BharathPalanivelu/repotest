@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.shopee.app.ui.common.ExceptionCatchListView android:id="@id/recommend_friends_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+        <RelativeLayout android:id="@id/emptyView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black26" android:gravity="center" android:id="@id/label" android:paddingTop="8.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sp_no_recommended_friends" android:layout_centerInParent="true" style="@style/RobotoR12" />
+            <ImageView android:id="@id/circle_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_no_user" android:layout_above="@id/label" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</merge>

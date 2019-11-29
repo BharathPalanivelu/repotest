@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:id="@id/ll_title_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="@dimen/SP_action_bar_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_left" android:background="@drawable/sp_sdk_action_bar_button_bg" android:padding="16.0dip" android:visibility="visible" android:layout_width="@dimen/SP_action_bar_height" android:layout_height="@dimen/SP_action_bar_height" android:src="@drawable/feeds_ic_close_gray" android:layout_centerVertical="true" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:gravity="center" android:id="@id/btn_top_back" android:layout_width="wrap_content" android:layout_height="@dimen/SP_action_bar_height" android:layout_marginLeft="8.0dip" android:layout_toRightOf="@id/iv_left" android:layout_centerVertical="true" style="@style/SPR18" />
+    <RelativeLayout android:gravity="right" android:layout_gravity="right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="50.0dip" android:layout_alignParentRight="true">
+        <ImageView android:id="@id/iv_right" android:padding="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" android:layout_centerVertical="true" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/main_text_color" android:gravity="center|right" android:id="@id/tv_right" android:background="@drawable/sp_sdk_action_bar_button_bg" android:padding="16.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/SPM14" />
+    </RelativeLayout>
+</RelativeLayout>

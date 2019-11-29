@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:garena="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/allow_setting" android:layout_width="fill_parent" android:layout_height="56.0dip" garena:primaryText="@string/sp_label_allow_notification" garena:showCheck="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/action_required_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" garena:primaryText="@string/sp_action_required" garena:secondaryText="@string/sp_action_required_notify_setting_message" garena:showCheck="true" garena:showSecondary="true" />
+            <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/activity_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" garena:primaryText="@string/sp_home_tab_activity" garena:secondaryText="@string/sp_activity_notify_setting_message" garena:showCheck="true" garena:showSecondary="true" />
+            <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/chats_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" garena:primaryText="@string/sp_label_chats" garena:secondaryText="@string/sp_chats_notify_setting_message" garena:showCheck="true" garena:showSecondary="true" />
+            <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/out_of_stock_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" garena:primaryText="@string/sp_out_out_stock_reminder" garena:secondaryText="@string/sp_stock_notify_setting_message" garena:showCheck="true" garena:showSecondary="true" />
+            <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/smart_noti_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" garena:primaryText="@string/sp_smart_notification" garena:secondaryText="@string/sp_smart_notification_description" garena:showCheck="true" garena:showSecondary="true" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

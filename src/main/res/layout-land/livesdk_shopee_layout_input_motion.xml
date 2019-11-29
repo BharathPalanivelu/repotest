@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_out_side" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/rl_input_btn" android:layout_width="296.0dip" android:layout_height="25.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="15.0dip" android:layout_alignParentBottom="true">
+            <include layout="@layout/livesdk_shopee_layout_input_btn" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_input_expand" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <include layout="@layout/livesdk_shopee_layout_input_expand" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

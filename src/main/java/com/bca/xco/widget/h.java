@@ -1,0 +1,221 @@
+package com.bca.xco.widget;
+
+public final class h {
+
+    public static final class a {
+        public static final int common_google_signin_btn_text_dark = 2131099891;
+        public static final int common_google_signin_btn_text_dark_default = 2131099892;
+        public static final int common_google_signin_btn_text_dark_disabled = 2131099893;
+        public static final int common_google_signin_btn_text_dark_focused = 2131099894;
+        public static final int common_google_signin_btn_text_dark_pressed = 2131099895;
+        public static final int common_google_signin_btn_text_light = 2131099896;
+        public static final int common_google_signin_btn_text_light_default = 2131099897;
+        public static final int common_google_signin_btn_text_light_disabled = 2131099898;
+        public static final int common_google_signin_btn_text_light_focused = 2131099899;
+        public static final int common_google_signin_btn_text_light_pressed = 2131099900;
+        public static final int xco_bgcolor = 2131100595;
+        public static final int xco_black = 2131100596;
+        public static final int xco_button_border_color = 2131100597;
+        public static final int xco_button_border_color_disable = 2131100598;
+        public static final int xco_button_cancel_border_color = 2131100599;
+        public static final int xco_button_cancel_color = 2131100600;
+        public static final int xco_button_cancel_hover_color = 2131100601;
+        public static final int xco_button_color = 2131100602;
+        public static final int xco_button_color_disable = 2131100603;
+        public static final int xco_button_hover_color = 2131100604;
+        public static final int xco_button_reject_color = 2131100605;
+        public static final int xco_gray = 2131100606;
+        public static final int xco_link_html = 2131100607;
+        public static final int xco_normal = 2131100608;
+        public static final int xco_text_active = 2131100609;
+        public static final int xco_text_inactive = 2131100610;
+        public static final int xco_transparent = 2131100611;
+        public static final int xco_white = 2131100612;
+    }
+
+    public static final class b {
+        public static final int xco_border_radius = 2131165783;
+        public static final int xco_bullet_top = 2131165784;
+        public static final int xco_button_border_width = 2131165785;
+        public static final int xco_button_height = 2131165786;
+        public static final int xco_button_height_otp = 2131165787;
+        public static final int xco_button_width = 2131165788;
+        public static final int xco_button_width_otp = 2131165789;
+        public static final int xco_dialog_button_font_size = 2131165790;
+        public static final int xco_dialog_ponsel_font_size = 2131165791;
+        public static final int xco_dialog_text_font_size = 2131165792;
+        public static final int xco_left_rp = 2131165793;
+        public static final int xco_margin_rp = 2131165794;
+        public static final int xco_size_bullet = 2131165795;
+        public static final int xco_size_icon = 2131165796;
+        public static final int xco_small_font_size = 2131165797;
+        public static final int xco_space_dialogotp_bottom = 2131165798;
+        public static final int xco_space_ic_limit_info = 2131165799;
+        public static final int xco_space_icon_with_text = 2131165800;
+        public static final int xco_space_layout = 2131165801;
+        public static final int xco_space_left_subtitle = 2131165802;
+        public static final int xco_spacebullet_between = 2131165803;
+        public static final int xco_spacebullet_left = 2131165804;
+        public static final int xco_standard_font_size = 2131165805;
+        public static final int xco_text_size_height = 2131165806;
+        public static final int xco_text_size_height_otp = 2131165807;
+        public static final int xco_text_size_input = 2131165808;
+        public static final int xco_warnpointspace = 2131165809;
+    }
+
+    public static final class c {
+        public static final int common_full_open_on_phone = 2131231258;
+        public static final int common_google_signin_btn_icon_dark = 2131231259;
+        public static final int common_google_signin_btn_icon_dark_focused = 2131231260;
+        public static final int common_google_signin_btn_icon_dark_normal = 2131231261;
+        public static final int common_google_signin_btn_icon_light = 2131231264;
+        public static final int common_google_signin_btn_icon_light_focused = 2131231265;
+        public static final int common_google_signin_btn_icon_light_normal = 2131231266;
+        public static final int common_google_signin_btn_text_dark = 2131231268;
+        public static final int common_google_signin_btn_text_dark_focused = 2131231269;
+        public static final int common_google_signin_btn_text_dark_normal = 2131231270;
+        public static final int common_google_signin_btn_text_light = 2131231273;
+        public static final int common_google_signin_btn_text_light_focused = 2131231274;
+        public static final int common_google_signin_btn_text_light_normal = 2131231275;
+        public static final int ic_logo_oneklik = 2131231561;
+        public static final int xco_button_disable = 2131232095;
+        public static final int xco_button_rounded_cancel = 2131232096;
+        public static final int xco_button_rounded_disable = 2131232097;
+        public static final int xco_button_rounded_positive = 2131232098;
+        public static final int xco_button_submit = 2131232099;
+        public static final int xco_ic_batas_harian = 2131232100;
+        public static final int xco_ic_cancel = 2131232101;
+        public static final int xco_ic_kartu = 2131232102;
+        public static final int xco_ic_logo_bca = 2131232103;
+        public static final int xco_ic_logo_ok = 2131232104;
+        public static final int xco_ic_logo_ok2 = 2131232105;
+        public static final int xco_ic_logo_oneklik = 2131232106;
+        public static final int xco_ic_nomor_sakuku = 2131232107;
+        public static final int xco_ic_notification = 2131232108;
+        public static final int xco_ic_otp = 2131232109;
+        public static final int xco_ic_otp_active = 2131232110;
+        public static final int xco_ic_otp_inactive = 2131232111;
+        public static final int xco_ic_otp_na = 2131232112;
+        public static final int xco_ic_ver_nomor_ponsel = 2131232113;
+    }
+
+    public static final class d {
+        public static final int adjust_height = 2131361898;
+        public static final int adjust_width = 2131361899;
+        public static final int auto = 2131361996;
+        public static final int dark = 2131362518;
+        public static final int frame_layout = 2131362732;
+        public static final int icon_only = 2131362793;
+        public static final int light = 2131362975;
+        public static final int none = 2131363190;
+        public static final int standard = 2131363877;
+        public static final int text_bantuan = 2131363992;
+        public static final int wide = 2131364370;
+        public static final int xco_button_cancel = 2131364378;
+        public static final int xco_button_ok = 2131364379;
+        public static final int xco_button_send_otp = 2131364380;
+        public static final int xco_checkbox_agreement = 2131364381;
+        public static final int xco_ic_batas_harian = 2131364382;
+        public static final int xco_ic_close = 2131364383;
+        public static final int xco_ic_kartu = 2131364384;
+        public static final int xco_imagelogo = 2131364385;
+        public static final int xco_img_otp = 2131364386;
+        public static final int xco_info_limit = 2131364387;
+        public static final int xco_input_card_number = 2131364388;
+        public static final int xco_input_daily_limit = 2131364389;
+        public static final int xco_input_otp = 2131364390;
+        public static final int xco_label_otp = 2131364391;
+        public static final int xco_list_phone = 2131364392;
+        public static final int xco_message = 2131364393;
+        public static final int xco_phone_number = 2131364394;
+        public static final int xco_submit = 2131364395;
+        public static final int xco_text_agreement = 2131364396;
+        public static final int xco_text_help = 2131364397;
+        public static final int xco_textview_cardnumber = 2131364398;
+        public static final int xco_textview_otp = 2131364399;
+        public static final int xco_title = 2131364400;
+        public static final int xco_webview = 2131364401;
+    }
+
+    public static final class e {
+        public static final int xco_dialog_info = 2131559159;
+        public static final int xco_dialog_requestotp = 2131559160;
+        public static final int xco_fragment_screen_edit = 2131559161;
+        public static final int xco_fragment_screen_help = 2131559162;
+        public static final int xco_fragment_screen_phone = 2131559163;
+        public static final int xco_fragment_screen_registrasi = 2131559164;
+        public static final int xco_fragment_screen_term_condition = 2131559165;
+        public static final int xco_main_layout = 2131559166;
+    }
+
+    public static final class f {
+        public static final int common_google_play_services_enable_button = 2131886852;
+        public static final int common_google_play_services_enable_text = 2131886853;
+        public static final int common_google_play_services_enable_title = 2131886854;
+        public static final int common_google_play_services_install_button = 2131886855;
+        public static final int common_google_play_services_install_text = 2131886856;
+        public static final int common_google_play_services_install_title = 2131886857;
+        public static final int common_google_play_services_notification_ticker = 2131886859;
+        public static final int common_google_play_services_unknown_issue = 2131886860;
+        public static final int common_google_play_services_unsupported_text = 2131886861;
+        public static final int common_google_play_services_update_button = 2131886862;
+        public static final int common_google_play_services_update_text = 2131886863;
+        public static final int common_google_play_services_update_title = 2131886864;
+        public static final int common_google_play_services_updating_text = 2131886865;
+        public static final int common_google_play_services_wear_update_text = 2131886866;
+        public static final int common_open_on_phone = 2131886867;
+        public static final int common_signin_button_text = 2131886868;
+        public static final int common_signin_button_text_long = 2131886869;
+        public static final int xco_agreement = 2131889442;
+        public static final int xco_app_name = 2131889443;
+        public static final int xco_btn_dialog_info_ok = 2131889444;
+        public static final int xco_btn_dialog_otp_batal = 2131889445;
+        public static final int xco_btn_dialog_otp_ok = 2131889446;
+        public static final int xco_bullets = 2131889447;
+        public static final int xco_button_next = 2131889448;
+        public static final int xco_button_submit_edit = 2131889449;
+        public static final int xco_button_submit_registration = 2131889450;
+        public static final int xco_dialogwarn_point1 = 2131889451;
+        public static final int xco_dialogwarn_point2 = 2131889452;
+        public static final int xco_dialogwarn_point3 = 2131889453;
+        public static final int xco_err_card_01 = 2131889454;
+        public static final int xco_err_limit_01 = 2131889455;
+        public static final int xco_err_limit_02 = 2131889456;
+        public static final int xco_err_limit_03 = 2131889457;
+        public static final int xco_err_otp_01 = 2131889458;
+        public static final int xco_err_otp_02 = 2131889459;
+        public static final int xco_err_otp_03 = 2131889460;
+        public static final int xco_err_parse_int = 2131889461;
+        public static final int xco_err_ponsel_01 = 2131889462;
+        public static final int xco_err_syarat_01 = 2131889463;
+        public static final int xco_error_code_mapping_001 = 2131889464;
+        public static final int xco_error_code_mapping_007 = 2131889465;
+        public static final int xco_error_code_mapping_009 = 2131889466;
+        public static final int xco_error_code_mapping_011 = 2131889467;
+        public static final int xco_error_code_mapping_054 = 2131889468;
+        public static final int xco_error_code_mapping_057 = 2131889469;
+        public static final int xco_error_code_mapping_072 = 2131889470;
+        public static final int xco_error_hmac_mismatch = 2131889471;
+        public static final int xco_error_message_eng = 2131889472;
+        public static final int xco_error_message_ind = 2131889473;
+        public static final int xco_error_must_number = 2131889474;
+        public static final int xco_error_network_failed = 2131889475;
+        public static final int xco_error_timeout = 2131889476;
+        public static final int xco_error_timeout_add = 2131889477;
+        public static final int xco_error_timeout_edit = 2131889478;
+        public static final int xco_error_timeout_token = 2131889479;
+        public static final int xco_error_token_expired = 2131889480;
+        public static final int xco_error_unknown = 2131889481;
+        public static final int xco_help = 2131889482;
+        public static final int xco_hint_input_card_number = 2131889483;
+        public static final int xco_hint_input_daily_limit = 2131889484;
+        public static final int xco_hint_input_otp = 2131889485;
+        public static final int xco_listphone_prompt = 2131889486;
+        public static final int xco_permintaan_otp = 2131889487;
+        public static final int xco_please_wait = 2131889488;
+        public static final int xco_success_registration = 2131889489;
+        public static final int xco_success_updatelimit = 2131889490;
+        public static final int xco_timeout_maxprogress = 2131889491;
+        public static final int xco_widget_name = 2131889492;
+    }
+}

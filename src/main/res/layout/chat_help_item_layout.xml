@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/help_system_message_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="8.0dip" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black26" android:id="@id/label" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_toRightOf="@id/icon" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="@style/RobotoL12" />
+</RelativeLayout>

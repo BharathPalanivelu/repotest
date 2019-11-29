@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:garena="http://schemas.android.com/apk/res-auto">
+    <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/refund_amount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="72.0dip" garena:enabled="false" garena:primaryText="@string/sp_label_refund_amount" garena:secondaryText="$48,000" garena:showSecondary="true" />
+    <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/reason_select" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="72.0dip" android:layout_below="@id/refund_amount" garena:primaryText="@string/sp_label_reason" garena:secondaryText="@string/sp_cancel_reason_selection_default_text" garena:showSecondary="true" />
+    <com.devspark.robototextview.widget.RobotoButton android:id="@id/submit_btn" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_margin="16.0dip" android:text="@string/sp_submit" android:layout_alignParentBottom="true" style="@style/ButtonPrimary" />
+</RelativeLayout>

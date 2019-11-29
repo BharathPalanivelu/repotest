@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shopee.live.livestreaming.ui.view.CleanableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/container_audience"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.shopee.live.livestreaming.ui.view.TXVideoLayout
+        android:id="@id/video_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.shopee.live.livestreaming.ui.view.GradientTransparentView
+        android:id="@id/gradient_cover"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.shopee.live.livestreaming.ui.anchor.view.WrapLoadingView
+        android:id="@id/wrap_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.shopee.live.livestreaming.ui.anchor.view.LivePageAnchorInfoView
+        android:id="@id/live_page_anchor_info_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/live_page_title_audience_view" />
+
+    <com.shopee.live.livestreaming.ui.view.DotsLoadingView
+        android:id="@id/loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.shopee.live.livestreaming.ui.anchor.view.LivePageShowProductView
+        android:id="@id/live_page_show_product_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="16.0dip"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/live_page_anchor_info_view" />
+
+    <com.shopee.live.livestreaming.ui.anchor.view.VoucherStickerItemView
+        android:id="@id/voucher_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="168.0dip"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/live_page_audience_bottom_view"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <com.shopee.live.livestreaming.ui.audience.view.VideoPlayProgressBar
+        android:id="@id/live_replay_video_progress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.shopee.live.livestreaming.ui.audience.view.AudienceBottomView
+        android:id="@id/live_page_audience_bottom_view"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingLeft="11.0dip"
+        android:paddingRight="15.0dip"
+        app:layout_constraintBottom_toTopOf="@id/live_replay_video_progress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.shopee.live.livestreaming.ui.anchor.view.PublicScreenView
+        android:id="@id/public_screen_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.0dip"
+        app:layout_constraintBottom_toTopOf="@id/live_page_audience_bottom_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.shopee.live.livestreaming.ui.view.AdView
+        android:id="@id/iv_adview_audience"
+        android:layout_width="75.0dip"
+        android:layout_height="75.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="15.0dip"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/live_page_anchor_info_view" />
+
+    <com.shopee.live.livestreaming.ui.view.AudienceCoinView
+        android:id="@id/ac_coin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15.0dip"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/live_page_anchor_info_view"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/live_page_anchor_info_view" />
+
+    <ImageView
+        android:id="@id/portrait_to_landscape_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginBottom="11.0dip"
+        android:src="@drawable/live_streaming_ic_por_to_land"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/video_view"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.shopee.live.livestreaming.ui.view.TXLiveNetStatusLayout
+        android:id="@id/tx_status_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+    <com.shopee.live.livestreaming.ui.audience.view.FlowLikeLayout
+        android:id="@id/live_audience_flow_like"
+        android:layout_width="70.0dip"
+        android:layout_height="270.0dip"
+        android:layout_marginBottom="50.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/live_page_audience_bottom_view"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.shopee.live.livestreaming.ui.anchor.view.LivePageTitleView
+        android:id="@id/live_page_title_audience_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</com.shopee.live.livestreaming.ui.view.CleanableLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="72.0dip" android:layout_height="fill_parent">
+        <View android:layout_gravity="center" android:background="@color/md_divider_black" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <View android:layout_gravity="center_horizontal" android:background="@drawable/circle_background" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_marginTop="@dimen/spacing_normal" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/spacing_middle" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:id="@id/tvTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/spacing_normal" android:layout_marginBottom="@dimen/spacing_tiny" android:maxLines="1" android:layout_marginEnd="@dimen/spacing_normal" style="@style/RobotoR12" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:id="@id/tvContent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/spacing_normal" android:layout_marginBottom="@dimen/spacing_tiny" android:layout_marginEnd="@dimen/spacing_normal" style="@style/RobotoL12" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black26" android:id="@id/tvTime" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/spacing_normal" android:layout_marginBottom="@dimen/spacing_middle" android:maxLines="1" android:layout_marginEnd="@dimen/spacing_normal" style="@style/RobotoL10" />
+        <View android:id="@id/divider" android:background="@color/md_divider_black" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+</merge>

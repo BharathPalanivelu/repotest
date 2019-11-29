@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center|left|top" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/imageSearchServerPreview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.shopee.app.ui.image.bound.BoundPreview android:id="@id/boundServerPreview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/imageSearchServerPreview" android:layout_alignTop="@id/imageSearchServerPreview" android:layout_alignRight="@id/imageSearchServerPreview" android:layout_alignBottom="@id/imageSearchServerPreview" />
+        <TextView android:textColor="@color/red_light" android:id="@id/serverPreviewLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignRight="@id/imageSearchServerPreview" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <ImageView android:layout_gravity="center" android:id="@id/imageCroppedPreview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <RelativeLayout android:layout_gravity="bottom|center|right" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/imageSearchLocalPreview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textColor="@color/red_light" android:id="@id/localPreviewLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Local preview" android:layout_alignRight="@id/imageSearchLocalPreview" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/com_garena_beepay_section_item_large_vertical_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textSize="@dimen/com_garena_beepay_section_vertical_large_desc_size" android:textColor="@color/txt_color_dark" android:textColorHint="@color/txt_color_light" android:gravity="bottom" android:tag="field_edit" android:background="@null" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <View android:background="@drawable/com_garena_beepay_section_item_separator_dark" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="3.0dip" />
+</LinearLayout>

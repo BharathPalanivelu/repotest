@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="54.0dip" android:layout_height="54.0dip" android:src="@mipmap/livequiz_bg_count_down_shadow" android:layout_centerInParent="true" />
+    <com.shopee.livequiz.ui.view.CountDownCircleView android:id="@id/count_down_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" app:count_down_circle_color="#ffefefef" app:count_down_circle_gradient_end_color="@color/livequiz_main_color" app:count_down_circle_gradient_start_color="@color/livequiz_main_color" app:count_down_progress_color="#ffefefef" app:count_down_progress_width="6.0dip" app:count_down_radius="24.0dip" />
+    <RelativeLayout android:background="@drawable/livequiz_bg_count_down_timer" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_centerInParent="true">
+        <com.shopee.livequiz.ui.view.GradientTextView android:textSize="28.0sp" android:textColor="#ffefefef" android:gravity="center" android:id="@id/count_down_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" app:robotoTypeface="roboto_bold" />
+    </RelativeLayout>
+</RelativeLayout>

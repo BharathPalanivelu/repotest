@@ -1,0 +1,6 @@
+package com.google.android.gms.internal.p000firebaseperf;
+
+/* renamed from: com.google.android.gms.internal.firebase-perf.zzgg  reason: invalid package */
+public interface zzgg extends zzga, Cloneable {
+    zzgg zzim();
+}

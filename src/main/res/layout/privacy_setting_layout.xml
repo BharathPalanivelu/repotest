@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/private_activity" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="72.0dip" app:primaryText="@string/sp_private_activity" app:secondaryText="@string/sp_private_activity_hint" app:showCheck="true" app:showSecondary="true" />
+    <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/private_likes" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="72.0dip" app:primaryText="@string/sp_private_likes" app:secondaryText="@string/sp_private_likes_hint" app:showCheck="true" app:showSecondary="true" />
+    <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/invisible_to_contacts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="72.0dip" app:primaryText="@string/sp_invisible_to_contacts" app:secondaryText="@string/sp_info_invisible_to_contact" app:showCheck="true" app:showSecondary="true" />
+    <com.shopee.app.ui.setting.cell.SettingTwoLineItemView_ android:id="@id/access_to_contacts" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="72.0dip" app:primaryText="@string/sp_access_to_contacts" app:secondaryText="@string/sp_info_access_to_contacts" app:showCheck="true" app:showSecondary="true" />
+</merge>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/feeds_common_top" />
+    <com.shopee.sdk.ui.DrawShadowFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:shadowDrawable="@drawable/bottom_shadow2" app:shadowVisible="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_pictures" android:background="@color/grey_0" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.shopee.feeds.feedlibrary.view.edittext.LimitEditText android:textSize="14.0sp" android:textColorHint="@color/grey_500" android:gravity="start|center|top" android:id="@id/et_limit" android:background="@color/grey_0" android:layout_width="fill_parent" android:layout_height="100.0dip" android:hint="@string/feeds_new_post_page_edit_placehoder" android:maxLength="1000" />
+            <FrameLayout android:id="@id/fl_bottom_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_toogle" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:id="@id/rl_share_ins" android:background="@color/white" android:paddingLeft="12.0dip" android:paddingTop="15.0dip" android:paddingRight="12.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                        <TextView android:textSize="16.0sp" android:textColor="@color/black_87" android:id="@id/tv_share_ins_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <com.shopee.feeds.feedlibrary.view.ToogleButton android:id="@id/ins_toogle" android:layout_width="44.0dip" android:layout_height="22.0dip" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/rl_save_album" android:background="@color/white" android:paddingLeft="12.0dip" android:paddingTop="15.0dip" android:paddingRight="12.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip">
+                        <TextView android:textSize="16.0sp" android:textColor="@color/black_87" android:id="@id/tv_save_album_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <com.shopee.feeds.feedlibrary.view.ToogleButton android:id="@id/album_toogle" android:layout_width="44.0dip" android:layout_height="22.0dip" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_tags" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </FrameLayout>
+        </LinearLayout>
+    </com.shopee.sdk.ui.DrawShadowFrameLayout>
+</LinearLayout>

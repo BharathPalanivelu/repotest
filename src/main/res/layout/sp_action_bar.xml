@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.garena.android.appkit.tools.BBActionBar android:orientation="horizontal" android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" garena:background_color="@color/primary"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:garena="http://schemas.android.com/apk/res-auto" />

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/v_bg" android:background="@color/black_60" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/rl_title" android:layout_width="wrap_content" android:layout_height="56.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
+        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:id="@id/tv_add_done" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feeds_button_done" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:textAllCaps="false" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_edit_content" android:layout_width="fill_parent" android:layout_height="360.0dip" android:layout_below="@id/rl_title">
+        <com.shopee.feeds.feedlibrary.editor.sticker.CommentStickerItemView android:id="@id/view_comment_sticker_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_notify" android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="" android:layout_below="@id/view_comment_sticker_item" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

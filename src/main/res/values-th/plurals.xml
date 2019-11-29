@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="chat_minimized_unread_message_count">
+        <item quantity="other">มี %1$d ข้อความที่ยังไม่ได้อ่านจาก %2$s</item>
+    </plurals>
+</resources>

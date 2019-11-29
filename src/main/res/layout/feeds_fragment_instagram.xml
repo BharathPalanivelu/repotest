@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_ins_parent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/feeds_common_top" />
+    <include android:visibility="gone" layout="@layout/feeds_layout_library_no_content" />
+    <include android:visibility="gone" layout="@layout/feeds_layout_retry" />
+    <include android:visibility="gone" layout="@layout/feeds_layout_library_no_login" />
+    <com.shopee.sdk.ui.DrawShadowFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:shadowDrawable="@drawable/bottom_shadow2" app:shadowVisible="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_library" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:background="@color/grey_100" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.shopee.feeds.feedlibrary.view.preview.ContainerLayout android:layout_gravity="center" android:id="@id/picture_preview" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <ImageView android:layout_gravity="center" android:id="@id/iv_video_stop" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/feeds_ic_profile_video" android:scaleType="fitXY" />
+                <RelativeLayout android:layout_gravity="bottom" android:id="@id/rl_select_tool" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/iv_enlarge" android:background="@drawable/feeds_bg_enlarge_btn" android:padding="8.0dip" android:clickable="true" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/feeds_selector_resizei_photo" android:scaleType="fitXY" />
+                    <ImageView android:id="@id/iv_multi" android:background="@drawable/feeds_bg_multi_normal" android:padding="8.0dip" android:clickable="true" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/feeds_selector_multi_photo" android:scaleType="fitXY" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </FrameLayout>
+            <View android:background="@color/white" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+            <com.shopee.feeds.feedlibrary.view.InstagramListView android:id="@id/gallery_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="1.0dip" android:layout_weight="1.0" />
+            <View android:id="@id/view_blank" android:background="@color/grey_0" android:layout_width="fill_parent" android:layout_height="50.0dip" />
+        </LinearLayout>
+    </com.shopee.sdk.ui.DrawShadowFrameLayout>
+</LinearLayout>

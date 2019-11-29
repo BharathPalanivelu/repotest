@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/video_parent" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/video_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/iv_video_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerInside" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/iv_video_stop" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/feeds_ic_profile_video" android:scaleType="fitXY" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/photo_parent" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.shopee.feeds.feedlibrary.view.CommonCheckButton android:id="@id/checkbox_mute" android:background="@drawable/feeds_bg_common_check_button" android:padding="6.0dip" android:focusable="true" android:clickable="true" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_margin="16.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

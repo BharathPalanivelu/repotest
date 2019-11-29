@@ -1,0 +1,92 @@
+package com.shopee.protocol.action;
+
+import com.squareup.wire.ProtoEnum;
+
+public enum Errcode implements ProtoEnum {
+    OK(0),
+    DROPPED(-2),
+    UNKNOWN(-1),
+    PARAM(1),
+    PERM(2),
+    LIMIT(3),
+    NOTFOUND(4),
+    EXIST(5),
+    OUTSTOCK(6),
+    EXPIRE(7),
+    INVITATION(8),
+    BANNED(9),
+    DUPCMD(10),
+    DUPLICATE(11),
+    COUNTRY_RESTRICT(12),
+    DELETED(13),
+    PROMOTION(14),
+    FREQUENT(15),
+    SHADOW_ACC(16),
+    PRICE_LIMIT(17),
+    PRICERULE(18),
+    NOT_LOGIN(19),
+    FRAUD(20),
+    HASHTAG_LIMIT(21),
+    LOCKED(22),
+    SELLER_PROMOTION(23),
+    USER_FREEZED(24),
+    LOGIN_DEVICE_LIMIT(25),
+    ESTIMATED_DAYS_LIMIT(26),
+    ITEM_EMPTY_DESC(27),
+    BE_BLOCKED(28),
+    I_BLOCKED(29),
+    CATEGORY_LEVEL(30),
+    CATEGORY_REMOVED(31),
+    CATEGORY_CONSISTENT(32),
+    NAME_LIMIT(33),
+    DISABLED(34),
+    NEED_OTP(35),
+    PASSWORD_CHANGE(36),
+    VERSION(37),
+    NEED_VOICE_OTP(38),
+    HOLIDAY(39),
+    SHADOW(40),
+    NEED_VERIFY_PHONE(41),
+    PRICE(42),
+    LISTING_PENALTY(43),
+    NEWLY_REGISTERED(44),
+    NO_ORDER(45),
+    PHONE_REGISTERED(46),
+    REFERRAL_FULLY_REDEEMED(47),
+    GROUP_BUY(48),
+    WELCOME_PACKAGE(49),
+    UNLISTED(50),
+    SHOPNAME_INVALID(51),
+    MESSAGE_CENSORED(52),
+    PHONE_FORMAT(53),
+    DAILY_LIMIT(54),
+    ITEM_LIMIT(55),
+    ENDED(56),
+    SLASH_PRICE(57),
+    WALLET_COMPENSATE_WRONG_PROVIDER(58),
+    NEED_REGISTER(59),
+    ADD_ON_DEAL(60),
+    WALLET_BALANCE_INSUFFICIENT(61),
+    ADD_ON_DEAL_SUB_ITEM_INVALID(62),
+    ADD_ON_DEAL_MAIN_ITEM_INVALID(63),
+    ADD_ON_DEAL_EXPIRED(64),
+    CENSORED(65),
+    WALLET_COMPENSATE_BALANCE_INSUFFICIENT(66),
+    CATEGORY_NOT_LEAF_NODE(67),
+    COINS_ALREADY_RETRIEVED(68),
+    BUNDLE_DEAL(69),
+    NONSTACKABLE_VOUCHER(70),
+    MITRA_AUTHORIZE_FAIL(71),
+    WALLET_CB_SELLER(72),
+    WALLET_BLACKLISTED(73);
+    
+    private final int value;
+
+    private Errcode(int i) {
+        this.value = i;
+    }
+
+    public int getValue() {
+        return this.value;
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/product_icon" android:tag="product_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:src="@drawable/com_garena_shopee_ic_add_product_category" android:layout_marginStart="16.0dip" />
+    <com.devspark.robototextview.widget.RobotoTextView android:gravity="center_vertical" android:id="@id/product_title" android:tag="product_option_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" style="@style/ProductEditText" />
+    <com.rengwuxian.materialedittext.MaterialEditText android:gravity="end|center" android:id="@id/edit_value" android:tag="product_option_edit_text" android:visibility="gone" android:saveEnabled="false" android:layout_width="0.0dip" android:layout_height="fill_parent" android:maxWidth="180.0dip" android:hint="SetCategory" android:singleLine="true" android:layout_weight="1.0" android:inputType="textCapSentences" android:textCursorDrawable="@null" app:met_hideUnderline="true" style="@style/ProductEditText" />
+    <com.devspark.robototextview.widget.RobotoTextView android:gravity="end|center" android:id="@id/text_value" android:tag="product_option_text_values" android:visibility="visible" android:saveEnabled="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxWidth="180.0dip" android:hint="SetCategory" android:singleLine="true" android:layout_weight="1.0" style="@style/ProductEditText" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/arrowIcon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="-8.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/com_garena_shopee_ic_arrow_right" android:layout_marginStart="-8.0dip" android:layout_marginEnd="8.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/progressSection" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:id="@id/progress1" android:visibility="gone" android:layout_width="35.0dip" android:layout_height="35.0dip" android:indeterminate="true" />
+        <View android:id="@id/divider" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+    </LinearLayout>
+</merge>

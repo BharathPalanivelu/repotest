@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/share_copy_link" android:title="@string/sp_label_copy" />
+    <item android:id="@id/share_line" android:title="@string/sp_label_line" />
+    <item android:id="@id/share_whatsapp" android:title="@string/sp_label_whatsapp" />
+    <item android:id="@id/share_facebook" android:title="@string/sp_label_facebook" />
+    <item android:id="@id/share_instagram" android:title="@string/sp_label_instagram" />
+    <item android:id="@id/share_twitter" android:title="@string/sp_label_twitter" />
+    <item android:id="@id/share_pinterest" android:title="@string/sp_label_pinterest" />
+    <item android:id="@id/share_beetalk" android:title="@string/sp_label_beetalk" />
+    <item android:id="@id/share_buzz" android:title="@string/sp_label_buzz" />
+    <item android:id="@id/share_email" android:title="@string/sp_label_email" />
+    <item android:id="@id/share_sms" android:title="@string/sp_label_sms" />
+    <item android:id="@id/share_viber" android:title="@string/sp_label_viber" />
+    <item android:id="@id/share_system_android" android:title="@string/sp_share_more" />
+    <item android:id="@id/share_messenger" android:title="@string/sp_messenger" />
+    <item android:id="@id/share_copy_info" android:title="@string/sp_label_info" />
+    <item android:id="@id/share_dummy" android:title="@string/sp_label_info" />
+</menu>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:bottomLeftRadius="@dimen/com_garena_beepay_margin_xxx_small" android:bottomRightRadius="@dimen/com_garena_beepay_margin_xxx_small" />
+    <solid android:color="@color/com_garena_beepay_qr_payment_grey" />
+</shape>

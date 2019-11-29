@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/feeds_progress_dialog_bg" android:layout_width="124.0dip" android:layout_height="124.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.shopee.feeds.feedlibrary.view.widget.CircleProgressView android:id="@id/progress_circle" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="30.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/tv_posting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_below="@id/progress_circle" android:layout_centerHorizontal="true" />
+</RelativeLayout>

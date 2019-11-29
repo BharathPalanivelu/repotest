@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/feeds_common_top" />
+    <com.shopee.sdk.ui.DrawShadowFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:shadowDrawable="@drawable/bottom_shadow2" app:shadowVisible="true">
+        <com.shopee.feeds.feedlibrary.view.CustomSwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_view" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/grey_600" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_no_data" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="140.0dip" android:layout_marginRight="30.0dip" android:text="@string/feeds_following_no_data_tips" />
+            </LinearLayout>
+        </com.shopee.feeds.feedlibrary.view.CustomSwipeRefreshLayout>
+    </com.shopee.sdk.ui.DrawShadowFrameLayout>
+</LinearLayout>

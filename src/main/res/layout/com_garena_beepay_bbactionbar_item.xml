@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton android:id="@id/myactionbar_item_btn" android:visibility="visible" android:layout_width="@dimen/com_garena_beepay__action_bar_icon_width" android:layout_height="fill_parent" android:layout_margin="4.0dip" android:scaleType="centerInside" android:adjustViewBounds="true" android:singleLine="true" android:layout_centerVertical="true" style="@style/com_garena_beepay_myactionbar_item"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

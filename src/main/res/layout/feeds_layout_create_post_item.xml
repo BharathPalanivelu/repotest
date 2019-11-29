@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/fl_post_pic" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_picture" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/iv_video" android:visibility="gone" android:layout_width="124.0dip" android:layout_height="124.0dip" android:scaleType="centerCrop" />
+    <ImageView android:layout_gravity="right" android:id="@id/iv_video_tag" android:visibility="gone" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_margin="5.0dip" android:src="@drawable/feeds_ic_video" />
+</FrameLayout>

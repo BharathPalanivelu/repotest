@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/container" android:background="#de282828" android:paddingLeft="16.0dip" android:paddingTop="12.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.shopee.app.ui.common.AvatarView android:id="@id/avatar" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" android:layout_alignParentTop="true" android:layout_marginEnd="16.0dip" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/white" android:ellipsize="end" android:gravity="start|center" android:id="@id/username" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_alignParentTop="true" android:textAlignment="viewStart" android:layout_toStartOf="@id/open_btn" android:layout_toEndOf="@id/avatar" style="@style/RobotoR12" />
+    <com.shopee.app.ui.common.IconImageView_ android:id="@id/open_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" app:iconColor="@color/white" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/buyer_review_panel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:layout_below="@id/username" android:layout_toEndOf="@id/avatar">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/five_star_panel" android:layout_width="wrap_content" android:layout_height="8.0dip" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/avatar">
+        <com.devspark.robototextview.widget.RobotoTextView android:scrollbarSize="2.0dip" android:scrollbarThumbVertical="@color/white54" android:textColor="@color/white" android:id="@id/content" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/RobotoR14" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/white90" android:ellipsize="end" android:id="@id/time" android:background="#de282828" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/content" style="@style/RobotoL12" />
+    </RelativeLayout>
+</RelativeLayout>

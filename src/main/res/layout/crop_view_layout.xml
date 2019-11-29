@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.garena.cropimage.library.CropImageView android:id="@id/crop_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:garena_cropimage_frameColor="#99000000" app:garena_cropimage_ratioHeight="1" app:garena_cropimage_ratioWidth="1" />
+</merge>

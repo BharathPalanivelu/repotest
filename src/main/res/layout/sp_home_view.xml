@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gtab="http://schemas.android.com/apk/res-auto">
+    <com.shopee.app.ui.home.mall.NestedTabView android:id="@id/sp_home_tab_view" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="50.0dip" gtab:com_garena_tab_can_scroll="true" />
+    <com.shopee.app.ui.home.bottom.BottomNavView android:orientation="horizontal" android:id="@id/sp_bottom_navigation_layout" android:background="@color/white" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="@dimen/home_navi_tab_view_height" android:layout_alignParentBottom="true" />
+    <View android:id="@id/frame" android:background="@color/white96" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/christmas_theme" android:visibility="gone" android:layout_width="88.0dip" android:layout_height="88.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="12.0dip" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <ImageView android:id="@id/floating_menu" android:visibility="gone" android:layout_width="72.0dip" android:layout_height="wrap_content" android:layout_marginRight="18.0dip" android:layout_marginBottom="60.0dip" android:src="@drawable/ic_create_new_post_selector" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <View android:background="@drawable/ic_tabbar_shadows" android:layout_width="fill_parent" android:layout_height="6.0dip" android:layout_above="@id/sp_bottom_navigation_layout" />
+</merge>

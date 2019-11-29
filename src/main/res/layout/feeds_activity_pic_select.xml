@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/feeds_view_tab_statusbar" />
+        <com.shopee.feeds.feedlibrary.view.easyviewpager.CustomScrollViewPager android:id="@id/viewpager_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true">
+        <com.google.android.material.tabs.TabLayout android:id="@id/tab_post" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" app:tabIndicatorColor="@color/main_text_color" app:tabTextAppearance="@style/TabLayoutTextStyle" app:tabTextColor="#ff191919" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/feeds_common_top" />
+    <com.garena.cropimage.library.CropImageView android:id="@id/crop_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:garena_cropimage_frameColor="#99000000" custom:garena_cropimage_ratioHeight="1" custom:garena_cropimage_ratioWidth="1" />
+</LinearLayout>

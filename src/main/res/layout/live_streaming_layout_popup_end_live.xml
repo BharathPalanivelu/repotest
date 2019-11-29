@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/shadow_view" android:background="@color/black65" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_centerInParent="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/popup_window_view" android:background="@drawable/live_streaming_bg_popup_retry" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="8.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:id="@id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="5.0dip" android:text="Confirm to turn off your streaming?" android:lineSpacingExtra="8.0dip" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip">
+                    <TextView android:textStyle="bold" android:textColor="@color/color_txt_dialog" android:gravity="center" android:id="@id/tv_confirm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CONFIRM" android:layout_weight="1.0" android:layout_alignParentRight="true" />
+                    <TextView android:textStyle="bold" android:textColor="@color/color_txt_dialog" android:gravity="center" android:id="@id/tv_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:text="CANCEL" android:layout_weight="1.0" android:layout_toLeftOf="@id/tv_confirm" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

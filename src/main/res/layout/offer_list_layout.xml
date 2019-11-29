@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.shopee.app.ui.common.ProductInfoView_ android:id="@id/product_info" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:id="@id/order_filter_section" android:background="@color/black03" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_below="@id/product_info">
+            <FrameLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:width="0.0dip" android:layout_weight="1.0">
+                <com.devspark.robototextview.widget.RobotoButton android:gravity="center" android:id="@id/btn_all" android:background="@drawable/btn_flat_primary_grey" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/RobotoR12" />
+                <ImageView android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/arrow_all" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow" />
+            </FrameLayout>
+            <View android:layout_gravity="center_vertical" android:background="@color/black12" android:layout_width="1.0px" android:layout_height="40.0dip" />
+            <FrameLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:width="0.0dip" android:layout_weight="1.0">
+                <Button android:gravity="center" android:id="@id/btn_pending" android:background="@drawable/btn_flat_primary_grey" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/RobotoR12" />
+                <ImageView android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/arrow_pending" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow" />
+            </FrameLayout>
+            <View android:layout_gravity="center_vertical" android:background="@color/black12" android:layout_width="1.0px" android:layout_height="40.0dip" />
+            <FrameLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:width="0.0dip" android:layout_weight="1.0">
+                <Button android:gravity="center" android:id="@id/btn_accept" android:background="@drawable/btn_flat_primary_grey" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/RobotoR12" />
+                <ImageView android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/arrow_accept" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow" />
+            </FrameLayout>
+            <View android:layout_gravity="center_vertical" android:background="@color/black12" android:layout_width="1.0px" android:layout_height="40.0dip" />
+            <FrameLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:width="0.0dip" android:layout_weight="1.0">
+                <Button android:gravity="center" android:id="@id/btn_rejected" android:background="@drawable/btn_flat_primary_grey" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/RobotoR12" />
+                <ImageView android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/arrow_rejected" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow" />
+            </FrameLayout>
+        </LinearLayout>
+        <com.shopee.app.ui.common.ExceptionCatchListView android:id="@id/offer_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:dividerHeight="1.0px" android:layout_below="@id/order_filter_section" />
+        <RelativeLayout android:id="@id/emptyView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/order_filter_section"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black26" android:gravity="center" android:id="@id/label" android:paddingTop="8.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sp_label_empty_chats" android:layout_centerInParent="true" style="@style/RobotoR12" />
+            <ImageView android:id="@id/circle_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_no_comment" android:layout_above="@id/label" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="40.0dip" android:layout_height="40.0dip" android:indeterminate="true" style="@android:style/Widget.Holo.ProgressBar.Large" />
+</merge>

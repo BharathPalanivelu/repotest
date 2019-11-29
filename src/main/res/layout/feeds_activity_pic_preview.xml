@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_pic" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <androidx.viewpager.widget.ViewPager android:id="@id/vp_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/dot_container" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_marginTop="10.0dip" />
+        <com.shopee.feeds.feedlibrary.view.VideoWrapView android:id="@id/video_wrap_view" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

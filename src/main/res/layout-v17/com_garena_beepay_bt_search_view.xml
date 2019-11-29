@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/com_garena_beepay_search_front_action" android:clickable="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:cropToPadding="false" style="@style/com_garena_beepay_myactionbar_item" />
+    <EditText android:gravity="center_vertical" android:id="@id/search_box" android:background="@android:color/transparent" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:hint="@string/com_garena_beepay_label_search" android:singleLine="true" android:layout_weight="1.0" android:inputType="textNoSuggestions" android:imeOptions="actionSearch" android:layout_marginStart="16.0dip" style="@style/com_garena_beepay_input_content" />
+    <ImageButton android:id="@id/search_cancel" android:layout_width="@dimen/com_garena_beepay__action_bar_icon_width" android:layout_height="fill_parent" android:cropToPadding="false" style="@style/com_garena_beepay_myactionbar_item" />
+</merge>

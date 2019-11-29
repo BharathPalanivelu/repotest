@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/vacationMode" android:background="#fffffaea" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/vacation_mode_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="12.0dip" android:src="@drawable/ic_notice" android:layout_centerVertical="true" android:layout_marginStart="12.0dip" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black65" android:gravity="center_vertical" android:id="@id/main_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:minHeight="48.0dip" android:text="@string/sp_vacation_mode_on" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/vacation_mode_icon" style="@style/RobotoR14" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/primary" android:gravity="center_vertical" android:id="@id/vacation_mode_turn_off" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:minHeight="48.0dip" android:text="@string/sp_label_turn_off" android:layout_centerVertical="true" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" style="@style/RobotoR14" />
+    </RelativeLayout>
+    <View android:layout_width="fill_parent" android:layout_height="10.0dip" />
+    <com.shopee.app.ui.home.me.v3.NotificationRow android:id="@id/notificationRow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.shopee.app.ui.home.me.v3.feature.MeFeatureRecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    <com.shopee.app.ui.home.me.v3.OptionRow android:id="@id/btnViewMyShop" android:layout_width="fill_parent" android:layout_height="wrap_content" app:isBorderHidden="true" app:text="@string/sp_view_my_shop" app:trackSection="seller_functions" app:trackTabName="Selling" app:trackTarget="View My Shop" app:value="@string/sp_label_manage_my_shop" app:valueColor="@color/primary" />
+    <View android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    <com.shopee.app.ui.webview.WebPageView_ android:id="@id/listingWebView" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:contentDescription="disableWebBridge" />
+</merge>

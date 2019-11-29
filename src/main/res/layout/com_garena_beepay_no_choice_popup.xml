@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@color/com_garena_beepay_common_popup_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/com_garena_beepay_popup_container">
+        <LinearLayout style="@style/com_garena_beepay_popup_body">
+            <TextView android:id="@id/com_garena_beepay_center_message_title" style="@style/com_garena_beepay_popup_title" />
+            <TextView android:id="@id/com_garena_beepay_center_message" style="@style/com_garena_beepay_popup_content" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/com_garena_beepay_confirm_popup_btn_control_panel" style="@style/com_garena_beepay_popup_action_section">
+            <Button android:id="@id/com_garena_beepay_logout_popup_confirm_btn" android:text="@string/com_garena_beepay_label_ok" style="@style/com_garena_beepay_popup_action_section_btn" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

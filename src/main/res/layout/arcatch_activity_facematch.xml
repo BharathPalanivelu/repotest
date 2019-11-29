@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.shopee.arcatch.page.view.ArCatchTitleBar android:id="@id/arcatch_newbie_titlebar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewFlipper android:id="@id/arcatch_fm_flipper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.shopee.arcatch.page.view.ArCatchGuideView android:id="@id/arcatch_guide_guide" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.shopee.arcatch.page.view.ArCatchFaceMatchView android:id="@id/arcatch_face_match" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </ViewFlipper>
+        <com.shopee.arcatch.page.view.ArCatchMusicView android:layout_gravity="end" android:id="@id/arcatch_fm_music" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" />
+    </FrameLayout>
+</LinearLayout>

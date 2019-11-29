@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/imageView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.devspark.robototextview.widget.RobotoTextView android:layout_gravity="end|bottom|center" android:id="@id/product_price" android:minWidth="30.0dip" style="@style/productPriceLabel" />
+    <RelativeLayout android:layout_gravity="end|center|top" android:id="@id/top_panel" android:layout_width="40.0dip" android:layout_height="40.0dip">
+        <ImageView android:id="@id/top_badge" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_badge_soldout" android:scaleType="fitXY" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/top_text" android:layout_width="40.0dip" android:layout_height="40.0dip" android:text="Sold\nOut" android:singleLine="false" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/sold_out_overlay" android:background="@color/white54" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/offer_overlay" android:background="@color/black50" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.devspark.robototextview.widget.RobotoTextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/sp_accepted_offer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:text="@string/sp_offer_accepted_new" android:layout_centerHorizontal="true" />
+        <com.devspark.robototextview.widget.RobotoTextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/sp_offer_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_below="@id/sp_accepted_offer" android:layout_centerHorizontal="true" />
+        <com.devspark.robototextview.widget.RobotoButton android:id="@id/goto_cart" android:background="@drawable/btn_overlay" android:layout_width="120.0dip" android:layout_height="36.0dip" android:layout_marginTop="20.0dip" android:text="@string/sp_go_to_cart" android:layout_below="@id/sp_offer_price" android:layout_centerHorizontal="true" style="@style/ButtonSecondaryPrimary" />
+    </RelativeLayout>
+</FrameLayout>

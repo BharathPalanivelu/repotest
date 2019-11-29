@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/livequiz_color_black_30" android:layout_width="fill_parent" android:layout_height="fill_parent" android:translationZ="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/qa_container" android:background="@drawable/livequiz_bg_game_panel" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="330.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="65.0dip" android:layout_marginRight="15.0dip" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip">
+            <com.devspark.robototextview.widget.RobotoTextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/t_ls_spectating" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/answer_result_spectating" android:includeFontPadding="false" app:autoSizeMinTextSize="10.0sp" app:autoSizeTextType="uniform" app:robotoTypeface="roboto_medium_italic" style="@style/txt_typeface_9" />
+            <com.devspark.robototextview.widget.RobotoTextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/text_question" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="52.5dip" android:text="qwwiufdasfdaskf asdfjdansfldajfladjfldanadlfnadsfjadsd djadfjadsjfadsfjadsjfasd sasdfjadsjfsdajfas;dfjadsfjadsfjasdfa dfjadfjadfa fad fadsfadadfa" android:maxLines="4" android:includeFontPadding="false" app:autoSizeMaxTextSize="18.0sp" app:autoSizeMinTextSize="10.0sp" app:autoSizeTextType="uniform" app:robotoTypeface="roboto_bold" style="@style/txt_typeface_5" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/answer_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:layout_marginBottom="19.0dip">
+            <com.shopee.livequiz.ui.view.AnswerResultProgressView android:id="@id/answer_1" android:layout_width="wrap_content" android:layout_height="35.0dip" />
+            <com.shopee.livequiz.ui.view.AnswerResultProgressView android:id="@id/answer_2" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_marginTop="10.0dip" />
+            <com.shopee.livequiz.ui.view.AnswerResultProgressView android:id="@id/answer_3" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_marginTop="10.0dip" />
+            <com.shopee.livequiz.ui.view.AnswerResultProgressView android:id="@id/answer_4" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_marginTop="10.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/rl_status_image" android:layout_width="330.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="35.0dip" android:layout_marginRight="15.0dip" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+        <ImageView android:id="@id/status_image" android:layout_width="54.0dip" android:layout_height="54.0dip" android:src="@mipmap/livequiz_ic_answer_correct" android:scaleType="fitCenter" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

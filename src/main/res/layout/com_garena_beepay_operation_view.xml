@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/com_garena_beepay_container" android:background="@drawable/bg_opaque_black_round_rectangle" android:padding="@dimen/com_garena_beepay_margin_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="130.0dip" android:minHeight="124.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airpay.paysdk.base.ui.weidget.CoinCloudLoadingView android:id="@id/com_garena_beepay_loading_view" android:layout_width="wrap_content" android:layout_height="wrap_content" app:colorBackground="@color/com_garena_beepay_bg_color_transparent" app:colorForeground="@color/com_garena_beepay_bg_color_white" app:colorSymbol="@color/bg_color_opaque_black" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/com_garena_beepay_txt_color_white" android:gravity="center" android:id="@id/com_garena_beepay_txt_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/com_garena_beepay_label_loading" />
+</LinearLayout>

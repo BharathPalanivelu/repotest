@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/chat_text" android:layout_width="215.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/upper_panel" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/product_image" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginRight="8.0dip" android:layout_marginEnd="8.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@id/product_image" android:layout_toEndOf="@id/product_image">
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/product_name" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" style="@style/RobotoR14" />
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/original_price" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:singleLine="true" style="@style/RobotoL14" />
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/primary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/product_price" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:singleLine="true" style="@style/RobotoL16" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@id/divider" android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/upper_panel" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/offer_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/divider">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/make_offer" android:background="@drawable/chat_item_btn_left_bg" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sp_txt_make_offer" android:singleLine="true" style="@style/RobotoR12" />
+        </FrameLayout>
+        <View android:background="@color/black06" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip" />
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/buy_now" android:background="@drawable/chat_item_btn_right_bg" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/sp_label_buy" android:singleLine="true" style="@style/RobotoR12" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

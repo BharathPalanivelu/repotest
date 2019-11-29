@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/top_border_white_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.shopee.app.ui.common.TagEditText android:textColorHint="@color/black26" android:id="@id/chat_edit" android:background="@null" android:paddingLeft="16.0dip" android:paddingTop="5.0dip" android:paddingRight="16.0dip" android:paddingBottom="5.0dip" android:scrollbars="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="48.0dip" android:maxLines="3" android:layout_weight="1.0" android:inputType="textCapSentences|textImeMultiLine|textMultiLine" android:isScrollContainer="true" style="@style/RobotoR16" />
+    <ImageButton android:id="@id/photo_add" android:background="@drawable/action_bar_button_background" android:layout_width="40.0dip" android:layout_height="fill_parent" android:src="@drawable/com_garena_shopee_ic_camera" />
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageButton android:enabled="false" android:id="@id/send_btn" android:background="@drawable/action_bar_button_background" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="fill_parent" android:src="@drawable/com_garena_shopee_ic_send" />
+        <ImageButton android:id="@id/phone_btn" android:background="@drawable/action_bar_button_background" android:layout_width="40.0dip" android:layout_height="fill_parent" android:src="@drawable/com_garena_shopee_ic_call" />
+    </FrameLayout>
+</LinearLayout>

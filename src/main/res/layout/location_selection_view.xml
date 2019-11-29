@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:indeterminate="true" style="@android:style/Widget.Holo.ProgressBar.Large" />
+    <RelativeLayout android:id="@id/location_action_bar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentTop="true">
+        <ImageButton android:id="@id/location_close_window" android:background="@drawable/btn_secondary_white_square" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/com_garena_shopee_ic_close" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="18.0sp" android:gravity="center_vertical" android:id="@id/map_view_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/sp_label_choose_location" android:layout_centerHorizontal="true" />
+        <ImageButton android:id="@id/send_location" android:background="@drawable/btn_secondary_white_square" android:layout_width="48.0dip" android:layout_height="fill_parent" android:src="@drawable/com_garena_shopee_ic_done" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/location_frame_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/location_action_bar">
+        <fragment android:name="com.google.android.gms.maps.SupportMapFragment" android:id="@id/mapView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/center_panel" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@color/panel_color_black" android:gravity="center_vertical" android:id="@id/address_label" android:background="@drawable/com_garena_shopee_bg_tooltip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/sp_label_loading" />
+            <ImageView android:layout_gravity="center_horizontal" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="50.0dip" android:src="@drawable/com_garena_shopee_ic_map_location" android:contentDescription="@string/sp_label_share_description" />
+        </LinearLayout>
+    </FrameLayout>
+    <ListView android:id="@id/list_address_result" android:visibility="gone" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0dip" android:layout_below="@id/location_frame_layout" />
+</RelativeLayout>

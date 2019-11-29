@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/rating_close" android:background="@drawable/action_bar_button_background" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_card_close" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/complement" android:gravity="center" android:id="@id/rating_title" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="8.0dip" style="@style/RobotoR14" />
+    <com.devspark.robototextview.widget.RobotoButton android:textSize="14.0sp" android:id="@id/btn_whole_row" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="12.0dip" android:singleLine="true" android:layout_below="@id/rating_title" android:textAllCaps="false" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" style="@style/ButtonPrimary" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/rating_btn_panel" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:layout_below="@id/rating_title">
+        <com.devspark.robototextview.widget.RobotoButton android:textSize="14.0sp" android:id="@id/button_left" android:layout_width="0.0dip" android:layout_height="36.0dip" android:layout_marginRight="8.0dip" android:singleLine="true" android:layout_weight="1.0" android:textAllCaps="false" android:layout_marginEnd="8.0dip" style="@style/ButtonSecondaryBlack" />
+        <com.devspark.robototextview.widget.RobotoButton android:textSize="14.0sp" android:id="@id/button_right" android:layout_width="0.0dip" android:layout_height="36.0dip" android:singleLine="true" android:layout_weight="1.0" android:textAllCaps="false" style="@style/ButtonPrimary" />
+    </LinearLayout>
+</RelativeLayout>

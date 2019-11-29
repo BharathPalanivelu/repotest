@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="#ffcfcfcf" android:layout_width="fill_parent" android:layout_height="55.0dip">
+            <com.bca.xco.widget.comp.XTextView android:textAppearance="?android:textAppearanceSmall" android:textStyle="bold" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/xco_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="BANTUAN" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" />
+            <ImageView android:layout_gravity="right" android:id="@id/xco_ic_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/xco_ic_cancel" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <WebView android:layout_gravity="center_horizontal" android:id="@id/xco_webview" android:background="@color/xco_gray" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</ScrollView>

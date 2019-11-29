@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:background="@drawable/rounded_white" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="10.0dip" android:layout_centerVertical="true" />
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black65" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/cross" android:layout_toRightOf="@id/icon" android:layout_centerVertical="true" style="@style/RobotoR12" />
+    <ImageView android:id="@id/cross" android:layout_width="15.0dip" android:layout_height="15.0dip" android:src="@drawable/ic_close_black_24dp" android:tint="@color/black65" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

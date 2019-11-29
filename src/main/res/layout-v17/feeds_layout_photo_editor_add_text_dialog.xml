@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/rl_edit_window_view" android:background="@color/black26" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/rl_title" android:layout_width="wrap_content" android:layout_height="@dimen/feeds_text_sticker_edit_top_bar_height" android:layout_marginLeft="@dimen/feeds_text_sticker_edit_text_margin" android:layout_marginRight="@dimen/feeds_text_sticker_edit_text_margin">
+            <CheckBox android:id="@id/rb_check_high_light" android:background="@drawable/feeds_bg_photo_editor_check_highlight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@null" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/tv_add_done" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/feeds_button_done" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:textAllCaps="false" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_edit_container" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="280.0dip" android:layout_marginLeft="@dimen/feeds_text_sticker_edit_text_margin" android:layout_marginRight="@dimen/feeds_text_sticker_edit_text_margin" android:layout_below="@id/rl_title">
+            <com.shopee.feeds.feedlibrary.editor.text.AutoSizeEditText android:textSize="24.0sp" android:id="@id/et_add_text" android:background="@null" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="8.0dip" android:includeFontPadding="false" android:maxLength="200" android:layout_centerVertical="true" android:inputType="textMultiLine" app:robotoTypeface="roboto_bold" style="@style/PhotoEditorEditText" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_color_picker" android:layout_width="fill_parent" android:layout_height="@dimen/feeds_text_sticker_edit_bottom_bar_height" android:layout_below="@id/rl_edit_container">
+            <com.shopee.feeds.feedlibrary.editor.text.ColorPickerContainer android:id="@id/color_picker" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

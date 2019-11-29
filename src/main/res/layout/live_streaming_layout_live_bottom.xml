@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:id="@id/rl_live_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/rl_bottom_product_anchor" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_bottom_product_anchor" android:paddingBottom="2.0dip" android:layout_width="38.0dip" android:layout_height="40.0dip" android:src="@drawable/live_streaming_ic_anchor_bottom_product" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_product_num" android:layout_width="wrap_content" android:layout_height="15.0dip" android:layout_marginBottom="3.0dip" android:includeFontPadding="false" android:layout_toRightOf="@id/iv_bottom_product_anchor" app:layout_constraintBottom_toBottomOf="@id/iv_bottom_product_anchor" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View android:id="@id/bottom_placeholder1" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:layout_gravity="bottom" android:id="@id/rl_bottom_voucher" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_bottom_voucher" android:background="@drawable/live_streaming_bg_oval" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_streaming_ic_bottom_voucher" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <View android:id="@id/bottom_placeholder2" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:layout_gravity="bottom" android:id="@id/rl_bottom_comment" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_bottom_comment" android:background="@drawable/live_streaming_bg_oval" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_streaming_ic_comment" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <View android:id="@id/bottom_placeholder3" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:layout_gravity="bottom" android:id="@id/rl_bottom_share" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_bottom_share" android:background="@drawable/live_streaming_bg_oval" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_streaming_ic_share" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <View android:id="@id/bottom_placeholder4" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:layout_gravity="bottom" android:id="@id/rl_bottom_beauty" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_bottom_beauty" android:background="@drawable/live_streaming_bg_oval" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_streaming_ic_beauty" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <View android:id="@id/bottom_placeholder5" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:layout_gravity="bottom" android:id="@id/rl_bottom_camera_switch" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_bottom_camera_switch" android:background="@drawable/live_streaming_bg_oval" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_streaming_ic_camera" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <View android:id="@id/bottom_empty1_placeholder" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:layout_gravity="bottom" android:id="@id/rl_bottom_empty1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_bottom_empty1" android:background="@drawable/live_streaming_empty_bg" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_streaming_ic_empty" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <View android:id="@id/bottom_empty2_placeholder" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:layout_gravity="bottom" android:id="@id/rl_bottom_empty2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_bottom_empty2" android:background="@drawable/live_streaming_empty_bg" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/live_streaming_ic_empty" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <CheckBox android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/cb_notify_follower" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="8.0dip" android:checked="true" android:button="@null" android:drawableLeft="@drawable/live_streaming_bg_notify_check" android:drawablePadding="4.0dip" android:layout_alignParentRight="true" />
+</RelativeLayout>

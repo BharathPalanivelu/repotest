@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.devspark.robototextview.widget.RobotoButton android:textSize="14.0dip" android:id="@id/contact_btn" android:layout_width="0.0dip" android:layout_height="38.0dip" android:layout_marginRight="4.0dip" android:text="@string/sp_contact_seller" android:singleLine="true" android:drawableLeft="@drawable/com_garena_shopee_ic_order_chat" android:layout_weight="1.0" android:textAllCaps="false" android:drawableStart="@drawable/com_garena_shopee_ic_order_chat" android:layout_marginEnd="4.0dip" style="@style/ButtonSecondaryBlue" />
+    <com.devspark.robototextview.widget.RobotoButton android:textSize="14.0dip" android:id="@id/visit_shop_btn" android:layout_width="0.0dip" android:layout_height="38.0dip" android:layout_marginLeft="4.0dip" android:text="@string/sp_visit_shop" android:singleLine="true" android:drawableLeft="@drawable/com_garena_shopee_ic_order_visittheshop" android:layout_weight="1.0" android:textAllCaps="false" android:drawableStart="@drawable/com_garena_shopee_ic_order_visittheshop" android:layout_marginStart="4.0dip" style="@style/ButtonSecondaryBlue" />
+</LinearLayout>

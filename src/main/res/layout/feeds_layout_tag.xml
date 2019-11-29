@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fl_bg" android:background="@drawable/feeds_shadow_round_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/feeds_tag_margin">
+        <FrameLayout android:id="@id/container" android:background="@drawable/feeds_tag_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="32.0dip" />
+    </FrameLayout>
+    <com.shopee.feeds.feedlibrary.editor.tag.TagDeleteView android:id="@id/iv_delete_left" android:padding="10.0dip" android:visibility="gone" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginLeft="-16.0dip" android:layout_marginTop="-16.0dip" android:src="@drawable/feeds_icn_feed_close" android:scaleType="fitCenter" android:layout_alignLeft="@id/fl_bg" android:layout_alignTop="@id/fl_bg" />
+    <com.shopee.feeds.feedlibrary.editor.tag.TagDeleteView android:id="@id/iv_delete_right" android:padding="@dimen/feeds_tag_delete_btn_padding" android:visibility="gone" android:layout_width="44.0dip" android:layout_height="44.0dip" android:layout_marginTop="-16.0dip" android:layout_marginRight="-16.0dip" android:src="@drawable/feeds_icn_feed_close" android:scaleType="fitCenter" android:layout_alignTop="@id/fl_bg" android:layout_alignRight="@id/fl_bg" />
+    <FrameLayout android:id="@id/fl_top" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="@dimen/feeds_tag_triangle_width" android:layout_height="@dimen/feeds_tag_triangle_height" android:layout_marginTop="0.20000005dip" android:layout_alignTop="@id/fl_bg" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/v_top_bg" android:layout_width="20.0dip" android:layout_height="8.0dip" android:src="@drawable/feeds_ic_tag_triangle_up" android:tint="#0f000000" />
+        <ImageView android:id="@id/ic_top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="0.20000005dip" android:src="@drawable/feeds_ic_tag_triangle_up" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/fl_bottom" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="@dimen/feeds_tag_triangle_width" android:layout_height="@dimen/feeds_tag_triangle_height" android:layout_alignBottom="@id/fl_bg" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/v_bottom_bg" android:layout_width="20.5dip" android:layout_height="8.5dip" android:src="@drawable/feeds_ic_tag_triangle_down" android:tint="#0f000000" />
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/ic_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="0.20000005dip" android:src="@drawable/feeds_ic_tag_triangle_down" />
+    </FrameLayout>
+</RelativeLayout>

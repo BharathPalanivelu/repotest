@@ -1,0 +1,45 @@
+package com.facebook.react.bridge;
+
+import com.facebook.jni.HybridData;
+import com.facebook.proguard.annotations.DoNotStrip;
+import com.facebook.react.bridge.JavaJSExecutor;
+
+@DoNotStrip
+public class ProxyJavaScriptExecutor extends JavaScriptExecutor {
+    private JavaJSExecutor mJavaJSExecutor;
+
+    private static native HybridData initHybrid(JavaJSExecutor javaJSExecutor);
+
+    public String getName() {
+        return "ProxyJavaScriptExecutor";
+    }
+
+    public static class Factory implements JavaScriptExecutorFactory {
+        private final JavaJSExecutor.Factory mJavaJSExecutorFactory;
+
+        public Factory(JavaJSExecutor.Factory factory) {
+            this.mJavaJSExecutorFactory = factory;
+        }
+
+        public JavaScriptExecutor create() throws Exception {
+            return new ProxyJavaScriptExecutor(this.mJavaJSExecutorFactory.create());
+        }
+    }
+
+    static {
+        ReactBridge.staticInit();
+    }
+
+    public ProxyJavaScriptExecutor(JavaJSExecutor javaJSExecutor) {
+        super(initHybrid(javaJSExecutor));
+        this.mJavaJSExecutor = javaJSExecutor;
+    }
+
+    public void close() {
+        JavaJSExecutor javaJSExecutor = this.mJavaJSExecutor;
+        if (javaJSExecutor != null) {
+            javaJSExecutor.close();
+            this.mJavaJSExecutor = null;
+        }
+    }
+}

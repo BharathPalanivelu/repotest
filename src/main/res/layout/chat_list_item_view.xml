@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/avatar" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <com.shopee.app.ui.common.BadgeView_ android:gravity="center" android:id="@id/badge" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_alignTop="@id/avatar" android:layout_alignRight="@id/avatar" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/product_image" android:layout_toRightOf="@id/avatar" android:layout_centerVertical="true">
+        <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black87" android:ellipsize="end" android:gravity="start" android:id="@id/user_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/RobotoM16" />
+        <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/banned_icon" android:visibility="invisible" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="2.0dip" android:src="@drawable/ic_exclamation_mark" android:scaleType="fitXY" />
+            <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black54" android:ellipsize="end" android:gravity="start" android:id="@id/text_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/RobotoL14" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.devspark.robototextview.widget.RobotoTextView android:textColor="@color/black26" android:id="@id/time" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:singleLine="true" android:layout_alignParentRight="true" style="@style/RobotoR11" />
+    <ImageView android:id="@id/product_image" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginRight="16.0dip" android:layout_below="@id/time" android:layout_alignParentRight="true" />
+    <View android:id="@id/divider" android:background="@color/black06" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="72.0dip" android:layout_marginTop="12.0dip" android:layout_below="@id/product_image" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/bottom_bar_header_item_view" />
+    <com.facebook.drawee.view.SimpleDraweeView android:layout_gravity="center" android:id="@id/tab_animation_icon" android:clickable="false" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginBottom="5.5dip" />
+</FrameLayout>
