@@ -181,12 +181,11 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
         super.onCreate(bundle);
         setContentView(c.f.live_streaming_activity_audience);
         locateView();
-        this.txVideoLayout.a();
-        // init presenter
-        this.s = new com.shopee.live.livestreaming.ui.audience.b(this);
-        this.floatWindowModeTask = new FloatWindowModeTask(ThreadExecutor.getInstance(), this);
+        this.txVideoLayout.a(); // init TXCloudVideoView inside TXVideoLayout
+        this.s = new com.shopee.live.livestreaming.ui.audience.b(this);// init presenter
+        this.floatWindowModeTask = new FloatWindowModeTask(ThreadExecutor.getInstance(), this);// init float window mode task
         this.s.a((interfaceD) this);// presenter attachView
-        classX.g();
+        classX.g();// data tracking
     }
 
     /* access modifiers changed from: protected */

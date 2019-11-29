@@ -203,7 +203,6 @@ public class a {
     // com.tencent.rtmp.TXLivePlayer, init txliveplayer (tanpa parameter)
     public void k() {
         // passing txLivePlayConfig
-
         a(new com.shopee.live.livestreaming.ui.audience.a.b().a(0).b(0).a(this.txLivePlayConfig));
     }
 

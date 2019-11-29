@@ -158,7 +158,7 @@ public class classX {
             String b2 = p.b();
             String authority = Uri.parse(b2).getAuthority();
             if (authority != null) {
-                AnonymousClass4 r3 = new com.shopee.sdk.f.b<Integer>() {
+                com.shopee.sdk.f.b r3 = new com.shopee.sdk.f.b<Integer>() {
                     public void a(Integer num) {
                     }
 

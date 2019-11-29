@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.shopee.live.livestreaming.ui.anchor.view.PublicScreenView;
 
-public class DanmaKuView extends c {
+public class DanmaKuView extends cRecyclerView {
     /* access modifiers changed from: private */
     public Paint M;
     /* access modifiers changed from: private */

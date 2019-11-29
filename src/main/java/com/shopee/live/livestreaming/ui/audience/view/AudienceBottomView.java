@@ -228,7 +228,7 @@ public class AudienceBottomView extends com.shopee.live.livestreaming.a.b implem
         }
     }
 
-    public void setAudienceView(com.shopee.live.livestreaming.ui.audience.d dVar) {
+    public void setAudienceView(com.shopee.live.livestreaming.ui.audience.interfaceD dVar) {
         this.q = dVar;
     }
 
