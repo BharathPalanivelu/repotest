@@ -69,8 +69,6 @@ import com.shopee.sdk.modules.ui.navigator.NavigationPath;
 import com.shopee.sdk.modules.ui.navigator.options.PopOption;
 import java.io.File;
 
-import loan.data_point.Constant;
-
 public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingActivity implements interfaceD, AudienceCoinView.a, c {
     /* access modifiers changed from: private */
     public static int N = 1;
@@ -87,11 +85,12 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     int K;
     int L;
     int M;
-    /* access modifiers changed from: private */
-    public FloatWindowModeTask O;
-    /* access modifiers changed from: private */
-    public FloatWindowModeTask.Callback P;
-    private NetworkStateReceiver Q;
+
+
+    public FloatWindowModeTask floatWindowModeTask;
+    public FloatWindowModeTask.Callback callback;
+
+    private NetworkStateReceiver networkStateReceiver;
     private boolean R = false;
     private ConstraintLayout S;
     private androidx.constraintlayout.widget.ConstraintSet T;
@@ -100,38 +99,39 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     public volatile float V;
     private Runnable W = new Runnable() {
         public void run() {
-            BaseLiveStreamingActivity.this.k.setChildMaxHeight(BaseLiveStreamingActivity.this.B());
+            BaseLiveStreamingActivity.this.publicScreenView.setChildMaxHeight(BaseLiveStreamingActivity.this.B());
         }
     };
 
     /* renamed from: b  reason: collision with root package name */
-    protected CleanableLayout f28963b;
+    protected CleanableLayout cleanableLayout;
 
-    /* renamed from: c  reason: collision with root package name */
-    protected View f28964c;
+    /* gradient cover */
+    protected View view;
 
     /* renamed from: d  reason: collision with root package name */
-    protected TXVideoLayout f28965d;
+    protected TXVideoLayout txVideoLayout;
 
     /* renamed from: e  reason: collision with root package name */
-    protected DotsLoadingView f28966e;
+    protected DotsLoadingView dotsLoadingView;
 
     /* renamed from: f  reason: collision with root package name */
-    protected LivePageTitleView f28967f;
+    protected LivePageTitleView livePageTitleView;
 
     /* renamed from: g  reason: collision with root package name */
-    protected LivePageAnchorInfoView f28968g;
-    protected LivePageShowProductView h;
-    protected FlowLikeLayout i;
-    protected AudienceBottomView j;
-    protected PublicScreenView k;
+    protected LivePageAnchorInfoView livePageAnchorInfoView;
+    protected LivePageShowProductView livePageShowProductView
+            ;
+    protected FlowLikeLayout flowLikeLayout;
+    protected AudienceBottomView audienceBottomView;
+    protected PublicScreenView publicScreenView;
     protected VideoPlayProgressBar l;
-    protected TXLiveNetStatusLayout m;
-    protected VoucherStickerItemView n;
-    protected WrapLoadingView o;
-    protected AdView p;
-    protected ImageView q;
-    protected AudienceCoinView r;
+    protected TXLiveNetStatusLayout txLiveNetStatusLayout;
+    protected VoucherStickerItemView voucherStickerItemView;
+    protected WrapLoadingView wrapLoadingView;
+    protected AdView adView;
+    protected ImageView imageView;
+    protected AudienceCoinView audienceCoinView;
 
     // ini mirip dengan presenter
     protected com.shopee.live.livestreaming.ui.audience.b s;
@@ -157,23 +157,23 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     }
 
     private void locateView() {
-        this.f28963b = (CleanableLayout) a(c.e.container_audience);
-        this.f28964c = a(c.e.gradient_cover);
-        this.f28965d = (TXVideoLayout) a(c.e.video_view);
-        this.f28966e = (DotsLoadingView) a(c.e.loading_view);
-        this.f28967f = (LivePageTitleView) a(c.e.live_page_title_audience_view);
-        this.f28968g = (LivePageAnchorInfoView) a(c.e.live_page_anchor_info_view);
-        this.h = (LivePageShowProductView) a(c.e.live_page_show_product_view);
-        this.i = (FlowLikeLayout) a(c.e.live_audience_flow_like);
-        this.j = (AudienceBottomView) a(c.e.live_page_audience_bottom_view);
-        this.k = (PublicScreenView) a(c.e.public_screen_view);
+        this.cleanableLayout = (CleanableLayout) a(c.e.container_audience);
+        this.view = a(c.e.gradient_cover);
+        this.txVideoLayout = (TXVideoLayout) a(c.e.video_view);
+        this.dotsLoadingView = (DotsLoadingView) a(c.e.loading_view);
+        this.livePageTitleView = (LivePageTitleView) a(c.e.live_page_title_audience_view);
+        this.livePageAnchorInfoView = (LivePageAnchorInfoView) a(c.e.live_page_anchor_info_view);
+        this.livePageShowProductView = (LivePageShowProductView) a(c.e.live_page_show_product_view);
+        this.flowLikeLayout = (FlowLikeLayout) a(c.e.live_audience_flow_like);
+        this.audienceBottomView = (AudienceBottomView) a(c.e.live_page_audience_bottom_view);
+        this.publicScreenView = (PublicScreenView) a(c.e.public_screen_view);
         this.l = (VideoPlayProgressBar) a(c.e.live_replay_video_progress);
-        this.m = (TXLiveNetStatusLayout) a(c.e.tx_status_layout);
-        this.n = (VoucherStickerItemView) a(c.e.voucher_view);
-        this.o = (WrapLoadingView) a(c.e.wrap_loading);
-        this.p = (AdView) a(c.e.iv_adview_audience);
-        this.q = (ImageView) a(c.e.portrait_to_landscape_icon);
-        this.r = (AudienceCoinView) a(c.e.ac_coin);
+        this.txLiveNetStatusLayout = (TXLiveNetStatusLayout) a(c.e.tx_status_layout);
+        this.voucherStickerItemView = (VoucherStickerItemView) a(c.e.voucher_view);
+        this.wrapLoadingView = (WrapLoadingView) a(c.e.wrap_loading);
+        this.adView = (AdView) a(c.e.iv_adview_audience);
+        this.imageView = (ImageView) a(c.e.portrait_to_landscape_icon);
+        this.audienceCoinView = (AudienceCoinView) a(c.e.ac_coin);
     }
 
     /* access modifiers changed from: protected */
@@ -181,10 +181,10 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
         super.onCreate(bundle);
         setContentView(c.f.live_streaming_activity_audience);
         locateView();
-        this.f28965d.a();
+        this.txVideoLayout.a();
         // init presenter
         this.s = new com.shopee.live.livestreaming.ui.audience.b(this);
-        this.O = new FloatWindowModeTask(ThreadExecutor.getInstance(), this);
+        this.floatWindowModeTask = new FloatWindowModeTask(ThreadExecutor.getInstance(), this);
         this.s.a((interfaceD) this);// presenter attachView
         classX.g();
     }
@@ -209,15 +209,18 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
             e2.printStackTrace();
         }
 
+        // com.shopee.live.livestreaming.util.d.a(getApplicationContext()) {1 artinya width > height
+        // com.shopee.live.livestreaming.util.d.a(getApplicationContext()) {0 artinya widtch < height } -1 berarti null contextnya
+
         if (com.shopee.live.livestreaming.util.d.a(getApplicationContext()) == 1 && this.V != BitmapDescriptorFactory.HUE_RED) {
-            w(); // init view juga
+            initViewDanPlayernya(); // init view juga
         }
         if (this.y) {
             FloatVideoService.a aVar = this.A;
             if (aVar != null) {
                 aVar.a();
                 this.y = false;
-                this.f28965d.a();
+                this.txVideoLayout.a();
             }
         }
     }
@@ -227,11 +230,11 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
         super.onStop();
         if (isFinishing()) {
             this.s.a();// presenter manggil sesuatu
-            this.h.setClickListener((LivePageShowProductView.a) null);
-            this.f28967f.setSizeChangeListener((LivePageTitleView.a) null);
-            this.f28968g.setClickListener((LivePageAnchorInfoView.a) null);
-            this.j.setBottomViewCallback((AudienceBottomView.b) null);
-            this.f28966e.b(); // stop some view
+            this.livePageShowProductView.setClickListener((LivePageShowProductView.a) null);
+            this.livePageTitleView.setSizeChangeListener((LivePageTitleView.a) null);
+            this.livePageAnchorInfoView.setClickListener((LivePageAnchorInfoView.a) null);
+            this.audienceBottomView.setBottomViewCallback((AudienceBottomView.b) null);
+            this.dotsLoadingView.b(); // stop some view
             com.shopee.sdk.b.c().b("NotificationShopeeLiveHideMiniWindow", this);
         }
     }
@@ -243,11 +246,11 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
         if (bVar != null) {
             bVar.g();
         }
-        AdView adView = this.p;
+        AdView adView = this.adView;
         if (adView != null) {
             adView.a();
         }
-        WrapLoadingView wrapLoadingView = this.o;
+        WrapLoadingView wrapLoadingView = this.wrapLoadingView;
         if (wrapLoadingView != null) {
             wrapLoadingView.c();
         }
@@ -255,8 +258,8 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
 
     public void z_() {
         ac.b(getApplicationContext());
-        this.f28966e.a();
-        this.q.setOnClickListener(new View.OnClickListener() {
+        this.dotsLoadingView.a();
+        this.imageView.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (BaseLiveStreamingActivity.this.w) {
                     com.shopee.live.livestreaming.ui.audience.c.I();
@@ -266,35 +269,35 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
                 BaseLiveStreamingActivity.this.x();
             }
         });
-        this.o.setLoadingListener(new WrapLoadingView.a() {
+        this.wrapLoadingView.setLoadingListener(new WrapLoadingView.a() {
             public void a() {
-                BaseLiveStreamingActivity.this.q.setVisibility(8);
+                BaseLiveStreamingActivity.this.imageView.setVisibility(8);
             }
 
             public void b() {
                 if (BaseLiveStreamingActivity.this.V != BitmapDescriptorFactory.HUE_RED && com.shopee.live.livestreaming.util.d.a(BaseLiveStreamingActivity.this.getApplicationContext()) == 0) {
-                    if (BaseLiveStreamingActivity.this.q.getVisibility() != 0) {
+                    if (BaseLiveStreamingActivity.this.imageView.getVisibility() != 0) {
                         if (BaseLiveStreamingActivity.this.w) {
                             com.shopee.live.livestreaming.ui.audience.c.H();
                         } else {
                             com.shopee.live.livestreaming.ui.audience.c.B();
                         }
                     }
-                    BaseLiveStreamingActivity.this.q.setVisibility(0);
+                    BaseLiveStreamingActivity.this.imageView.setVisibility(0);
                 }
             }
         });
-        this.r.setOnViewVisibleListener(this);
+        this.audienceCoinView.setOnViewVisibleListener(this);
         this.C = new b(this.f28744a);
         if (!com.shopee.sdk.b.a().d().b()) {
-            this.f28968g.g();
+            this.livePageAnchorInfoView.g();
         }
         if (this.w) {
-            this.f28967f.e();
-            this.f28968g.e();
+            this.livePageTitleView.e();
+            this.livePageAnchorInfoView.e();
         } else {
-            this.f28967f.d();
-            this.f28968g.d();
+            this.livePageTitleView.d();
+            this.livePageAnchorInfoView.d();
         }
         if (this.t == 0) {
             d();
@@ -305,11 +308,11 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
             this.s.a(this.t);
             this.s.d(this.t);
         }
-        this.j.c(this.t);
-        this.j.setAudienceView(this);
-        this.j.setFlowLikeLayout(this.i);
-        this.j.setPlayMode(this.w ? 21 : 20);
-        this.h.setClickListener(new LivePageShowProductView.a() {
+        this.audienceBottomView.c(this.t);
+        this.audienceBottomView.setAudienceView(this);
+        this.audienceBottomView.setFlowLikeLayout(this.flowLikeLayout);
+        this.audienceBottomView.setPlayMode(this.w ? 21 : 20);
+        this.livePageShowProductView.setClickListener(new LivePageShowProductView.a() {
             public void a() {
             }
 
@@ -318,22 +321,22 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
                 BaseLiveStreamingActivity.this.a(i, j);
             }
         });
-        this.k.setLiveMode(20);
-        this.k.b(com.garena.android.appkit.tools.b.e(c.g.live_streaming_viewer_msg_welcome));
-        this.k.c(h.a());
-        this.f28967f.setSizeChangeListener(new LivePageTitleView.a() {
+        this.publicScreenView.setLiveMode(20);
+        this.publicScreenView.b(com.garena.android.appkit.tools.b.e(c.g.live_streaming_viewer_msg_welcome));
+        this.publicScreenView.c(livePageShowProductView.a());
+        this.livePageTitleView.setSizeChangeListener(new LivePageTitleView.a() {
             public void a(int i, int i2, int i3, int i4) {
                 if (com.shopee.live.livestreaming.util.d.a(BaseLiveStreamingActivity.this.getApplicationContext()) != 0) {
                     androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
-                    cVar.a((ConstraintLayout) BaseLiveStreamingActivity.this.f28963b);
-                    cVar.a(BaseLiveStreamingActivity.this.f28968g.getId(), 3, 0, 3, (int) ab.a(12.0f));
-                    cVar.b((ConstraintLayout) BaseLiveStreamingActivity.this.f28963b);
-                    com.shopee.live.livestreaming.ui.view.d.b(BaseLiveStreamingActivity.this.f28967f.getBottom());
+                    cVar.a((ConstraintLayout) BaseLiveStreamingActivity.this.cleanableLayout);
+                    cVar.a(BaseLiveStreamingActivity.this.livePageAnchorInfoView.getId(), 3, 0, 3, (int) ab.a(12.0f));
+                    cVar.b((ConstraintLayout) BaseLiveStreamingActivity.this.cleanableLayout);
+                    com.shopee.live.livestreaming.ui.view.d.b(BaseLiveStreamingActivity.this.livePageTitleView.getBottom());
                 } else if (i2 < 500) {
                     androidx.constraintlayout.widget.c cVar2 = new androidx.constraintlayout.widget.c();
-                    cVar2.a((ConstraintLayout) BaseLiveStreamingActivity.this.f28963b);
-                    cVar2.a(BaseLiveStreamingActivity.this.f28968g.getId(), 3, 0, 3, BaseLiveStreamingActivity.this.f28967f.getTop() + BaseLiveStreamingActivity.this.f28967f.getHeight() + ((int) ab.a(12.0f)));
-                    cVar2.b((ConstraintLayout) BaseLiveStreamingActivity.this.f28963b);
+                    cVar2.a((ConstraintLayout) BaseLiveStreamingActivity.this.cleanableLayout);
+                    cVar2.a(BaseLiveStreamingActivity.this.livePageAnchorInfoView.getId(), 3, 0, 3, BaseLiveStreamingActivity.this.livePageTitleView.getTop() + BaseLiveStreamingActivity.this.livePageTitleView.getHeight() + ((int) ab.a(12.0f)));
+                    cVar2.b((ConstraintLayout) BaseLiveStreamingActivity.this.cleanableLayout);
                 }
             }
 
@@ -341,17 +344,17 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
                 BaseLiveStreamingActivity.this.y();
             }
         });
-        this.Q = new NetworkStateReceiver();
+        this.networkStateReceiver = new NetworkStateReceiver();
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
-        this.Q.a(new NetworkStateReceiver.a() {
+        this.networkStateReceiver.a(new NetworkStateReceiver.a() {
             public void a(int i) {
                 BaseLiveStreamingActivity.this.c(i);
             }
         });
-        registerReceiver(this.Q, intentFilter);
+        registerReceiver(this.networkStateReceiver, intentFilter);
         this.R = true;
-        this.p.setAdViewClickListener(new AdView.a() {
+        this.adView.setAdViewClickListener(new AdView.a() {
             public void a() {
                 long i = BaseLiveStreamingActivity.this.s.i();
                 if (i != -1) {
@@ -371,9 +374,9 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
                 }
             }
         });
-        this.f28963b.setTouchListener(new CleanableLayout.b() {
+        this.cleanableLayout.setTouchListener(new CleanableLayout.b() {
             public void a() {
-                BaseLiveStreamingActivity.this.n.a(true, false);
+                BaseLiveStreamingActivity.this.voucherStickerItemView.a(true, false);
             }
         });
         this.C.a(this.t);
@@ -409,15 +412,15 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     /* access modifiers changed from: private */
     public void o() {
         androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
-        cVar.a((ConstraintLayout) this.f28963b);
-        cVar.a(this.p.getId(), 3, this.r.getId(), 4, (int) com.shopee.live.livestreaming.util.w.a(this, 10.0f));
-        cVar.b((ConstraintLayout) this.f28963b);
+        cVar.a((ConstraintLayout) this.cleanableLayout);
+        cVar.a(this.adView.getId(), 3, this.audienceCoinView.getId(), 4, (int) com.shopee.live.livestreaming.util.w.a(this, 10.0f));
+        cVar.b((ConstraintLayout) this.cleanableLayout);
     }
 
     public void b() {
         if (this.R) {
-            this.Q.a((NetworkStateReceiver.a) null);
-            unregisterReceiver(this.Q);
+            this.networkStateReceiver.a((NetworkStateReceiver.a) null);
+            unregisterReceiver(this.networkStateReceiver);
             this.R = false;
         }
         m();
@@ -432,9 +435,9 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     }
 
     public void a(boolean z2) {
-        this.f28968g.g();
-        this.f28968g.setFollowingStatus(z2);
-        this.f28968g.setFollowButtonClickable(!z2);
+        this.livePageAnchorInfoView.g();
+        this.livePageAnchorInfoView.setFollowingStatus(z2);
+        this.livePageAnchorInfoView.setFollowButtonClickable(!z2);
     }
 
     public void a(final int i2, final long j2) {
@@ -465,26 +468,26 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     }
 
     public void a(DanmaKuContentEntity danmaKuContentEntity) {
-        this.k.a(danmaKuContentEntity);
+        this.publicScreenView.a(danmaKuContentEntity);
     }
 
     public void a(DanmaKuEntity danmaKuEntity) {
-        this.k.a(danmaKuEntity);
+        this.publicScreenView.a(danmaKuEntity);
     }
 
     public void a(PollingRoomInfoEntity pollingRoomInfoEntity, SessionProductEntity.ProductItem productItem) {
-        this.f28968g.a(pollingRoomInfoEntity);
-        this.j.b(this.f28968g.getMemberCount());
-        this.j.a((long) pollingRoomInfoEntity.session_like_cnt);
+        this.livePageAnchorInfoView.a(pollingRoomInfoEntity);
+        this.audienceBottomView.b(this.livePageAnchorInfoView.getMemberCount());
+        this.audienceBottomView.a((long) pollingRoomInfoEntity.session_like_cnt);
         if (pollingRoomInfoEntity.getProducts_cnt() > 0) {
-            this.j.setProductItemCount(pollingRoomInfoEntity.getProducts_cnt());
+            this.audienceBottomView.setProductItemCount(pollingRoomInfoEntity.getProducts_cnt());
         }
-        this.h.a(productItem);
-        this.k.post(this.W);
+        this.livePageShowProductView.a(productItem);
+        this.publicScreenView.post(this.W);
     }
 
     public void a(EtoeMessageItem etoeMessageItem) {
-        this.j.a(etoeMessageItem.type == 0);
+        this.audienceBottomView.a(etoeMessageItem.type == 0);
     }
 
     public int B_() {
@@ -496,12 +499,12 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     }
 
     public AudienceBottomView h() {
-        return this.j;
+        return this.audienceBottomView;
     }
 
     /* access modifiers changed from: protected */
     public void b(boolean z2) {
-        this.j.setLikeClickForbidden(z2);
+        this.audienceBottomView.setLikeClickForbidden(z2);
     }
 
     /* access modifiers changed from: protected */
@@ -510,27 +513,27 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     }
 
     private void p() {
-        this.f28968g.getAnchorPortrait().post(new Runnable() {
+        this.livePageAnchorInfoView.getAnchorPortrait().post(new Runnable() {
             public void run() {
-                int top = BaseLiveStreamingActivity.this.f28968g.getAnchorPortrait().getTop() + BaseLiveStreamingActivity.this.f28968g.getPaddingTop();
+                int top = BaseLiveStreamingActivity.this.livePageAnchorInfoView.getAnchorPortrait().getTop() + BaseLiveStreamingActivity.this.livePageAnchorInfoView.getPaddingTop();
                 androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
-                cVar.a((ConstraintLayout) BaseLiveStreamingActivity.this.f28963b);
-                cVar.a(BaseLiveStreamingActivity.this.p.getId(), 3, BaseLiveStreamingActivity.this.f28968g.getId(), 3, top);
-                cVar.b((ConstraintLayout) BaseLiveStreamingActivity.this.f28963b);
+                cVar.a((ConstraintLayout) BaseLiveStreamingActivity.this.cleanableLayout);
+                cVar.a(BaseLiveStreamingActivity.this.adView.getId(), 3, BaseLiveStreamingActivity.this.livePageAnchorInfoView.getId(), 3, top);
+                cVar.b((ConstraintLayout) BaseLiveStreamingActivity.this.cleanableLayout);
             }
         });
     }
 
     private void q() {
-        this.p.post(new Runnable() {
+        this.adView.post(new Runnable() {
             public void run() {
-                int top = BaseLiveStreamingActivity.this.f28967f.getTop() + BaseLiveStreamingActivity.this.f28968g.getPaddingTop() + BaseLiveStreamingActivity.this.f28967f.getHeight() + BaseLiveStreamingActivity.this.f28967f.getPaddingBottom() + ((int) ab.a(7.0f));
+                int top = BaseLiveStreamingActivity.this.livePageTitleView.getTop() + BaseLiveStreamingActivity.this.livePageAnchorInfoView.getPaddingTop() + BaseLiveStreamingActivity.this.livePageTitleView.getHeight() + BaseLiveStreamingActivity.this.livePageTitleView.getPaddingBottom() + ((int) ab.a(7.0f));
                 androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
-                cVar.a((ConstraintLayout) BaseLiveStreamingActivity.this.f28963b);
-                cVar.a(BaseLiveStreamingActivity.this.p.getId(), 3, 0, 3, top);
-                cVar.b((ConstraintLayout) BaseLiveStreamingActivity.this.f28963b);
+                cVar.a((ConstraintLayout) BaseLiveStreamingActivity.this.cleanableLayout);
+                cVar.a(BaseLiveStreamingActivity.this.adView.getId(), 3, 0, 3, top);
+                cVar.b((ConstraintLayout) BaseLiveStreamingActivity.this.cleanableLayout);
                 BaseLiveStreamingActivity.this.r();
-                BaseLiveStreamingActivity.this.p.setVisibilityListener(new AdView.b() {
+                BaseLiveStreamingActivity.this.adView.setVisibilityListener(new AdView.b() {
                     public void a(int i) {
                         BaseLiveStreamingActivity.this.r();
                     }
@@ -544,14 +547,14 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
         int i2;
         int i3;
         if (getRequestedOrientation() == 0) {
-            boolean z2 = this.p.getVisibility() == 8;
+            boolean z2 = this.adView.getVisibility() == 8;
             androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
-            cVar.a((ConstraintLayout) this.f28963b);
-            int id = this.n.getId();
+            cVar.a((ConstraintLayout) this.cleanableLayout);
+            int id = this.voucherStickerItemView.getId();
             if (z2) {
                 i2 = 0;
             } else {
-                i2 = this.p.getId();
+                i2 = this.adView.getId();
             }
             int i4 = z2 ? 3 : 4;
             if (z2) {
@@ -560,7 +563,7 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
                 i3 = c.C0439c.live_streaming_land_voucher_top_margin;
             }
             cVar.a(id, 3, i2, i4, com.garena.android.appkit.tools.b.d(i3));
-            cVar.b((ConstraintLayout) this.f28963b);
+            cVar.b((ConstraintLayout) this.cleanableLayout);
         }
     }
 
@@ -576,27 +579,27 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
             this.t = liveStreamingSessionEntity.getSession().getSession_id();
             f.a().b(this.t);
             this.v = liveStreamingSessionEntity.getSession().getCover_pic();
-            this.f28963b.setLandBackground(this.v);
-            this.f28967f.setData(liveStreamingSessionEntity);
-            this.f28968g.setData(liveStreamingSessionEntity.getSession());
-            this.k.setLiveStreamingSessionEntity(liveStreamingSessionEntity);
-            this.j.b(this.f28968g.getMemberCount());
+            this.cleanableLayout.setLandBackground(this.v);
+            this.livePageTitleView.setData(liveStreamingSessionEntity);
+            this.livePageAnchorInfoView.setData(liveStreamingSessionEntity.getSession());
+            this.publicScreenView.setLiveStreamingSessionEntity(liveStreamingSessionEntity);
+            this.audienceBottomView.b(this.livePageAnchorInfoView.getMemberCount());
             if (this.w) {
-                this.j.setLikeNumber((long) liveStreamingSessionEntity.getSession().getLike_cnt());
+                this.audienceBottomView.setLikeNumber((long) liveStreamingSessionEntity.getSession().getLike_cnt());
             } else {
-                this.j.setLikeNumber(0);
+                this.audienceBottomView.setLikeNumber(0);
             }
-            this.j.setTitleName(liveStreamingSessionEntity.getSession().getTitle());
+            this.audienceBottomView.setTitleName(liveStreamingSessionEntity.getSession().getTitle());
             String nickname = liveStreamingSessionEntity.getSession().getNickname();
             if (com.shopee.live.livestreaming.util.d.a(nickname)) {
                 nickname = liveStreamingSessionEntity.getSession().getUsername();
             }
-            this.j.setAnchorName(nickname);
+            this.audienceBottomView.setAnchorName(nickname);
             f.a().d(liveStreamingSessionEntity.getSession().getUid());
             f.a().a(liveStreamingSessionEntity.getSession().getStart_time());
-            this.f28968g.setClickListener(new LivePageAnchorInfoView.a() {
+            this.livePageAnchorInfoView.setClickListener(new LivePageAnchorInfoView.a() {
                 public void a(boolean z) {
-                    BaseLiveStreamingActivity.this.f28968g.setFollowButtonClickable(false);
+                    BaseLiveStreamingActivity.this.livePageAnchorInfoView.setFollowButtonClickable(false);
                     if (z) {
                         BaseLiveStreamingActivity.this.s.f(shop_id);
                     }
@@ -618,7 +621,7 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
                     }
                 }
             });
-            this.j.setBottomViewCallback(new AudienceBottomView.b() {
+            this.audienceBottomView.setBottomViewCallback(new AudienceBottomView.b() {
                 public void a(String str) {
                     if ("live--v".equals(str)) {
                         BaseLiveStreamingActivity.this.a((FloatWindowModeTask.Promise) new FloatWindowModeTask.Promise() {
@@ -631,20 +634,20 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
                     BaseLiveStreamingActivity.this.s.b(str);
                     com.shopee.sdk.modules.app.e.a e2 = x.e();
                     if (e2 != null) {
-                        BaseLiveStreamingActivity.this.k.b((long) e2.a(), p.a(e2.d()), h.a(), str);
+                        BaseLiveStreamingActivity.this.publicScreenView.b((long) e2.a(), adView.a(e2.d()), livePageShowProductView.a(), str);
                     }
                     com.shopee.live.livestreaming.ui.audience.c.g();
                     if ("debug-open".equals(str)) {
                         BaseLiveStreamingActivity.this.s();
                     } else if ("debug-close".equals(str)) {
                         com.shopee.live.livestreaming.b.b().a().setTXLogEnable(false);
-                        BaseLiveStreamingActivity.this.m.setVisibility(8);
+                        BaseLiveStreamingActivity.this.txLiveNetStatusLayout.setVisibility(8);
                     }
                 }
 
                 public void a() {
                     com.shopee.live.livestreaming.ui.audience.c.h();
-                    com.shopee.sdk.b.a().e().a((Activity) BaseLiveStreamingActivity.this, NavigationPath.a(p.b() + "p/report?session=" + liveStreamingSessionEntity.getSession().getSession_id()), (o) null);
+                    com.shopee.sdk.b.a().e().a((Activity) BaseLiveStreamingActivity.this, NavigationPath.a(adView.b() + "p/report?session=" + liveStreamingSessionEntity.getSession().getSession_id()), (o) null);
                 }
 
                 public void a(int i) {
@@ -652,7 +655,7 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
                 }
 
                 public void b() {
-                    BaseLiveStreamingActivity.this.f28963b.c();
+                    BaseLiveStreamingActivity.this.cleanableLayout.c();
                 }
             });
         }
@@ -663,10 +666,10 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
             promise.onResolve();
             return;
         }
-        this.P = new FloatWindowModeTask.Callback() {
+        this.callback = new FloatWindowModeTask.Callback() {
             public void onCheckedPermissionStep1(boolean z) {
                 if (z) {
-                    BaseLiveStreamingActivity.this.O.execute(new FloatWindowModeTask.Data(3), BaseLiveStreamingActivity.this.P);
+                    BaseLiveStreamingActivity.this.floatWindowModeTask.execute(new FloatWindowModeTask.Data(3), BaseLiveStreamingActivity.this.callback);
                     promise.onResolve();
                     return;
                 }
@@ -687,7 +690,7 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
 
             public void onCheckedPermissionStep2(boolean z) {
                 if (z) {
-                    BaseLiveStreamingActivity.this.O.execute(new FloatWindowModeTask.Data(3), BaseLiveStreamingActivity.this.P);
+                    BaseLiveStreamingActivity.this.floatWindowModeTask.execute(new FloatWindowModeTask.Data(3), BaseLiveStreamingActivity.this.callback);
                 }
                 promise.onResolve();
             }
@@ -721,14 +724,14 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
             }
         };
         if ((this.w && com.shopee.live.livestreaming.ui.audience.a.c.b().d() != null) || (!this.w && com.shopee.live.livestreaming.ui.audience.a.a.a().c() != null)) {
-            this.O.execute(new FloatWindowModeTask.Data(1), this.P);
+            this.floatWindowModeTask.execute(new FloatWindowModeTask.Data(1), this.callback);
         }
     }
 
     /* access modifiers changed from: protected */
     public void onActivityResult(int i2, int i3, Intent intent) {
         if (i2 == N) {
-            this.O.execute(new FloatWindowModeTask.Data(2), this.P);
+            this.floatWindowModeTask.execute(new FloatWindowModeTask.Data(2), this.callback);
         }
         if (i2 == 9281 && this.z) {
             this.z = false;
@@ -750,7 +753,7 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     public void s() {
         if (androidx.core.app.a.b((Context) this, "android.permission.WRITE_EXTERNAL_STORAGE") == 0) {
             com.shopee.live.livestreaming.b.b().a().setTXLogEnable(true);
-            this.m.setVisibility(0);
+            this.txLiveNetStatusLayout.setVisibility(0);
             return;
         }
         t.a().a(this, new t.b() {
@@ -759,18 +762,18 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
 
             public void a(String str) {
                 com.shopee.live.livestreaming.b.b().a().setTXLogEnable(true);
-                BaseLiveStreamingActivity.this.m.setVisibility(0);
+                BaseLiveStreamingActivity.this.txLiveNetStatusLayout.setVisibility(0);
             }
         });
     }
 
     public void a(LiveAdDataEntity liveAdDataEntity) {
         if (liveAdDataEntity == null) {
-            this.p.a((String) null, false);
+            this.adView.a((String) null, false);
             return;
         }
         String pic = liveAdDataEntity.getAd_spot().getPic();
-        if (!TextUtils.isEmpty(pic) && this.p.a(pic, true)) {
+        if (!TextUtils.isEmpty(pic) && this.adView.a(pic, true)) {
             com.shopee.live.livestreaming.ui.audience.c.a(liveAdDataEntity.getAd_spot().getAd_spot_id());
         }
     }
@@ -794,15 +797,15 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
 
     public void a(int i2, String str, String str2) {
         if (this.D) {
-            this.C.b(i2 + "   " + str + "   " + str2 + "   " + i.a() + "\n");
+            this.C.b(i2 + "   " + str + "   " + str2 + "   " + flowLikeLayout.a() + "\n");
         }
     }
 
     public void a(float f2, float f3) {
         if (f3 > f2) {
-            this.q.setVisibility(8);
+            this.imageView.setVisibility(8);
         } else if (f2 == BitmapDescriptorFactory.HUE_RED || f3 == BitmapDescriptorFactory.HUE_RED || getResources().getConfiguration().orientation != 1) {
-            this.q.setVisibility(8);
+            this.imageView.setVisibility(8);
         } else {
             this.V = f3 / f2;
             v();
@@ -812,82 +815,93 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     private void v() {
         int a2 = com.shopee.live.livestreaming.util.w.a(getApplicationContext());
         androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
-        cVar.a((ConstraintLayout) this.f28963b);
-        cVar.d(this.f28965d.getId(), a2);
-        cVar.c(this.f28965d.getId(), (int) (((float) a2) * this.V));
+        cVar.a((ConstraintLayout) this.cleanableLayout);
+        cVar.d(this.txVideoLayout.getId(), a2);
+        cVar.c(this.txVideoLayout.getId(), (int) (((float) a2) * this.V));
         androidx.constraintlayout.widget.c cVar2 = cVar;
-        cVar2.a(this.f28965d.getId(), 3, 0, 3, (int) ab.a(212.0f));
-        cVar2.a(this.f28965d.getId(), 4, 0, 4, (int) ab.a(245.0f));
-        cVar.b((ConstraintLayout) this.f28963b);
-        if (this.q.getVisibility() != 0) {
+        cVar2.a(this.txVideoLayout.getId(), 3, 0, 3, (int) ab.a(212.0f));
+        cVar2.a(this.txVideoLayout.getId(), 4, 0, 4, (int) ab.a(245.0f));
+        cVar.b((ConstraintLayout) this.cleanableLayout);
+        if (this.imageView.getVisibility() != 0) {
             if (this.w) {
                 com.shopee.live.livestreaming.ui.audience.c.H();
             } else {
                 com.shopee.live.livestreaming.ui.audience.c.B();
             }
         }
-        this.q.setVisibility(0);
+        this.imageView.setVisibility(0);
         com.shopee.live.livestreaming.ui.audience.a.a.a().k();
-        this.f28963b.setNeedBackground(true);
-        this.f28963b.d();
+        this.cleanableLayout.setNeedBackground(true);
+        this.cleanableLayout.d();
     }
 
     /**
      * init view juga
      */
-    private void w() {
-        // old code
-        int a2 = com.shopee.live.livestreaming.util.w.a(getApplicationContext()); // ambil height
-        int b2 = com.shopee.live.livestreaming.util.w.b(getApplicationContext()); // ambil width
-
-        androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
-        cVar.a((ConstraintLayout) this.f28963b); // a(layout) == clone(ConstraintLayout)
-        cVar.d(this.f28965d.getId(), a2);// constrainHeight(viewId,
-        cVar.c(this.f28965d.getId(), b2);
-        cVar.a(this.f28965d.getId(), 3, 0, 3, 0);
-        cVar.a(this.f28965d.getId(), 4, 0, 4, 0);
-        cVar.a(this.f28965d.getId(), 1, 0, 1, 0);
-        cVar.a(this.f28965d.getId(), 2, 0, 2, 0);
-
-        cVar.d(this.f28964c.getId(), a2);
-        cVar.c(this.f28964c.getId(), b2);
-        androidx.constraintlayout.widget.c cVar2 = cVar;
-        cVar2.a(this.f28964c.getId(), 3, this.f28965d.getId(), 3, 0);
-        cVar2.a(this.f28964c.getId(), 4, this.f28965d.getId(), 4, 0);
-        cVar2.a(this.f28964c.getId(), 1, this.f28965d.getId(), 1, 0);
-        cVar2.a(this.f28964c.getId(), 2, this.f28965d.getId(), 2, 0);
-        cVar.b((ConstraintLayout) this.f28963b);
+    private void initViewDanPlayernya() {
+//        // old code
+//        int a2 = com.shopee.live.livestreaming.util.w.a(getApplicationContext()); // ambil height
+//        int b2 = com.shopee.live.livestreaming.util.w.b(getApplicationContext()); // ambil width
+//
+//        androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
+//        cVar.a((ConstraintLayout) this.cleanableLayout); // a(layout) == clone(ConstraintLayout)
+//        cVar.d(this.txVideoLayout.getId(), a2);// constrainHeight(viewId,
+//        cVar.c(this.txVideoLayout.getId(), b2); // constrainWIdth
+//        cVar.a(this.txVideoLayout.getId(), 3, 0, 3, 0);
+//        cVar.a(this.txVideoLayout.getId(), 4, 0, 4, 0);
+//        cVar.a(this.txVideoLayout.getId(), 1, 0, 1, 0);
+//        cVar.a(this.txVideoLayout.getId(), 2, 0, 2, 0);
+//
+//        cVar.d(this.view.getId(), a2);
+//        cVar.c(this.view.getId(), b2);
+//        androidx.constraintlayout.widget.c cVar2 = cVar;
+//        cVar2.a(this.view.getId(), 3, this.txVideoLayout.getId(), 3, 0);
+//        cVar2.a(this.view.getId(), 4, this.txVideoLayout.getId(), 4, 0);
+//        cVar2.a(this.view.getId(), 1, this.txVideoLayout.getId(), 1, 0);
+//        cVar2.a(this.view.getId(), 2, this.txVideoLayout.getId(), 2, 0);
+//        cVar.b((ConstraintLayout) this.cleanableLayout);// applyTo
+//
+//        this.imageView.setVisibility(8);// 8 == Visibility.GONE
+//
+//        com.shopee.live.livestreaming.ui.audience.a.a.a().k();
 
 
         //new code
-
         int height = com.shopee.live.livestreaming.util.w.a(getApplicationContext()); // ambil height
         int width = com.shopee.live.livestreaming.util.w.b(getApplicationContext()); // ambil width
 
         ConstraintSet constraintSet = new ConstraintSet();
-        constraintSet.clone(f28963b);
+        constraintSet.clone(cleanableLayout);
 
-        constraintSet.constrainHeight(f28965d.getId(), height);
-        constraintSet.constrainWidth(f28965d.getId(), width);
-        constraintSet.connect(this.f28965d.getId(), 3, 0, 3, 0);
-        constraintSet.connect(this.f28965d.getId(), 4, 0, 4, 0);
-        constraintSet.connect(this.f28965d.getId(), 1, 0, 1, 0);
-        constraintSet.connect(this.f28965d.getId(), 2, 0, 2, 0);
+        constraintSet.constrainHeight(txVideoLayout.getId(), height);
+        constraintSet.constrainWidth(txVideoLayout.getId(), width);
+        constraintSet.connect(this.txVideoLayout.getId(), 3, 0, 3, 0);
+        constraintSet.connect(this.txVideoLayout.getId(), 4, 0, 4, 0);
+        constraintSet.connect(this.txVideoLayout.getId(), 1, 0, 1, 0);
+        constraintSet.connect(this.txVideoLayout.getId(), 2, 0, 2, 0);
+        constraintSet.constrainHeight(this.view.getId(), height);
+        constraintSet.constrainWidth(this.view.getId(), width);
+        constraintSet.connect(this.view.getId(), 3, this.txVideoLayout.getId(), 3, 0);
+        constraintSet.connect(this.view.getId(), 4, this.txVideoLayout.getId(), 4, 0);
+        constraintSet.connect(this.view.getId(), 1, this.txVideoLayout.getId(), 1, 0);
+        constraintSet.connect(this.view.getId(), 2, this.txVideoLayout.getId(), 2, 0);
+        constraintSet.applyTo(cleanableLayout);
 
-        this.q.setVisibility(8);// 8 == Visibility.GONE
 
-        com.shopee.live.livestreaming.ui.audience.a.a.a().k();
+        // ini
+        com.shopee.live.livestreaming.ui.audience.a.a.a().k(); //
+
     }
 
     /* access modifiers changed from: private */
     public void x() {
-        this.k.b();
+        this.publicScreenView.b();
         setRequestedOrientation(0);
     }
 
     /* access modifiers changed from: private */
     public void y() {
-        this.k.b();
+        this.publicScreenView.b();
         setRequestedOrientation(1);
     }
 
@@ -897,8 +911,8 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
         // ambil visibility
         C();
         if (configuration.orientation == 1) {
-            this.T.b(this.S);
-            if (this.M == 8) { // kalau view gone
+            this.T.applyTo(this.S);
+            if (this.M == View.GONE) { // kalau view gone
                 p();
             } else {
                 z();
@@ -915,14 +929,14 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
                 com.shopee.live.livestreaming.ui.audience.c.E();
             }
         } else {
-            this.U.b(this.S);
-            if (this.M == 8) {
+            this.U.applyTo(this.S);
+            if (this.M == View.GONE) {
                 q();
             } else {
                 A();
             }
             if (this.V != BitmapDescriptorFactory.HUE_RED) {
-                w();
+                initViewDanPlayernya();
                 if (this.w) {
                     com.shopee.live.livestreaming.ui.audience.a.c.a(true);
                     com.shopee.live.livestreaming.ui.audience.c.J();
@@ -933,60 +947,60 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
             }
         }
         D();
-        this.k.post(this.W);
+        this.publicScreenView.post(this.W);
     }
 
     private void z() {
-        this.r.post(new Runnable() {
+        this.audienceCoinView.post(new Runnable() {
             public void run() {
                 androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
-                cVar.a((ConstraintLayout) BaseLiveStreamingActivity.this.f28963b);
-                cVar.a(BaseLiveStreamingActivity.this.r.getId(), 3, BaseLiveStreamingActivity.this.f28968g.getId(), 3);
-                cVar.a(BaseLiveStreamingActivity.this.r.getId(), 4, BaseLiveStreamingActivity.this.f28968g.getId(), 4);
-                cVar.b((ConstraintLayout) BaseLiveStreamingActivity.this.f28963b);
+                cVar.a((ConstraintLayout) BaseLiveStreamingActivity.this.cleanableLayout);
+                cVar.a(BaseLiveStreamingActivity.this.audienceCoinView.getId(), 3, BaseLiveStreamingActivity.this.livePageAnchorInfoView.getId(), 3);
+                cVar.a(BaseLiveStreamingActivity.this.audienceCoinView.getId(), 4, BaseLiveStreamingActivity.this.livePageAnchorInfoView.getId(), 4);
+                cVar.b((ConstraintLayout) BaseLiveStreamingActivity.this.cleanableLayout);
                 BaseLiveStreamingActivity.this.o();
             }
         });
     }
 
     private void A() {
-        this.r.post(new Runnable() {
+        this.audienceCoinView.post(new Runnable() {
             public void run() {
                 androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
-                cVar.a((ConstraintLayout) BaseLiveStreamingActivity.this.f28963b);
-                cVar.a(BaseLiveStreamingActivity.this.r.getId(), 3, BaseLiveStreamingActivity.this.f28968g.getId(), 4, (int) w.a(BaseLiveStreamingActivity.this, 10.0f));
-                cVar.b((ConstraintLayout) BaseLiveStreamingActivity.this.f28963b);
+                cVar.a((ConstraintLayout) BaseLiveStreamingActivity.this.cleanableLayout);
+                cVar.a(BaseLiveStreamingActivity.this.audienceCoinView.getId(), 3, BaseLiveStreamingActivity.this.livePageAnchorInfoView.getId(), 4, (int) w.a(BaseLiveStreamingActivity.this, 10.0f));
+                cVar.b((ConstraintLayout) BaseLiveStreamingActivity.this.cleanableLayout);
             }
         });
     }
 
     /* access modifiers changed from: private */
     public int B() {
-        return this.j.getTop() - this.h.getBottom();
+        return this.audienceBottomView.getTop() - this.livePageShowProductView.getBottom();
     }
 
     private void C() {
-        this.E = this.p.getVisibility();
-        this.F = this.h.getVisibility();
-        this.G = this.j.getVisibility();
-        this.H = this.k.getVisibility();
+        this.E = this.adView.getVisibility();
+        this.F = this.livePageShowProductView.getVisibility();
+        this.G = this.audienceBottomView.getVisibility();
+        this.H = this.publicScreenView.getVisibility();
         this.I = this.l.getVisibility();
-        this.J = this.n.getVisibility();
-        this.K = this.f28968g.getVisibility();
-        this.L = this.f28967f.getVisibility();
-        this.M = this.r.getVisibility();
+        this.J = this.voucherStickerItemView.getVisibility();
+        this.K = this.livePageAnchorInfoView.getVisibility();
+        this.L = this.livePageTitleView.getVisibility();
+        this.M = this.audienceCoinView.getVisibility();
     }
 
     private void D() {
-        this.p.setVisibility(this.E);
-        this.h.setVisibility(this.F);
-        this.j.setVisibility(this.G);
-        this.k.setVisibility(this.H);
+        this.adView.setVisibility(this.E);
+        this.livePageShowProductView.setVisibility(this.F);
+        this.audienceBottomView.setVisibility(this.G);
+        this.publicScreenView.setVisibility(this.H);
         this.l.setVisibility(this.I);
-        this.n.setVisibility(this.J);
-        this.f28968g.setVisibility(this.K);
-        this.f28967f.setVisibility(this.L);
-        this.r.setVisibility(this.M);
+        this.voucherStickerItemView.setVisibility(this.J);
+        this.livePageAnchorInfoView.setVisibility(this.K);
+        this.livePageTitleView.setVisibility(this.L);
+        this.audienceCoinView.setVisibility(this.M);
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:18:0x005a A[Catch:{ Exception -> 0x00c8 }] */

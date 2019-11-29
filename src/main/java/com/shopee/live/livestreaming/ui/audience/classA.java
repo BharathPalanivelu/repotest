@@ -21,7 +21,7 @@ public class classA extends c<e> {
     /* renamed from: e  reason: collision with root package name */
     private boolean f28929e = false;
 
-    public a(e eVar, com.shopee.live.livestreaming.ui.view.b.b bVar) {
+    public classA(e eVar, com.shopee.live.livestreaming.ui.view.b.b bVar) {
         this.f28926b = new b(eVar);
         this.f28928d = new com.shopee.live.livestreaming.ui.view.b.a();
         this.f28928d.a(bVar);

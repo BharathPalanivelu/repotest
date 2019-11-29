@@ -52,6 +52,10 @@ public class b {
         return f28765a;
     }
 
+    /**
+     * tentukan apakah cpu abi `x86` atau `x86_64`
+     * @return
+     */
     private static boolean c() {
         try {
             if (Build.VERSION.SDK_INT < 21) {

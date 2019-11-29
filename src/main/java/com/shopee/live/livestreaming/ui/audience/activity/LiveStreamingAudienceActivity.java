@@ -20,6 +20,7 @@ import com.shopee.live.livestreaming.sztracking.proto.GeneralAction;
 import com.shopee.live.livestreaming.ui.anchor.view.PublicScreenView;
 import com.shopee.live.livestreaming.ui.anchor.view.VoucherStickerItemView;
 import com.shopee.live.livestreaming.ui.audience.a;
+import com.shopee.live.livestreaming.ui.audience.classA;
 import com.shopee.live.livestreaming.ui.floatwindow.service.FloatVideoService;
 import com.shopee.live.livestreaming.ui.view.TXLiveNetStatusLayout;
 import com.shopee.live.livestreaming.ui.view.c.e;
@@ -27,10 +28,6 @@ import com.shopee.live.livestreaming.ui.view.c.i;
 import com.shopee.live.livestreaming.util.a.c;
 import com.shopee.live.livestreaming.util.d;
 import com.shopee.live.livestreaming.util.f;
-import com.shopee.live.livestreaming.util.o;
-import com.shopee.live.livestreaming.util.w;
-import com.shopee.live.livestreaming.util.y;
-import com.shopee.live.livestreaming.util.z;
 import com.shopee.sdk.modules.ui.navigator.NavigationPath;
 import com.shopee.sdk.modules.ui.navigator.options.PushOption;
 import com.tencent.rtmp.ITXLiveBaseListener;
@@ -54,7 +51,7 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
     private boolean Y = true;
     /* access modifiers changed from: private */
     public boolean Z = false;
-    private a aa;
+    private classA aa;
 
     public void z_() {
         AudiencePageParams audiencePageParams = (AudiencePageParams) a(AudiencePageParams.class);
@@ -65,39 +62,39 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
         int i = 0;
         this.w = false;
         com.shopee.live.livestreaming.ui.a aVar = new com.shopee.live.livestreaming.ui.a(this.f28744a);
-        this.aa = new a(this.r, this.r);
-        this.r.setAudienceCheckInCoinPresenter(this.aa);
-        this.r.setFragmentManager(getSupportFragmentManager());
-        this.r.setApplication(getApplication());
+        this.aa = new classA(this.audienceCoinView, this.audienceCoinView);
+        this.audienceCoinView.setAudienceCheckInCoinPresenter(this.aa);
+        this.audienceCoinView.setFragmentManager(getSupportFragmentManager());
+        this.audienceCoinView.setApplication(getApplication());
         f.a().b(this.t);
         f.a().c(this.Q);
         f.a().b(audiencePageParams.getSource());
         f.a().e(this.u);
-        this.p.setClickable(true);
+        this.adView.setClickable(true);
         super.z_();
-        this.n.setVoucherCallback(new VoucherStickerItemView.a() {
+        this.voucherStickerItemView.setVoucherCallback(new VoucherStickerItemView.a() {
             public void a() {
             }
 
             public void b() {
             }
         });
-        this.k.setVoucherStickerClickCallback(this);
-        this.h.d();
+        this.publicScreenView.setVoucherStickerClickCallback(this);
+        this.livePageShowProductView.d();
         this.l.setVisibility(8);
-        this.f28963b.a((Context) this);
-        this.f28963b.b(this.k);
-        this.f28963b.b(this.i);
-        this.f28963b.b(this.j);
-        this.f28963b.b(this.h);
-        this.f28963b.b(this.p);
-        this.f28963b.b(this.r);
-        this.f28963b.b(this.f28968g);
+        this.cleanableLayout.a((Context) this);
+        this.cleanableLayout.b(this.publicScreenView);
+        this.cleanableLayout.b(this.flowLikeLayout);
+        this.cleanableLayout.b(this.audienceBottomView);
+        this.cleanableLayout.b(this.livePageShowProductView);
+        this.cleanableLayout.b(this.adView);
+        this.cleanableLayout.b(this.audienceCoinView);
+        this.cleanableLayout.b(this.livePageAnchorInfoView);
         p();
-        this.f28963b.setPageSize((float) w.a(this));
+        this.cleanableLayout.setPageSize((float) w.a(this));
         u();
         aVar.a();
-        TXLiveNetStatusLayout tXLiveNetStatusLayout = this.m;
+        TXLiveNetStatusLayout tXLiveNetStatusLayout = this.txLiveNetStatusLayout;
         if (!b.b().a().ifTXLogEnable()) {
             i = 8;
         }
@@ -105,11 +102,11 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
     }
 
     private void p() {
-        ViewGroup viewGroup = (ViewGroup) this.f28967f.findViewById(c.e.title_layout);
+        ViewGroup viewGroup = (ViewGroup) this.livePageTitleView.findViewById(c.e.title_layout);
         for (int i = 0; i < viewGroup.getChildCount(); i++) {
             View childAt = viewGroup.getChildAt(i);
             if (childAt.getId() != c.e.iv_page_close) {
-                this.f28963b.b(childAt);
+                this.cleanableLayout.b(childAt);
             }
         }
     }
@@ -123,7 +120,7 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
         }
         this.V = false;
         if (this.W) {
-            this.f28965d.a();
+            this.txVideoLayout.a();
             com.shopee.live.livestreaming.ui.audience.a.a.a().e();
             com.shopee.live.livestreaming.ui.audience.c.r();
         }
@@ -140,7 +137,7 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
         if (!this.y) {
             if (!this.z) {
                 com.shopee.live.livestreaming.ui.audience.a.a.a().d();
-                this.q.setVisibility(8);
+                this.imageView.setVisibility(8);
             }
             if (!isFinishing()) {
                 com.shopee.live.livestreaming.ui.audience.c.q();
@@ -152,7 +149,7 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
     public void e() {
         if (this.z) {
             com.shopee.live.livestreaming.ui.audience.a.a.a().d();
-            this.q.setVisibility(8);
+            this.imageView.setVisibility(8);
         }
     }
 
@@ -171,7 +168,7 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
         if (this.s.f() != null && !this.s.f().isCcu_limit()) {
             this.s.b(this.s.f().getSession().getSession_id());
         }
-        this.r.b();
+        this.audienceCoinView.b();
     }
 
     /* access modifiers changed from: protected */
@@ -181,10 +178,10 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
         if (!this.Y) {
             com.shopee.live.livestreaming.ui.audience.c.s();
         }
-        this.f28966e.b();
-        this.o.b();
+        this.dotsLoadingView.b();
+        this.wrapLoadingView.b();
         this.C.a();
-        this.n.c();
+        this.voucherStickerItemView.c();
         com.shopee.live.livestreaming.util.a.c cVar = this.O;
         if (cVar != null) {
             unregisterReceiver(cVar);
@@ -227,7 +224,7 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
         }
         LiveStreamingSessionEntity.Session session = f2.getSession();
         long maximum_can_show_items = f2.getMaximum_can_show_items();
-        long memberCount = this.f28968g.getMemberCount();
+        long memberCount = this.livePageAnchorInfoView.getMemberCount();
         String nickname = session.getNickname();
         if (d.a(nickname)) {
             nickname = session.getUsername();
@@ -248,10 +245,10 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
     }
 
     public void a(VoucherEntity voucherEntity, long j, int i) {
-        if (!this.n.e()) {
+        if (!this.voucherStickerItemView.e()) {
             if (voucherEntity == null || voucherEntity.getPromotion_id() == 0) {
-                this.n.a();
-                this.n.b();
+                this.voucherStickerItemView.a();
+                this.voucherStickerItemView.b();
                 return;
             }
             long currentTimeMillis = (System.currentTimeMillis() / 1000) - j;
@@ -260,10 +257,10 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
             }
             int i2 = (int) (((long) i) - currentTimeMillis);
             if (i2 <= 0) {
-                this.n.a();
-                this.n.b();
-            } else if (!this.n.b(voucherEntity)) {
-                this.n.a(i2, voucherEntity, j, i);
+                this.voucherStickerItemView.a();
+                this.voucherStickerItemView.b();
+            } else if (!this.voucherStickerItemView.b(voucherEntity)) {
+                this.voucherStickerItemView.a(i2, voucherEntity, j, i);
             }
         }
     }
@@ -281,11 +278,11 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
             eVar.a();
             return;
         }
-        this.f28967f.setVisibility(0);
-        this.f28968g.setVisibility(0);
-        this.h.setVisibility(0);
-        this.k.setVisibility(0);
-        this.j.setVisibility(0);
+        this.livePageTitleView.setVisibility(0);
+        this.livePageAnchorInfoView.setVisibility(0);
+        this.livePageShowProductView.setVisibility(0);
+        this.publicScreenView.setVisibility(0);
+        this.audienceBottomView.setVisibility(0);
         if (liveStreamingSessionEntity.getSession() != null) {
             this.s.a(liveStreamingSessionEntity.getSession());
             f.a().c(liveStreamingSessionEntity.getSession().getRoom_id());
@@ -315,8 +312,8 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
     /* access modifiers changed from: protected */
     public void a(String str) {
         this.P = str;
-        z.a();
-        AnonymousClass3 r0 = new ITXLivePlayListener() {
+        com.shopee.live.livestreaming.util.z.a();
+        ITXLivePlayListener r0 = new ITXLivePlayListener() {
             public void onPlayEvent(int i, Bundle bundle) {
                 if (i == -2301) {
                     if (LiveStreamingAudienceActivity.this.s.j()) {
@@ -356,13 +353,13 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
                             SZTrackingReporter.getInstance().notifyConnectSucceed();
                             SZTrackingReporter.getInstance().reportFirstFrameEvent();
                         } else if (i == 2004) {
-                            if (y.a()) {
-                                z.a((Context) LiveStreamingAudienceActivity.this, c.g.live_streaming_viewer_cellular_network_warm_tip);
+                            if (com.shopee.live.livestreaming.util.y.a()) {
+                                com.shopee.live.livestreaming.util.z.a((Context) LiveStreamingAudienceActivity.this, c.g.live_streaming_viewer_cellular_network_warm_tip);
                             }
                             if (LiveStreamingAudienceActivity.this.S != null && LiveStreamingAudienceActivity.this.S.b()) {
                                 LiveStreamingAudienceActivity.this.S.c();
                             }
-                            LiveStreamingAudienceActivity.this.f28966e.b();
+                            LiveStreamingAudienceActivity.this.dotsLoadingView.b();
                             LiveStreamingAudienceActivity.this.t();
                         } else if (i != 2006) {
                         }
@@ -384,13 +381,13 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
             }
 
             public void onNetStatus(Bundle bundle) {
-                if (LiveStreamingAudienceActivity.this.m.getVisibility() != 8) {
+                if (LiveStreamingAudienceActivity.this.txLiveNetStatusLayout.getVisibility() != 8) {
                     LiveStreamingSessionEntity f2 = LiveStreamingAudienceActivity.this.s.f();
                     String str = "";
                     if (!(f2 == null || f2.getSession() == null)) {
                         str = f2.getSession().getPlay_url();
                     }
-                    LiveStreamingAudienceActivity.this.m.a(bundle, LiveStreamingAudienceActivity.this.t, str);
+                    LiveStreamingAudienceActivity.this.txLiveNetStatusLayout.a(bundle, LiveStreamingAudienceActivity.this.t, str);
                 }
                 com.shopee.live.livestreaming.ui.audience.c.a(LiveStreamingAudienceActivity.this.f28744a, bundle);
                 LiveStreamingAudienceActivity.this.a(bundle);
@@ -400,13 +397,13 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
         SZTrackingReporter.getInstance().ifMultiCdn(this.s.j());
         SZTrackingReporter.getInstance().setVideoUrl(this.P);
         SZTrackingReporter.getInstance().reportGeneralEvent(GeneralAction.ACTION_ENTER_ROOM.getValue(), false);
-        com.shopee.live.livestreaming.ui.audience.a.a.a().a(this.f28965d.get()).a((ITXLivePlayListener) r0).a(str);
+        com.shopee.live.livestreaming.ui.audience.a.a.a().a(this.txVideoLayout.get()).a((ITXLivePlayListener) r0).a(str);
         TXLiveBase.setListener(new ITXLiveBaseListener() {
             public final void OnLog(int i, String str, String str2) {
                 LiveStreamingAudienceActivity.this.b(i, str, str2);
             }
         });
-        this.m.a(this.t, str);
+        this.txLiveNetStatusLayout.a(this.t, str);
         SZTrackingReporter.getInstance().notifyFirstConnectStart();
         SZTrackingReporter.getInstance().reportStartPlayEvent();
     }
@@ -419,7 +416,7 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
     /* access modifiers changed from: package-private */
     public void c(int i) {
         if (i == 2 && com.shopee.live.livestreaming.ui.audience.a.a.a().h()) {
-            z.a((Context) this, c.g.live_streaming_viewer_cellular_network_warm_tip);
+            com.shopee.live.livestreaming.util.z.a((Context) this, c.g.live_streaming_viewer_cellular_network_warm_tip);
         }
         this.X = i;
     }
@@ -430,8 +427,8 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
 
     /* access modifiers changed from: private */
     public void r() {
-        this.o.b();
-        this.j.c();
+        this.wrapLoadingView.b();
+        this.audienceBottomView.c();
         if (this.S == null) {
             this.S = new i((Activity) this.f28744a);
         }
@@ -485,15 +482,15 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
 
     /* access modifiers changed from: private */
     public void s() {
-        this.o.setVisibility(0);
-        this.o.a();
-        this.o.setLoadingText(com.garena.android.appkit.tools.b.e(c.g.live_streaming_network_reconnect_tip));
+        this.wrapLoadingView.setVisibility(0);
+        this.wrapLoadingView.a();
+        this.wrapLoadingView.setLoadingText(com.garena.android.appkit.tools.b.e(c.g.live_streaming_network_reconnect_tip));
     }
 
     /* access modifiers changed from: private */
     public void t() {
-        this.o.b();
-        this.o.setVisibility(8);
+        this.wrapLoadingView.b();
+        this.wrapLoadingView.setVisibility(8);
     }
 
     private void u() {
@@ -504,8 +501,8 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
     }
 
     public void j() {
-        if (this.n != null) {
-            this.n.a(true, false);
+        if (this.voucherStickerItemView != null) {
+            this.voucherStickerItemView.a(true, false);
         }
     }
 }

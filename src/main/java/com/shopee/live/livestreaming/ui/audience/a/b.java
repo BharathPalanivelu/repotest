@@ -3,7 +3,7 @@ package com.shopee.live.livestreaming.ui.audience.a;
 import com.tencent.rtmp.TXLivePlayConfig;
 import com.tencent.rtmp.TXLivePlayer;
 
-// ini config untuk
+// ini config untuk TXLivePlayConfig atau TXLivePlayer
 public class b {
 
     /* renamed from: a  reason: collision with root package name */
@@ -25,7 +25,7 @@ public class b {
     private double f28943f = 1.0d;
 
     /* renamed from: g  reason: collision with root package name */
-    private TXLivePlayConfig f28944g;
+    private TXLivePlayConfig txLivePlayConfig;
 
     public b a(int i) {
         this.f28938a = i;
@@ -38,7 +38,7 @@ public class b {
     }
 
     public b a(TXLivePlayConfig tXLivePlayConfig) {
-        this.f28944g = tXLivePlayConfig;
+        this.txLivePlayConfig = tXLivePlayConfig;
         return this;
     }
 
@@ -54,12 +54,12 @@ public class b {
             tXLivePlayer.setRenderMode(this.f28938a);
             tXLivePlayer.setRenderRotation(this.f28939b);
             tXLivePlayer.enableHardwareDecode(this.f28940c);
-            TXLivePlayConfig tXLivePlayConfig = this.f28944g;
+            TXLivePlayConfig tXLivePlayConfig = this.txLivePlayConfig;
             if (tXLivePlayConfig != null) {
                 tXLivePlayConfig.setAutoAdjustCacheTime(this.f28941d);
-                this.f28944g.setMinAutoAdjustCacheTime((float) this.f28943f);
-                this.f28944g.setMaxAutoAdjustCacheTime((float) this.f28942e);
-                tXLivePlayer.setConfig(this.f28944g);
+                this.txLivePlayConfig.setMinAutoAdjustCacheTime((float) this.f28943f);
+                this.txLivePlayConfig.setMaxAutoAdjustCacheTime((float) this.f28942e);
+                tXLivePlayer.setConfig(this.txLivePlayConfig);
             }
         }
     }

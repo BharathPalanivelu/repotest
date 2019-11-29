@@ -36,6 +36,11 @@ public class d {
         }
     }
 
+    /**
+     * kalau width lebih besar dibandingkan height
+     * @param context
+     * @return
+     */
     public static int a(Context context) {
         if (context == null) {
             return -1;

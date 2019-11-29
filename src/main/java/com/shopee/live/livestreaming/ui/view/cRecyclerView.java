@@ -8,14 +8,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.shopee.live.livestreaming.c;
 import com.shopee.live.livestreaming.data.entity.RNCartPanelDataEntity;
 
-public class c extends RecyclerView {
+// public class c extends RecyclerView {
+public class cRecyclerView extends RecyclerView {
     private int M;
 
-    public c(Context context) {
+    public cRecyclerView(Context context) {
         super(context);
     }
 
-    public c(Context context, AttributeSet attributeSet) {
+    public cRecyclerView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         a(context, attributeSet);
     }

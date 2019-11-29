@@ -12,14 +12,13 @@ import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.h;
+import androidx.fragment.app.FragmentManager;
 import com.devspark.robototextview.widget.RobotoTextView;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.shopee.live.livestreaming.c;
 import com.shopee.live.livestreaming.ui.audience.e;
 import com.shopee.live.livestreaming.ui.view.b.b;
 import com.shopee.live.livestreaming.util.z;
-import com.shopee.sdk.modules.ui.c.a;
 
 public class AudienceCoinView extends ConstraintLayout implements View.OnClickListener, e, b {
 
@@ -34,10 +33,10 @@ public class AudienceCoinView extends ConstraintLayout implements View.OnClickLi
     public ImageView m;
     /* access modifiers changed from: private */
     public RobotoTextView n;
-    private com.shopee.live.livestreaming.ui.audience.a o;
+    private com.shopee.live.livestreaming.ui.audience.classA o;
     private ObjectAnimator p;
     private b q;
-    private h r;
+    private FragmentManager fragmentManager;
     private a s;
     private boolean t;
 
@@ -65,12 +64,12 @@ public class AudienceCoinView extends ConstraintLayout implements View.OnClickLi
         this.s = aVar;
     }
 
-    public void setAudienceCheckInCoinPresenter(com.shopee.live.livestreaming.ui.audience.a aVar) {
+    public void setAudienceCheckInCoinPresenter(com.shopee.live.livestreaming.ui.audience.classA aVar) {
         this.o = aVar;
     }
 
-    public void setFragmentManager(h hVar) {
-        this.r = hVar;
+    public void setFragmentManager(FragmentManager hVar) {
+        this.fragmentManager = hVar;
     }
 
     public void z_() {
@@ -178,7 +177,7 @@ public class AudienceCoinView extends ConstraintLayout implements View.OnClickLi
             this.q.setArguments(bundle);
             this.q.a();
         }
-        this.q.show(this.r, f29099g);
+        this.q.show(this.fragmentManager, f29099g);
     }
 
     public void j() {

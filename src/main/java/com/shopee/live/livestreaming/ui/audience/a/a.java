@@ -1,6 +1,8 @@
 package com.shopee.live.livestreaming.ui.audience.a;
 
 import android.content.Context;
+import android.view.View;
+
 import com.garena.android.appkit.f.f;
 import com.shopee.live.livestreaming.b;
 import com.shopee.live.livestreaming.sztracking.SZTrackingReporter;
@@ -18,22 +20,22 @@ public class a {
     private static a f28930a;
 
     /* renamed from: b  reason: collision with root package name */
-    private TXLivePlayer f28931b;
+    private TXLivePlayer txLivePlayer;
 
     /* renamed from: c  reason: collision with root package name */
-    private final b f28932c = new b();
+    private final com.shopee.live.livestreaming.ui.audience.a.b f28932c = new com.shopee.live.livestreaming.ui.audience.a.b();
 
     /* renamed from: d  reason: collision with root package name */
-    private TXLivePlayConfig f28933d;
+    private TXLivePlayConfig txLivePlayConfig;
 
     /* renamed from: e  reason: collision with root package name */
-    private TXCloudVideoView f28934e;
+    private TXCloudVideoView txCloudVideoView;
 
     /* renamed from: f  reason: collision with root package name */
-    private ITXLivePlayListener f28935f;
+    private ITXLivePlayListener livePlayListener;
 
     /* renamed from: g  reason: collision with root package name */
-    private com.shopee.live.livestreaming.util.a f28936g;
+    private com.shopee.live.livestreaming.util.a onAudioFocusListener;
     private String h;
     private float i;
     private boolean j;
@@ -69,30 +71,30 @@ public class a {
     }
 
     private a(Context context) {
-        n();
-        this.f28931b = new TXLivePlayer(context);
-        this.f28933d = new TXLivePlayConfig();
-        this.f28933d.setEnableMessage(true);
-        this.f28936g = new com.shopee.live.livestreaming.util.a(context);
-        this.f28932c.a(0).b(0).a(this.f28933d);
+        n();// ini lgo
+        this.txLivePlayer = new TXLivePlayer(context);
+        this.txLivePlayConfig = new TXLivePlayConfig();
+        this.txLivePlayConfig.setEnableMessage(true);
+        this.onAudioFocusListener = new com.shopee.live.livestreaming.util.a(context);
+        this.f28932c.a(0).b(0).a(this.txLivePlayConfig);
         a(this.f28932c);
     }
 
     public a a(TXCloudVideoView tXCloudVideoView) {
         i();
-        this.f28934e = tXCloudVideoView;
-        this.f28931b.setPlayerView(tXCloudVideoView);
+        this.txCloudVideoView = tXCloudVideoView;
+        this.txLivePlayer.setPlayerView(tXCloudVideoView);
         return this;
     }
 
     public a a(ITXLivePlayListener iTXLivePlayListener) {
-        this.f28935f = iTXLivePlayListener;
-        this.f28931b.setPlayListener(this.f28935f);
+        this.livePlayListener = iTXLivePlayListener;
+        this.txLivePlayer.setPlayListener(this.livePlayListener);
         return this;
     }
 
     public void a(boolean z, double d2, double d3) {
-        this.f28932c.a(0).b(0).a(this.f28933d).a(z, d2, d3);
+        this.f28932c.a(0).b(0).a(this.txLivePlayConfig).a(z, d2, d3);
         a(this.f28932c);
     }
 
@@ -101,25 +103,25 @@ public class a {
     }
 
     public void a(String str) {
-        if (this.f28934e != null) {
+        if (this.txCloudVideoView != null) {
             int i2 = 1;
             if (str != null && str.contains("rtmp")) {
                 i2 = 0;
             }
             try {
-                if (this.f28931b.startPlay(str, i2) == 0) {
-                    this.f28934e.setVisibility(0);
+                if (this.txLivePlayer.startPlay(str, i2) == 0) {
+                    this.txCloudVideoView.setVisibility(View.VISIBLE);
                 } else {
-                    this.f28934e.setVisibility(8);
+                    this.txCloudVideoView.setVisibility(View.GONE);
                 }
                 SZTrackingReporter.getInstance().reportGeneralEvent(GeneralAction.ACTION_START_STREAM.getValue(), false);
             } catch (Exception unused) {
-                this.f28934e.setVisibility(8);
+                this.txCloudVideoView.setVisibility(View.GONE);
             }
             this.h = str;
-            this.f28932c.a(0).b(0).a(this.f28933d);
+            this.f28932c.a(0).b(0).a(this.txLivePlayConfig);
             a(this.f28932c);
-            com.shopee.live.livestreaming.util.a aVar = this.f28936g;
+            com.shopee.live.livestreaming.util.a aVar = this.onAudioFocusListener;
             if (aVar != null) {
                 aVar.a();
             }
@@ -127,10 +129,10 @@ public class a {
     }
 
     public void d() {
-        TXLivePlayer tXLivePlayer = this.f28931b;
+        TXLivePlayer tXLivePlayer = this.txLivePlayer;
         if (tXLivePlayer != null && tXLivePlayer.isPlaying()) {
-            this.f28931b.pause();
-            com.shopee.live.livestreaming.util.a aVar = this.f28936g;
+            this.txLivePlayer.pause();
+            com.shopee.live.livestreaming.util.a aVar = this.onAudioFocusListener;
             if (aVar != null) {
                 aVar.b();
             }
@@ -138,12 +140,12 @@ public class a {
     }
 
     public void e() {
-        TXLivePlayer tXLivePlayer = this.f28931b;
+        TXLivePlayer tXLivePlayer = this.txLivePlayer;
         if (tXLivePlayer != null && !tXLivePlayer.isPlaying()) {
-            this.f28931b.resume();
-            this.f28932c.a(0).b(0).a(this.f28933d);
+            this.txLivePlayer.resume();
+            this.f28932c.a(0).b(0).a(this.txLivePlayConfig);
             a(this.f28932c);
-            com.shopee.live.livestreaming.util.a aVar = this.f28936g;
+            com.shopee.live.livestreaming.util.a aVar = this.onAudioFocusListener;
             if (aVar != null) {
                 aVar.a();
             }
@@ -163,31 +165,31 @@ public class a {
     }
 
     public void g() {
-        this.f28931b.stopPlay(true);
-        com.shopee.live.livestreaming.util.a aVar = this.f28936g;
+        this.txLivePlayer.stopPlay(true);
+        com.shopee.live.livestreaming.util.a aVar = this.onAudioFocusListener;
         if (aVar != null) {
             aVar.b();
         }
     }
 
     public boolean h() {
-        return this.f28931b.isPlaying();
+        return this.txLivePlayer.isPlaying();
     }
 
     public void i() {
-        TXCloudVideoView tXCloudVideoView = this.f28934e;
+        TXCloudVideoView tXCloudVideoView = this.txCloudVideoView;
         if (tXCloudVideoView != null) {
             tXCloudVideoView.onDestroy();
-            this.f28934e = null;
+            this.txCloudVideoView = null;
         }
     }
 
     public static void j() {
         a aVar = f28930a;
         if (aVar != null) {
-            aVar.f28931b.setPlayListener((ITXLivePlayListener) null);
+            aVar.txLivePlayer.setPlayListener((ITXLivePlayListener) null);
             a aVar2 = f28930a;
-            aVar2.f28935f = null;
+            aVar2.livePlayListener = null;
             aVar2.i();
             f28930a = null;
         }
@@ -195,12 +197,14 @@ public class a {
 
     // com.tencent.rtmp.TXLivePlayer, init txliveplayer
     public void a(com.shopee.live.livestreaming.ui.audience.a.b bVar) {
-        bVar.a(this.f28931b);
+        bVar.a(this.txLivePlayer);
     }
 
     // com.tencent.rtmp.TXLivePlayer, init txliveplayer (tanpa parameter)
     public void k() {
-        a(new com.shopee.live.livestreaming.ui.audience.a.b().a(0).b(0).a(this.f28933d));
+        // passing txLivePlayConfig
+
+        a(new com.shopee.live.livestreaming.ui.audience.a.b().a(0).b(0).a(this.txLivePlayConfig));
     }
 
     public float l() {
