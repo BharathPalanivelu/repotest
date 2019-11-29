@@ -10,7 +10,7 @@ import com.shopee.live.livestreaming.ui.audience.activity.LiveStreamingReplayAct
 import com.shopee.live.livestreaming.ui.floatwindow.a.b;
 import com.shopee.live.livestreaming.ui.floatwindow.a.c;
 
-public class FloatVideoService extends Service implements b {
+public class FloatVideoService extends Service implements com.shopee.live.livestreaming.ui.floatwindow.service.b {
 
     /* renamed from: a  reason: collision with root package name */
     private interfaceA f29074a;
@@ -89,12 +89,12 @@ public class FloatVideoService extends Service implements b {
         if (this.f29074a.f29082a == 1) {
             this.f29077d = new com.shopee.live.livestreaming.ui.floatwindow.a.a();
         } else {
-            this.f29077d = new b();
+            this.f29077d = new com.shopee.live.livestreaming.ui.floatwindow.a.b();
         }
         if (this.f29075b == null) {
             this.f29075b = new com.shopee.live.livestreaming.ui.floatwindow.b.a();
             this.f29075b.a(getApplicationContext());
-            this.f29075b.a((b) this);
+            this.f29075b.a((com.shopee.live.livestreaming.ui.floatwindow.service.b) this);
         }
         this.f29075b.a(this.f29074a.f29085d, this.f29074a.f29086e);
         this.f29075b.a(this.f29074a.f29084c);
