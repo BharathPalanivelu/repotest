@@ -72,8 +72,8 @@ import java.io.File;
 public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingActivity implements interfaceD, AudienceCoinView.a, c {
     /* access modifiers changed from: private */
     public static int N = 1;
-    protected FloatVideoService.a A;
-    protected ServiceConnection B;
+    protected FloatVideoService.a floatVideoServiceBinder;
+    protected ServiceConnection serviceConnection;
     protected b C;
     protected boolean D = false;
     int E;
@@ -215,7 +215,7 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
             initViewDanPlayernya(); // init view juga
         }
         if (this.y) {
-            FloatVideoService.a aVar = this.A;
+            FloatVideoService.a aVar = this.floatVideoServiceBinder;
             if (aVar != null) {
                 aVar.a();
                 this.y = false;
@@ -390,7 +390,7 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
     }
 
     public void a(com.shopee.sdk.c.a aVar) {
-        FloatVideoService.a aVar2 = this.A;
+        FloatVideoService.a aVar2 = this.floatVideoServiceBinder;
         if (aVar2 != null) {
             aVar2.a();
         }
@@ -704,21 +704,21 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
                     }
                     BaseLiveStreamingActivity aVar2 = BaseLiveStreamingActivity.this;
                     aVar2.y = true;
-                    if (aVar2.A == null) {
-                        BaseLiveStreamingActivity.this.B = new ServiceConnection() {
+                    if (aVar2.floatVideoServiceBinder == null) {
+                        BaseLiveStreamingActivity.this.serviceConnection = new ServiceConnection() {
                             public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-                                BaseLiveStreamingActivity.this.A = (FloatVideoService.a) iBinder;
-                                BaseLiveStreamingActivity.this.A.a(aVar);
+                                BaseLiveStreamingActivity.this.floatVideoServiceBinder = (FloatVideoService.a) iBinder;
+                                BaseLiveStreamingActivity.this.floatVideoServiceBinder.a(aVar);
                             }
 
                             public void onServiceDisconnected(ComponentName componentName) {
-                                BaseLiveStreamingActivity.this.A = null;
+                                BaseLiveStreamingActivity.this.floatVideoServiceBinder = null;
                             }
                         };
-                        BaseLiveStreamingActivity.this.f28744a.bindService(new Intent(BaseLiveStreamingActivity.this.f28744a, FloatVideoService.class), BaseLiveStreamingActivity.this.B, 1);
+                        BaseLiveStreamingActivity.this.f28744a.bindService(new Intent(BaseLiveStreamingActivity.this.f28744a, FloatVideoService.class), BaseLiveStreamingActivity.this.serviceConnection, 1);
                         return;
                     }
-                    BaseLiveStreamingActivity.this.A.a(aVar);
+                    BaseLiveStreamingActivity.this.floatVideoServiceBinder.a(aVar);
                 }
             }
         };
@@ -742,7 +742,7 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
 
     /* access modifiers changed from: protected */
     public void m() {
-        ServiceConnection serviceConnection = this.B;
+        ServiceConnection serviceConnection = this.serviceConnection;
         if (serviceConnection != null) {
             unbindService(serviceConnection);
         }

@@ -156,8 +156,8 @@ public class LiveStreamingAudienceActivity extends com.shopee.live.livestreaming
     public void b() {
         super.b();
         if (com.shopee.live.livestreaming.ui.audience.a.a.b()) {
-            if (this.A != null) {
-                this.A.a();
+            if (this.floatVideoServiceBinder != null) {
+                this.floatVideoServiceBinder.a();
             }
             com.shopee.live.livestreaming.ui.audience.a.a.a().g();
             stopService(new Intent(this, FloatVideoService.class));
