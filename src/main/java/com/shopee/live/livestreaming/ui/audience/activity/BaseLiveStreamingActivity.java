@@ -566,7 +566,7 @@ public abstract class BaseLiveStreamingActivity extends VeryBaseLiveStreamingAct
         }
     }
 
-    /* access modifiers changed from: protected */
+
     public void d(final LiveStreamingSessionEntity liveStreamingSessionEntity) {
         if (liveStreamingSessionEntity != null && liveStreamingSessionEntity.getSession() != null) {
             LiveStreamingSessionEntity.PlayConfig play_config = liveStreamingSessionEntity.getPlay_config();

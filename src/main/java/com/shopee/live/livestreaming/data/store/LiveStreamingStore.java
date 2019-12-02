@@ -147,7 +147,7 @@ public class LiveStreamingStore extends b {
         }
     }
 
-    private boolean foundInListIntegerPref(com.shopee.sdk.e.a.b<Integer> bVar, Integer num) {
+    private boolean foundInListIntegerPref(com.shopee.sdk.e.pack_a.b<Integer> bVar, Integer num) {
         if (bVar.a() <= 0) {
             return false;
         }

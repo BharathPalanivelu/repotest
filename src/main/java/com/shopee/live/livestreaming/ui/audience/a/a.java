@@ -71,7 +71,7 @@ public class a {
     }
 
     private a(Context context) {
-        n();// ini lgo
+        n();// init log
         this.txLivePlayer = new TXLivePlayer(context);
         this.txLivePlayConfig = new TXLivePlayConfig();
         this.txLivePlayConfig.setEnableMessage(true);

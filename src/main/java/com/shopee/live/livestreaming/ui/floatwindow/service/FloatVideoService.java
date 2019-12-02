@@ -59,6 +59,9 @@ public class FloatVideoService extends Service implements com.shopee.live.livest
         }
     }
 
+    // ini dipanggil sama com.shopee.live.livestreaming.ui.floatwindow.b.b()
+    // antara close atau video cover
+    // ini pindah ke LiveStreamingReplayActivity atau LiveStreamingAudienceActivity
     public void a() {
         b();
         try {
@@ -83,6 +86,7 @@ public class FloatVideoService extends Service implements com.shopee.live.livest
         this.f29079f = false;
     }
 
+    // ini gerbang masuk
     /* access modifiers changed from: private */
     public void a(interfaceA aVar) {
         this.f29074a = aVar;
